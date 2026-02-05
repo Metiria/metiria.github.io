@@ -109,7 +109,8 @@ nav {
 }
 
 header {
-    padding-top: 5.5rem;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
     background-color: var(--header-background-color);
     background-image: url('../files/concerts/sanremo rock/1.jpeg');
     background-size: cover;
