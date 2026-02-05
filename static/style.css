@@ -111,6 +111,27 @@ nav {
 header {
     padding-top: 5.5rem;
     background-color: var(--header-background-color);
+    background-image: url('../files/concerts/sanremo rock/1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(169, 53, 207, 0.6);
+    pointer-events: none;
+}
+
+header .container {
+    position: relative;
+    z-index: 1;
 }
 
 footer {
@@ -190,93 +211,21 @@ footer {
     font-size: 0.25;
 }
 
-/* Centered navbar layout with left and right menu items */
-.navbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
+/* Navbar styling */
+.navbar-brand {
+    margin-right: 1rem;
 }
 
-.navbar-toggler {
-    order: -2;
-    margin-right: auto;
+.navbar-nav .nav-link {
+    color: var(--link-color) !important;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
 }
 
-.navbar-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    order: -1;
+.navbar-nav .nav-link:hover {
+    color: var(--hover-link-color) !important;
 }
 
-.navbar-collapse {
-    display: flex !important;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    flex-basis: auto !important;
-    gap: 2rem;
-    order: 1;
-}
-
-.navbar-left-menu,
-.navbar-right-menu {
-    display: flex;
-    align-items: center;
-}
-
-.navbar-nav-left,
-.navbar-nav-right {
-    flex-direction: row;
-    gap: 0;
-    margin-bottom: 0;
-}
-
-.navbar-nav-left .nav-link,
-.navbar-nav-right .nav-link {
-    padding-right: 1rem;
-    padding-left: 1rem;
-}
-
-/* Mobile responsive */
-@media (max-width: 991px) {
-    .navbar-toggler {
-        order: 1;
-        margin-right: 0;
-    }
-
-    .navbar-center {
-        order: 2;
-        flex: 1;
-        margin-left: auto;
-        margin-right: 0;
-    }
-
-    .navbar-collapse {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 1rem;
-        width: 100%;
-        order: 3;
-    }
-
-    .navbar-left-menu,
-    .navbar-right-menu {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navbar-nav-left,
-    .navbar-nav-right {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navbar-nav-left .nav-link,
-    .navbar-nav-right .nav-link {
-        padding-right: 0;
-        padding-left: 0;
-    }
+.navbar-nav .nav-link.active {
+    color: var(--hover-link-color) !important;
 }
