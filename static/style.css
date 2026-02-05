@@ -24,7 +24,6 @@ html, body {
 
     color: var(--main-color);
     
-    font-family: "Monomath";
     font-size: 18px;
 
     height: 100%;
@@ -77,25 +76,6 @@ h5 {
     font-size:   0.75rem;
 }
 
-pre {
-    display: block;
-
-    resize: none;
-    overflow: hidden;
-    max-width: 100%;
-
-    background-color: var(--pre-background-color);
-
-    color: var(--main-color);
-    
-    font-family: "Monomath";
-
-    margin-top:    12px;
-    margin-bottom: 12px;
-    margin-left:   0px;
-    margin-right:  0px;
-}
-
 sub {
     font-size: 0.50em;
 }
@@ -109,8 +89,8 @@ nav {
 }
 
 header {
-    padding-top: 8rem;
-    padding-bottom: 4rem;
+    padding-top: 20rem;
+    padding-bottom: 40rem;
     background-color: var(--header-background-color);
     background-image: url('../files/concerts/sanremo rock/1.jpeg');
     background-size: cover;
