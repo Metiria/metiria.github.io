@@ -1,11 +1,17 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-2">
     <div class="container-xxl navbar-container">
-        <div class="navbar-left">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-center">
+            <a href="{{ '/' | relative_url }}" class="navbar-brand">
+                <img src="{{ '/files/logo/transparent_background/Logo/5-7.png' | relative_url }}" height="60" alt="Logo">
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <div class="navbar-left-menu">
                 <ul class="navbar-nav navbar-nav-left">
                     <li class="nav-item">
                         <a class="nav-link {% if page.url == '/documentation.html' %}active{% endif %}" href="{{ '/documentation.html' | relative_url }}">Documentation</a>
@@ -16,16 +22,8 @@
                     </li>
                 </ul>
             </div>
-        </div>
 
-        <div class="navbar-center">
-            <a href="{{ '/' | relative_url }}" class="navbar-brand">
-                <img src="{{ '/files/logo/transparent_background/Logo/5-7.png' | relative_url }}" height="60" alt="Logo">
-            </a>
-        </div>
-
-        <div class="navbar-right">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+            <div class="navbar-right-menu">
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item">
                         <a class="nav-link {% if page.url == '/team.html' %}active{% endif %}" href="{{ '/team.html' | relative_url }}">Team</a>
