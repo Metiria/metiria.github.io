@@ -189,3 +189,71 @@ footer {
 .fs-9 {
     font-size: 0.25;
 }
+
+/* Centered navbar layout with left and right menu items */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navbar-left,
+.navbar-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left {
+    justify-content: flex-start;
+}
+
+.navbar-right {
+    justify-content: flex-end;
+}
+
+.navbar-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.navbar-nav-left,
+.navbar-nav-right {
+    flex-direction: row;
+    gap: 0;
+    margin-bottom: 0;
+}
+
+.navbar-nav-left .nav-link,
+.navbar-nav-right .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 991px) {
+    .navbar-container {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .navbar-left,
+    .navbar-right {
+        flex: 1 100%;
+        justify-content: flex-start;
+    }
+
+    .navbar-center {
+        flex: 1 100%;
+        order: -1;
+    }
+
+    .navbar-nav-left,
+    .navbar-nav-right {
+        flex-direction: column;
+        width: 100%;
+    }
+}
