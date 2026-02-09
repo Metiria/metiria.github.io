@@ -90,10 +90,9 @@ nav {
 }
 
 header {
-    padding-top: 30rem;
-    padding-bottom: 30rem;
+    padding-top: 20rem;
+    padding-bottom: 15rem;
     background-color: var(--header-background-color);
-    background-image: url('../files/concerts/sanremo rock/1.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -233,6 +232,7 @@ footer {
 .hero-cta {
     padding: 5rem 0;
     background: linear-gradient(135deg, rgba(169, 53, 207, 0.1) 0%, rgba(169, 53, 207, 0.05) 100%);
+    border-top: 2px solid rgba(169, 53, 207, 0.2);
     border-bottom: 2px solid rgba(169, 53, 207, 0.2);
 }
 
