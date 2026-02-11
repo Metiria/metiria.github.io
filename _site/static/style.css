@@ -436,3 +436,252 @@ footer {
         gap: 1rem;
     }
 }
+
+/* Tour Timeline Section */
+.tour-section {
+    padding: 5rem 0;
+    background-color: var(--main-background-color);
+}
+
+.tour-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tour-timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--hover-link-color) 0%, rgba(169, 53, 207, 0.3) 100%);
+}
+
+.tour-event {
+    margin-bottom: 3rem;
+    position: relative;
+    padding-left: 120px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.tour-event::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--hover-link-color) 0%, rgba(169, 53, 207, 0.8) 100%);
+    border-radius: 50%;
+    border: 3px solid var(--main-background-color);
+    box-shadow: 0 0 0 2px var(--hover-link-color);
+}
+
+.tour-date {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.date-day {
+    display: block;
+    font-size: 1.5rem;
+}
+
+.date-month {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.tour-details {
+    background: linear-gradient(135deg, rgba(169, 53, 207, 0.1) 0%, rgba(169, 53, 207, 0.05) 100%);
+    border: 1px solid rgba(169, 53, 207, 0.2);
+    border-radius: 8px;
+    padding: 1.5rem;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.tour-event:hover .tour-details {
+    border-color: var(--hover-link-color);
+    box-shadow: 0 8px 24px rgba(169, 53, 207, 0.2);
+    transform: translateX(8px);
+}
+
+.tour-venue {
+    font-size: 1.5rem;
+    color: var(--link-color);
+    margin-bottom: 0.5rem;
+}
+
+.tour-location {
+    font-size: 1rem;
+    color: var(--hover-link-color);
+    margin-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tour-city {
+    font-size: 0.95rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.tour-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.ticket-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.ticket-high {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+    border: 1px solid rgba(76, 175, 80, 0.4);
+}
+
+.ticket-low {
+    background-color: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+    border: 1px solid rgba(255, 193, 7, 0.4);
+}
+
+.ticket-unavailable {
+    background-color: rgba(244, 67, 54, 0.2);
+    color: #f44336;
+    border: 1px solid rgba(244, 67, 54, 0.4);
+}
+
+.tour-link {
+    color: var(--hover-link-color);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.tour-link:hover {
+    color: #fff;
+    border-bottom-color: var(--hover-link-color);
+}
+
+/* Tour Timeline Responsive */
+@media (max-width: 768px) {
+    .tour-timeline::before {
+        left: 15px;
+    }
+
+    .tour-event {
+        padding-left: 80px;
+    }
+
+    .tour-event::before {
+        width: 45px;
+        height: 45px;
+        left: -7px;
+        box-shadow: 0 0 0 1px var(--hover-link-color);
+    }
+
+    .tour-date {
+        left: 0;
+        top: 3px;
+        font-size: 0.8rem;
+    }
+
+    .date-day {
+        font-size: 1.2rem;
+    }
+
+    .date-month {
+        font-size: 0.7rem;
+    }
+
+    .tour-details {
+        padding: 1rem;
+    }
+
+    .tour-venue {
+        font-size: 1.2rem;
+    }
+
+    .tour-location {
+        font-size: 0.9rem;
+    }
+
+    .tour-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ticket-badge,
+    .tour-link {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .tour-link {
+        display: block;
+        padding: 0.5rem;
+    }
+}
+
+/* Header Logo */
+.header-logo {
+    text-align: center;
+    animation: fadeInDown 0.8s ease;
+}
+
+.header-logo img {
+    max-width: 250px;
+    height: auto;
+    filter: drop-shadow(0 8px 16px rgba(169, 53, 207, 0.4));
+    transition: transform 0.3s ease;
+}
+
+.header-logo img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-logo img {
+        max-width: 180px;
+    }
+}
