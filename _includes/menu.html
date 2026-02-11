@@ -11,6 +11,9 @@
         <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
+                    <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link {% if page.url == '/news.html' %}active{% endif %}" href="{{ '/news.html' | relative_url }}">News</a>
                 </li>
                 <li class="nav-item">
@@ -20,19 +23,16 @@
                     <a class="nav-link {% if page.url == '/releases.html' %}active{% endif %}" href="{{ '/releases.html' | relative_url }}">Releases</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if page.url == '/multimedia.html' %}active{% endif %}" href="{{ '/multimedia.html' | relative_url }}">Multimedia</a>
+                    <a class="nav-link {% if page.url == '/pictures.html' %}active{% endif %}" href="{{ '/pictures.html' | relative_url }}">Pictures</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if page.url == '/band.html' %}active{% endif %}" href="{{ '/band.html' | relative_url }}">Band</a>
+                    <a class="nav-link {% if page.url == '/lineup.html' %}active{% endif %}" href="{{ '/lineup.html' | relative_url }}">Lineup</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if page.url == '/store.html' %}active{% endif %}" href="{{ '/store.html' | relative_url }}">Store</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if page.url == '/streaming.html' %}active{% endif %}" href="{{ '/streaming.html' | relative_url }}">Streaming</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if page.url == '/social.html' %}active{% endif %}" href="{{ '/social.html' | relative_url }}">Social</a>
+                    <a class="nav-link {% if page.url == '/follow.html' %}active{% endif %}" href="{{ '/follow.html' | relative_url }}">Follow</a>
                 </li>
             </ul>
         </div>
