@@ -1,34 +1,4 @@
 @font-face {
-    font-family: "Vortex";
-    
-    src: url('assets/fonts/ft-vortex-font/FtVortex-G3ZDy.otf');
-    src: url('assets/fonts/ft-vortex-font/FtVortex-G3ZDy.otf') format('opentype');
-    
-    font-weight: normal;
-    font-style:  normal;
-}
-
-@font-face {
-    font-family: "MetalOld";
-    
-    src: url('assets/fonts/metal-old-font/MetalOld-XGEzo.otf');
-    src: url('assets/fonts/metal-old-font/MetalOld-XGEzo.otf') format('opentype');
-    
-    font-weight: normal;
-    font-style:  normal;
-}
-
-@font-face {
-    font-family: "StickbarMetal";
-    
-    src: url('assets/fonts/stickbar-metal-font/StickbarMetal-ZV4AJ.otf');
-    src: url('assets/fonts/stickbar-metal-font/StickbarMetal-ZV4AJ.otf') format('opentype');
-    
-    font-weight: normal;
-    font-style:  normal;
-}
-
-@font-face {
     font-family: "MetalMania";
     
     src: url('assets/fonts/Metal_Mania/MetalMania-Regular.ttf');
@@ -466,41 +436,6 @@ footer {
     color: #fff;
     transform: translateY(-4px);
     box-shadow: 0 8px 16px rgba(169, 53, 207, 0.4);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .section-subtitle {
-        font-size: 1rem;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .btn-primary,
-    .btn-outline-primary {
-        width: 100%;
-    }
-
-    .hero-cta {
-        padding: 3rem 0;
-    }
-
-    .featured-section,
-    .about-section,
-    .social-section {
-        padding: 3rem 0;
-    }
-
-    .social-links {
-        gap: 1rem;
-    }
 }
 
 /* Tour Timeline Section */
