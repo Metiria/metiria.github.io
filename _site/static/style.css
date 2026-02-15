@@ -124,7 +124,6 @@ header {
     padding-top: 20rem;
     padding-bottom: 15rem;
     background-color: var(--header-background-color);
-    background-image: url('../files/concerts/sanremo rock/1 smart resize.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -241,6 +240,41 @@ footer {
 
 .navbar-nav .nav-link.active {
     color: var(--hover-link-color) !important;
+}
+
+.menu-layout {
+    width: 100%;
+}
+
+.menu-nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.menu-nav-left {
+    justify-content: flex-start;
+}
+
+.menu-nav-right {
+    justify-content: flex-end;
+}
+
+.menu-brand-center {
+    margin: 0 1.5rem;
+    flex: 0 0 auto;
+}
+
+@media (max-width: 991.98px) {
+    .menu-nav {
+        flex: 1 1 auto;
+        align-items: flex-start;
+    }
+
+    .menu-nav-left,
+    .menu-nav-right {
+        justify-content: flex-start;
+    }
 }
 
 /* Modern Homepage Sections */
