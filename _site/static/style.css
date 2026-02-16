@@ -1,3 +1,5 @@
+/* GENERAL */
+
 @font-face {
     font-family: "MetalMania";
     
@@ -7,7 +9,6 @@
     font-weight: normal;
     font-style:  normal;
 }
-
 
 :root {
     --main-background-color: rgb(18, 18, 18);
@@ -119,6 +120,9 @@ header .container {
 footer {
     background-color: var(--nav-background-color);
 }
+
+
+/* NAVBAR */
 
 .navbar-brand {
     margin-top: 0;
@@ -279,6 +283,7 @@ footer {
 }
 
 /* Hero CTA Section */
+
 .hero-cta {
     padding: 5rem 0;
     background: linear-gradient(135deg, rgba(169, 53, 207, 0.1) 0%, rgba(169, 53, 207, 0.05) 100%);
@@ -357,18 +362,38 @@ footer {
     margin-bottom: 1rem;
 }
 
-.feature-card h3 {
+.feature-card h2 {
     color: var(--link-color);
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
 }
 
-.feature-card p {
-    color: var(--main-color);
-    font-size: 1rem;
-    line-height: 1.6;
+.feature-card h4 {
+    color: var(--link-color);
+}
+
+.member-card .member-avatar {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(169, 53, 207, 0.35);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+.member-card .member-avatar i {
+    font-size: 3rem;
+    color: var(--link-color);
+    opacity: 0.9;
+}
+
+.member-card h4 {
+    color: var(--hover-link-color);
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
 }
 
 /* About Section */
