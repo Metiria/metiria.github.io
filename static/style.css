@@ -87,10 +87,6 @@ sup {
     font-size: 0.50em;
 }
 
-nav {
-    background-color: var(--nav-background-color);
-}
-
 header {
     padding-top: 20rem;
     padding-bottom: 15rem;
@@ -119,40 +115,6 @@ header .container {
 
 footer {
     background-color: var(--nav-background-color);
-}
-
-
-/* NAVBAR */
-
-.navbar-brand {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 2rem;
-    padding: 0;
-    display: inline-block;
-}
-
-.navbar-brand img {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0.25rem;
-    padding: 0;
-    display: inline-block;
-}
-
-.navbar-nav .nav-item .nav-link {
-    color: var(--link-color)
-}
-
-.navbar-nav .nav-item .nav-link:hover {
-    color: var(--hover-link-color);
-}
-
-.navbar-nav .nav-item .nav-link.active {
-    color: var(--hover-link-color);
-    text-decoration: underline;
 }
 
 .footer-brand {
@@ -195,74 +157,6 @@ footer {
 
 .fs-9 {
     font-size: 0.25;
-}
-
-/* Navbar styling */
-.navbar-brand {
-    margin-right: 1rem;
-}
-
-.navbar-nav .nav-link {
-    color: var(--link-color) !important;
-    margin: 0 0.5rem;
-    transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-    color: var(--hover-link-color) !important;
-}
-
-.navbar-nav .nav-link.active {
-    color: var(--hover-link-color) !important;
-}
-
-.menu-layout {
-    width: 100%;
-}
-
-.menu-nav {
-    flex: 1;
-    display: flex;
-    align-items: center;
-}
-
-.menu-nav-left {
-    justify-content: flex-start;
-}
-
-.menu-nav-right {
-    justify-content: flex-end;
-}
-
-.menu-brand-center {
-    margin: 0 1.5rem;
-    flex: 0 0 auto;
-}
-
-@media (max-width: 991.98px) {
-    #navbarMenu.collapsing,
-    #navbarMenu.show {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-    }
-
-    .menu-nav {
-        flex: 0 0 50%;
-        max-width: 50%;
-        align-items: flex-start;
-    }
-
-    .menu-nav-left {
-        justify-content: flex-start;
-        text-align: left;
-    }
-
-    .menu-nav-right {
-        justify-content: flex-end;
-        text-align: right;
-        align-items: flex-end;
-    }
 }
 
 /* Modern Homepage Sections */
@@ -362,17 +256,9 @@ footer {
     margin-bottom: 1rem;
 }
 
-.feature-card h2 {
-    color: var(--link-color);
-}
-
-.feature-card h4 {
-    color: var(--link-color);
-}
-
 .member-card .member-avatar {
-    width: 200px;
-    height: 200px;
+    width: 260px;
+    height: 260px;
     margin: 0 auto 1.25rem;
     border-radius: 50%;
     display: flex;
