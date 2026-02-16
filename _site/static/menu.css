@@ -53,6 +53,31 @@ nav {
 }
 
 @media (max-width: 991.98px) {
+    .navbar > .container-xxl {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar .navbar-brand.d-lg-none {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin: 0 !important;
+        z-index: 1;
+    }
+
+    .navbar .navbar-toggler {
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+        transform: none;
+        z-index: 2;
+    }
+
     #navbarMenu.collapsing,
     #navbarMenu.show {
         display: flex;
