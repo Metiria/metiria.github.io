@@ -236,14 +236,28 @@ footer {
 }
 
 @media (max-width: 991.98px) {
-    .menu-nav {
-        flex: 1 1 auto;
+    #navbarMenu.collapsing,
+    #navbarMenu.show {
+        display: flex;
+        flex-wrap: wrap;
         align-items: flex-start;
     }
 
-    .menu-nav-left,
-    .menu-nav-right {
+    .menu-nav {
+        flex: 0 0 50%;
+        max-width: 50%;
+        align-items: flex-start;
+    }
+
+    .menu-nav-left {
         justify-content: flex-start;
+        text-align: left;
+    }
+
+    .menu-nav-right {
+        justify-content: flex-end;
+        text-align: right;
+        align-items: flex-end;
     }
 }
 
