@@ -265,6 +265,17 @@ footer {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
 }
 
+.member-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.member-card-link:hover,
+.member-card-link:focus {
+    color: inherit;
+}
+
 .member-card .member-avatar i {
     font-size: 3rem;
     color: var(--link-color);
@@ -278,7 +289,7 @@ footer {
     letter-spacing: 0.03em;
 }
 
-.member-card[id] {
+.member-card-link[id] {
     scroll-margin-top: 10rem;
 }
 
@@ -391,6 +402,11 @@ footer {
     padding-left: 60px;
     display: flex;
     align-items: flex-start;
+}
+
+
+.tour-event[id] {
+    scroll-margin-top: 10rem;
 }
 
 .tour-event::before {
