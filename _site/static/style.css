@@ -340,7 +340,6 @@ footer {
 /* Social Section */
 .social-section {
     padding: 5rem 0;
-    background: linear-gradient(135deg, rgba(169, 53, 207, 0.1) 0%, rgba(169, 53, 207, 0.05) 100%);
     border-top: 2px solid rgba(169, 53, 207, 0.2);
     border-bottom: 2px solid rgba(169, 53, 207, 0.2);
 }
