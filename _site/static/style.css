@@ -278,6 +278,10 @@ footer {
     letter-spacing: 0.03em;
 }
 
+.member-card[id] {
+    scroll-margin-top: 10rem;
+}
+
 /* About Section */
 .about-section {
     padding: 5rem 0;
