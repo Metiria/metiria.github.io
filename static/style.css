@@ -44,6 +44,10 @@ main {
     flex: 1;
 }
 
+.profile-main {
+    padding-top: 12rem;
+}
+
 hr {
     border: 1px solid var(--main-color);
 
@@ -541,4 +545,10 @@ footer {
 .tour-link:hover {
     color: #fff;
     border-bottom-color: var(--hover-link-color);
+}
+
+@media (max-width: 991.98px) {
+    .profile-main {
+        padding-top: 9.5rem;
+    }
 }
