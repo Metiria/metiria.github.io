@@ -73,7 +73,7 @@ nav {
     .navbar .navbar-toggler {
         position: absolute;
         right: 0.5rem;
-        top: 0.5rem;
+        top: 2rem;
         transform: none;
         z-index: 2;
     }
