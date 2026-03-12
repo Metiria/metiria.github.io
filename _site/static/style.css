@@ -577,10 +577,27 @@ footer {
     border-radius: 0;
     background: transparent;
     padding: 0.6rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.75rem;
+    min-height: 100%;
 }
 
 .release-slots .col:first-child .release-slot:hover {
     transform: none;
     border-color: transparent;
     background: transparent;
+}
+
+.release-slots .release-slot-title {
+    display: block;
+}
+
+.release-slots .release-slot-image {
+    display: block;
+    width: 100%;
+    max-width: 130px;
+    margin: 0 auto;
+    object-fit: contain;
 }
