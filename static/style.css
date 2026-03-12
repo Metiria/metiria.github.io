@@ -552,3 +552,35 @@ footer {
         padding-top: 9.5rem;
     }
 }
+
+.release-slots .release-slot {
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 10px;
+    background: linear-gradient(140deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04));
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-align: center;
+    padding: 0.6rem 0.35rem;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.release-slots .release-slot:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.6);
+    background: linear-gradient(140deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.08));
+}
+
+.release-slots .col:first-child .release-slot {
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    padding: 0.6rem 0;
+}
+
+.release-slots .col:first-child .release-slot:hover {
+    transform: none;
+    border-color: transparent;
+    background: transparent;
+}
