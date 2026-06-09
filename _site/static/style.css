@@ -601,3 +601,12 @@ footer {
     margin: 0 auto;
     object-fit: contain;
 }
+
+/* Header background image for hero header */
+.bg-hero-header {
+    /* Replace the URL below with the path to the image you want to use */
+    background-image: url("/files/concerts/sanremo rock/1.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
