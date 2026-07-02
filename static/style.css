@@ -562,13 +562,13 @@ footer {
     font-weight: 700;
     letter-spacing: 0.05em;
     text-align: center;
-    padding: 2rem 1.5rem;
-    min-height: 180px;
+    padding: 1.2rem 2.5rem;
+    min-height: 110px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
