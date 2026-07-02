@@ -565,7 +565,8 @@ footer {
     padding: 1.5rem 1rem;
     min-height: 140px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 0.75rem;
