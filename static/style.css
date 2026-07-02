@@ -610,6 +610,14 @@ footer {
     object-fit: contain;
 }
 
+.release-slots .col:nth-child(2) {
+    flex: 1.5;
+}
+
+.release-slots .col:nth-child(3) {
+    flex: 0.5;
+}
+
 /* Header background image for hero header */
 .bg-hero-header {
     /* Replace the URL below with the path to the image you want to use */
