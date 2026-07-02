@@ -610,6 +610,10 @@ footer {
     object-fit: contain;
 }
 
+.release-slots .release-slot a i {
+    font-size: 2rem;
+}
+
 .release-slots .col:nth-child(1) {
     flex: 0.5;
 }
