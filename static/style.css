@@ -616,6 +616,9 @@ footer {
     border-radius: 8px;
     padding: 1.5rem;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     transition: all 0.3s ease;
 }
 
@@ -626,22 +629,17 @@ footer {
 }
 
 .news-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #fff;
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.45rem;
     line-height: 1.4;
+    font-weight: 600;
 }
 
 .news-source {
     font-size: 0.95rem;
     color: var(--hover-link-color);
-    margin-bottom: 0.7rem;
-    line-height: 1.6;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 600;
-}
+    margin-bottom: 0.35rem;
 
 .news-description {
     font-size: 0.95rem;
