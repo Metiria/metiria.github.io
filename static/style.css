@@ -270,6 +270,20 @@ footer {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
 }
 
+.past-members-section .feature-card {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.past-members-section .feature-card:hover {
+    border-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 12px 24px rgba(255, 255, 255, 0.14);
+}
+
+.past-members-section .member-card .member-avatar {
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
 .member-card-link {
     display: block;
     text-decoration: none;
