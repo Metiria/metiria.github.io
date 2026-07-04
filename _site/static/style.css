@@ -303,10 +303,15 @@ footer {
 }
 
 .member-card h4 {
-    color: var(--hover-link-color);
+    color: #fff;
     margin-bottom: 0.75rem;
     font-size: 1.1rem;
     letter-spacing: 0.03em;
+}
+
+.current-members-section .member-card h2,
+.current-members-section .member-card h2 * {
+    color: var(--hover-link-color);
 }
 
 .member-card-link[id] {
