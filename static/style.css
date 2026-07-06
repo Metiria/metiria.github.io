@@ -747,6 +747,10 @@ footer {
     object-fit: contain;
 }
 
+.release-slots[id] {
+    scroll-margin-top: 10rem;
+}
+
 .release-slots .col:nth-child(1) {
     flex: 0.5;
 }
