@@ -247,9 +247,9 @@ footer {
 }
 
 .feature-card:hover {
-    transform: none;
-    border-color: rgba(169, 53, 207, 0.2);
-    box-shadow: none;
+    transform: translateY(-8px);
+    border-color: var(--hover-link-color);
+    box-shadow: 0 12px 24px rgba(169, 53, 207, 0.2);
 }
 
 .feature-icon {
@@ -330,6 +330,22 @@ h2.section-title[id],
 .about-section {
     padding: 5rem 0;
     background-color: var(--main-background-color);
+}
+
+.about-section .feature-card:hover,
+.about-section .feature-card:focus,
+.about-section .feature-card:focus-within,
+.about-section .feature-card:active {
+    transform: none;
+    border-color: rgba(169, 53, 207, 0.2);
+    box-shadow: none;
+}
+
+.about-section .feature-card a:hover,
+.about-section .feature-card a:focus,
+.about-section .feature-card a:active {
+    color: var(--hover-link-color);
+    text-decoration: none;
 }
 
 .about-section .section-title {
