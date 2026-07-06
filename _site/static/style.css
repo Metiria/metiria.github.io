@@ -820,9 +820,19 @@ h2.section-title[id],
 }
 
 #singles .release-slot a:hover,
-#singles .release-slot a:focus {
+#singles .release-slot a:focus,
+#attention-seeker .release-slot a:hover,
+#attention-seeker .release-slot a:focus,
+#sorrow .release-slot a:hover,
+#sorrow .release-slot a:focus {
     color: #fff;
     transform: translateY(-2px);
+}
+
+#singles .release-slot a,
+#attention-seeker .release-slot a,
+#sorrow .release-slot a {
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .release-slots[id] {
