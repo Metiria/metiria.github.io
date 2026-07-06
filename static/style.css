@@ -247,9 +247,9 @@ footer {
 }
 
 .feature-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--hover-link-color);
-    box-shadow: 0 12px 24px rgba(169, 53, 207, 0.2);
+    transform: none;
+    border-color: rgba(169, 53, 207, 0.2);
+    box-shadow: none;
 }
 
 .feature-icon {
@@ -469,10 +469,6 @@ h2.section-title[id],
     transition: transform 0.3s ease;
 }
 
-.tour-event:hover::before {
-    transform: scale(1.3);
-}
-
 .tour-date {
     position: absolute;
     left: 30px;
@@ -509,12 +505,6 @@ h2.section-title[id],
     padding: 1.5rem;
     flex: 1;
     transition: all 0.3s ease;
-}
-
-.tour-event:hover .tour-details {
-    border-color: var(--hover-link-color);
-    box-shadow: 0 8px 24px rgba(169, 53, 207, 0.2);
-    transform: translateX(8px);
 }
 
 .tour-venue {
@@ -554,7 +544,7 @@ h2.section-title[id],
     height: 2.75rem;
     border-radius: 50%;
     border: 1px solid rgba(169, 53, 207, 0.3);
-    color: var(--link-color);
+    color: var(--hover-link-color);
     background: rgba(169, 53, 207, 0.08);
     transition: all 0.3s ease;
     text-decoration: none;
@@ -747,12 +737,6 @@ h2.section-title[id],
     align-items: center;
     gap: 0.35rem;
     transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-}
-
-.release-slots .release-slot:hover {
-    transform: translateY(-2px);
-    border-color: rgba(255, 255, 255, 0.6);
-    background: linear-gradient(140deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.08));
 }
 
 .release-slots .col:first-child .release-slot {
