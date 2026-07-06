@@ -819,6 +819,12 @@ h2.section-title[id],
     opacity: 1;
 }
 
+#singles .release-slot a:hover,
+#singles .release-slot a:focus {
+    color: #fff;
+    transform: translateY(-2px);
+}
+
 .release-slots[id] {
     scroll-margin-top: 10rem;
 }
