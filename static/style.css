@@ -808,6 +808,15 @@ h2.section-title[id],
 
 .release-platform-scroller a {
     flex: 0 0 auto;
+    color: var(--link-color);
+    transition: color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+.release-platform-scroller a:hover,
+.release-platform-scroller a:focus {
+    color: var(--hover-link-color);
+    transform: translateY(-2px);
+    opacity: 1;
 }
 
 .release-slots[id] {
