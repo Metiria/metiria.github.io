@@ -319,6 +319,11 @@ footer {
     scroll-margin-top: 10rem;
 }
 
+h2.section-title[id],
+.release-slots[id] {
+    scroll-margin-top: 10rem;
+}
+
 /* About Section */
 .about-section {
     padding: 5rem 0;
