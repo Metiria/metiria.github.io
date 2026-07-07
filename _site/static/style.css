@@ -44,6 +44,18 @@ main {
     flex: 1;
 }
 
+a {
+    color: var(--hover-link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
 .profile-main {
     padding-top: 12rem;
 }
@@ -139,30 +151,6 @@ footer {
     display: inline-block;
 }
 
-.editable {
-    outline: none !important;
-}
-
-.editable:focus {
-    box-shadow: 0 0 10px;
-}
-
-.bg-success {
-    background-color: var();
-}
-
-.fs-7 {
-    font-size: 0.75rem;
-}
-
-.fs-8 {
-    font-size: 0.5rem;
-}
-
-.fs-9 {
-    font-size: 0.25;
-}
-
 /* Modern Homepage Sections */
 
 .section-title {
@@ -172,62 +160,6 @@ footer {
     margin-bottom: 1rem;
     letter-spacing: 0.05em;
     text-align: center;
-}
-
-.section-subtitle {
-    font-size: 1.25rem;
-    color: var(--main-color);
-    line-height: 1.6;
-}
-
-/* Hero CTA Section */
-
-.hero-cta {
-    padding: 5rem 0;
-    background: linear-gradient(135deg, rgba(169, 53, 207, 0.1) 0%, rgba(169, 53, 207, 0.05) 100%);
-    border-top: 2px solid rgba(169, 53, 207, 0.2);
-    border-bottom: 2px solid rgba(169, 53, 207, 0.2);
-}
-
-.cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.btn-primary {
-    background-color: var(--hover-link-color);
-    border-color: var(--hover-link-color);
-    color: #fff;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    padding: 0.75rem 2rem;
-    transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: #fff;
-    color: var(--hover-link-color);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(169, 53, 207, 0.3);
-}
-
-.btn-outline-primary {
-    border: 2px solid var(--hover-link-color);
-    color: var(--hover-link-color);
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    padding: 0.75rem 2rem;
-    transition: all 0.3s ease;
-    background-color: transparent;
-}
-
-.btn-outline-primary:hover {
-    background-color: var(--hover-link-color);
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(169, 53, 207, 0.3);
 }
 
 /* Featured Cards Section */
@@ -250,12 +182,6 @@ footer {
     transform: translateY(-8px);
     border-color: var(--hover-link-color);
     box-shadow: 0 12px 24px rgba(169, 53, 207, 0.2);
-}
-
-.feature-icon {
-    font-size: 3rem;
-    color: var(--hover-link-color);
-    margin-bottom: 1rem;
 }
 
 .member-card .member-avatar {
@@ -344,7 +270,7 @@ h2.section-title[id],
 .about-section .feature-card a:hover,
 .about-section .feature-card a:focus,
 .about-section .feature-card a:active {
-    color: var(--hover-link-color);
+    color: var(--link-color);
     text-decoration: none;
 }
 
@@ -574,58 +500,6 @@ h2.section-title[id],
     box-shadow: 0 6px 14px rgba(169, 53, 207, 0.25);
 }
 
-.tour-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.ticket-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    letter-spacing: 0.02em;
-}
-
-.ticket-high {
-    background-color: rgba(76, 175, 80, 0.2);
-    color: #4caf50;
-    border: 1px solid rgba(76, 175, 80, 0.4);
-}
-
-.ticket-low {
-    background-color: rgba(255, 193, 7, 0.2);
-    color: #ffc107;
-    border: 1px solid rgba(255, 193, 7, 0.4);
-}
-
-.ticket-unavailable {
-    background-color: rgba(244, 67, 54, 0.2);
-    color: #f44336;
-    border: 1px solid rgba(244, 67, 54, 0.4);
-}
-
-.tour-link {
-    color: var(--hover-link-color);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    letter-spacing: 0.02em;
-    transition: all 0.3s ease;
-    border-bottom: 2px solid transparent;
-}
-
-.tour-link:hover {
-    color: #fff;
-    border-bottom-color: var(--hover-link-color);
-}
-
 /* News Timeline Section */
 .news-section {
     padding: 5rem 0;
@@ -719,6 +593,7 @@ h2.section-title[id],
     font-size: 0.95rem;
     color: var(--hover-link-color);
     margin-bottom: 0.35rem;
+}
 
 .news-description {
     font-size: 0.95rem;
@@ -781,13 +656,6 @@ h2.section-title[id],
 
 .release-slots .release-slot-title-cell {
     justify-content: flex-start;
-}
-
-.release-slots .release-slot-cover-cell {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0.25rem;
 }
 
 .release-slots .release-slot-platforms {
