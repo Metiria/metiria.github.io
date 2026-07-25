@@ -635,3 +635,66 @@ h2.section-title[id],
     background-position: center;
     background-repeat: no-repeat;
 }
+
+/* Rule for glowing images*/
+.hover-glow {
+    transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.hover-glow:hover {
+    filter: brightness(1.25); 
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
+}
+
+/* Rule for glowing text*/
+.text-glow {
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    font-size: 1.5rem;
+}
+.text-glow:hover {
+    color: #ffffff; 
+}
+
+/* Rule for video-clip loop in home*/
+/* 1. Il Contenitore: Più alto e proporzionato */
+.video-hero {
+    height: 95vh; /* Più alto di prima, occupa quasi tutto lo schermo */
+    min-height: 700px; /* Aumentato anche il minimo vitale */
+    
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+    background-color: #000; /* Sfondo nero di sicurezza */
+    z-index: 1; /* Creiamo la base della "torta" */
+}
+
+/* 2. Il Video: Ora sta sicuramente SOPRA lo sfondo */
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 2; /* Livello 2: sopra lo sfondo nero */
+}
+
+/* 3. L'Overlay scuro (Assicurati che sia position: absolute!) */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* 40% nero */
+    z-index: 3; /* Livello 3: scurisce il video */
+}
+
+/* 4. Il Testo e i Bottoni */
+.content-overlay {
+    position: relative;
+    z-index: 4; /* Livello 4: in cima a tutto, intoccabile */
+}
