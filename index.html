@@ -41,12 +41,24 @@ subtitle: Our journey and destination
             </div>
         </div>
 
-        <!-- Modifica per includere il video di Attention Seeker-->
-        <div class="row mb-5">
-            <div class="col-12"">
-                <div class="ratio ratio-16x9 shadow-sm rounded overflow-hidden">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/A4u9jzIAPk8?si=Zz8WOWAsRbcFO-67" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
+        <!-- Attention Seeker video div -->
+        <div class="video-hero position-relative overflow-hidden d-flex align-items-center justify-content-center">
+    
+            <!-- Background video -->
+            <video autoplay loop muted playsinline class="bg-video">
+                <source src="{{ '/files/videos/clip_attention_seeker.mp4' | relative_url }}" type="video/mp4">
+            </video>
+
+            <!-- Dark overlay to good reading -->
+            <div class="video-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+            <!-- Title and watch now -->
+            <div class="content-overlay position-relative z-3 text-center">
+                <h1 class="display-3 text-white text-glow mb-0">METIRIA</h1>
+                <h2 class="text-white mb-4 letter-spacing-wide">ATTENTION SEEKER</h2>
+                <a href="https://www.youtube.com/watch?v=A4u9jzIAPk8" class="btn btn-outline-light px-5 py-2 rounded-0">
+                    WATCH VIDEO
+                </a>
             </div>
         </div>
 
