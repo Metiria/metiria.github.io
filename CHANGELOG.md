@@ -4,6 +4,9 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
+# [26-07-2026] - bigger links button in tour page for PC view
+- added a media query for bigger links in tour page in PC or tablet view 
+
 # [26-07-2026] - Home video clip button changed and footer links update
 - video clip button and writings updated in home page
 - all footer links now open a new browser window instead of reloading the page

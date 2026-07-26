@@ -489,6 +489,7 @@ h2.section-title[id],
     margin-bottom: 1rem;
 }
 
+/* Media links in tour page */
 .tour-media-links {
     display: flex;
     flex-direction: column;
@@ -496,7 +497,6 @@ h2.section-title[id],
     margin-left: 1rem;
     flex-shrink: 0;
 }
-
 .tour-media-links a {
     display: inline-flex;
     align-items: center;
@@ -510,13 +510,24 @@ h2.section-title[id],
     transition: all 0.3s ease;
     text-decoration: none;
 }
-
 .tour-media-links a:hover {
     border-color: var(--hover-link-color);
     background: var(--hover-link-color);
     color: #fff;
     transform: translateY(-2px);
     box-shadow: 0 6px 14px rgba(169, 53, 207, 0.25);
+}
+/* Media Query for Desktop e Tablet */
+@media (min-width: 768px) {
+    .tour-media-links {
+        gap: 1rem; 
+        margin-left: 2rem; 
+    }
+    .tour-media-links a {
+        width: 3.8rem; 
+        height: 3.8rem; 
+        font-size: 1.4rem; 
+    }
 }
 
 /* News Timeline Section */
