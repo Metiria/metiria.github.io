@@ -1,0 +1,15 @@
+/* Media Query per allineare il testo al centro da telefono */
+@media (max-width: 767px) {
+    p, .home-text, ul li { 
+        text-align: center !important;
+        
+        /* Ottimizzazione essenziale per il giustificato su mobile */
+        hyphens: auto;
+        -webkit-hyphens: auto;
+    }
+
+    ul {
+        list-style-type: none; /* Fa sparire i pallini */
+        padding-left: 0; /* Centra il testo in modo millimetrico rimuovendo il margine sinistro invisibile */
+    }
+}
