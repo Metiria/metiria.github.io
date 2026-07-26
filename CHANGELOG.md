@@ -4,6 +4,9 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
+# [26-07-2026] - Home video clip button changed
+- video clip button and writings updated in home page
+
 # [25-07-2026] - Attention Seeker video clip added in Home page
 - a section containing the video clip of Attention Seeker has been added in the home page, eliminating the 
   youtube preview and adding a new button with different style
