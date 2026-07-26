@@ -690,3 +690,45 @@ h2.section-title[id],
     position: relative;
     z-index: 4; 
 }
+/* Rules for text in video clip section*/
+.band-name {
+    font-size: clamp(3.5rem, 8vw, 7.5rem) !important; 
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 4px 8px rgba(0,0,0,0.8); 
+}
+.song-title {
+    font-size: clamp(1.2rem, 3vw, 2.5rem) !important;
+    letter-spacing: 18px; 
+    margin-bottom: 3rem;
+    text-indent: 18px; 
+    text-shadow: 2px 4px 8px rgba(0,0,0,0.8);
+}
+
+/* Rules for watch video button */
+.watch-video-btn {
+    font-size: 1.3rem !important;
+    padding: 16px 48px !important; 
+    letter-spacing: 3px;
+    border: 2px solid rgba(169, 53, 207, 0.3) !important; 
+    color: var(--hover-link-color) !important; 
+    background-color: transparent;
+    transition: all 0.3s ease;
+    text-decoration: none !important; 
+}
+.watch-video-btn:visited, 
+.watch-video-btn:active,
+.watch-video-btn:focus {
+    text-decoration: none !important; 
+    color: var(--hover-link-color) !important; 
+    outline: none !important; 
+    box-shadow: none; 
+}
+.watch-video-btn:hover {
+    border-color: var(--hover-link-color) !important;
+    background-color: var(--hover-link-color) !important;
+    color: #fff !important; 
+    transform: translateY(-4px); 
+    box-shadow: 0 8px 16px rgba(169, 53, 207, 0.4) !important; 
+    text-decoration: none !important; 
+}
