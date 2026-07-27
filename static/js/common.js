@@ -1,6 +1,26 @@
-// FOOTER 
+// SIMPLE LAYOUT 
+// functions for the back-to-top button 
+function handleScroll() {
+    const backToTopBtn = document.querySelector('#backToTopBtn');
+    if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show'); 
+    } else {
+        backToTopBtn.classList.remove('show'); 
+    }
+}
+function scrollToTop() {
+    const backToTopBtn = document.querySelector('#backToTopBtn');
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });  
+}
+window.addEventListener('scroll', handleScroll); 
+const backToTopBtn = document.querySelector('#backToTopBtn'); 
+backToTopBtn.addEventListener('click', scrollToTop); 
 
-// function for showing the message box of email copying
+// FOOTER 
+// Function for showing the message box of email copying
 function showToastMessage() {
     const toast = document.createElement('div');
     toast.textContent = "Email copied to clipboard!";
@@ -10,8 +30,7 @@ function showToastMessage() {
         toast.remove();
     }, 1200);
 }
-
-// function for mail button in footer
+// Functions for mail button in footer
 function onMailBtnClick(event) {
     const MailBtn = event.currentTarget; 
     const email = MailBtn.getAttribute('data-email'); 
@@ -27,6 +46,5 @@ function onMailBtnClick(event) {
     }, 500);
     showToastMessage(); 
 }
-
 const copyMailBtn = document.querySelector('#copyMailBtn'); 
 copyMailBtn.addEventListener('click', onMailBtnClick); 

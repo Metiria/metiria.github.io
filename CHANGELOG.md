@@ -4,12 +4,17 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
-# [27-07-2026] - Email copying on clipboard is now available, videoclip updated 
+# [[27-07-2026] - Go-to-top Button added
+- added the go-to-top button, which allows the user to rapidly go to the top of the web site page. 
+- modified files: _layouts/simple.html, static/style.css, static/js/common.js
+
+# [27-07-2026] - Email copying on clipboard is now available, videoclip updated
 - added a button in footer.html for copying band email address to clipboard with a small message box for confirming the action  
 - modified simple.html layout to include in every page common.js file 
 - button logic has been added to common.js
 - style features have been added to style.css 
 - the videoclip file has been replaced with the band selected video clip. The quality of the video has been reduced to avoid page loading latency (new dimension: 1.9MB from 320MB) and the audio track has been removed
+- modified files: _includes/footer.html, _layouts/simple.html, static/style.css, static/js/common.js, file/videos/clip_attention_seeker.mp4
 
 # [26-07-2026] - Bigger links button in tour page for PC view and specialized javascript and css files
 - added a media query for bigger links in tour page in PC or tablet view 
