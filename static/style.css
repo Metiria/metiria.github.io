@@ -371,6 +371,9 @@ h2.section-title[id],
     font-size: 1.5rem;
     transition: all 0.3s ease;
     text-decoration: none;
+    background-color: transparent; 
+    cursor: pointer; 
+    font-family: inherit;
 }
 
 .social-link:hover {
@@ -742,4 +745,29 @@ h2.section-title[id],
     transform: translateY(-4px); 
     box-shadow: 0 8px 16px rgba(169, 53, 207, 0.4) !important; 
     text-decoration: none !important; 
+}
+
+/* Rules for copymail button in footer */
+.mail-toast {
+    position: fixed;
+    bottom: 30px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: #111;
+    color: #fff;
+    padding: 12px 24px;
+    border: 1px solid var(--hover-link-color); 
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(169, 53, 207, 0.3);
+    z-index: 9999;
+    font-weight: bold;
+    pointer-events: none; 
+    animation: fadeInOut 2.5s ease forwards;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translate(-50%, 20px); }
+    15% { opacity: 1; transform: translate(-50%, 0); }
+    85% { opacity: 1; transform: translate(-50%, 0); }
+    100% { opacity: 0; transform: translate(-50%, -20px); }
 }

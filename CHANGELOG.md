@@ -4,8 +4,15 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
-# [26-07-2026] - bigger links button in tour page for PC view
+# [27-07-2026] - Email copying on clipboard is now available 
+- added a button in footer.html for copying band email address to clipboard with a small message box for confirming the action  
+- modified simple.html layout to include in every page common.js file 
+- button logic has been added to common.js
+- style features have been added to style.css 
+
+# [26-07-2026] - Bigger links button in tour page for PC view and specialized javascript and css files
 - added a media query for bigger links in tour page in PC or tablet view 
+- it's now possible to include specialized javascript and css files for each page extending the layout
 
 # [26-07-2026] - Home video clip button changed and footer links update
 - video clip button and writings updated in home page
