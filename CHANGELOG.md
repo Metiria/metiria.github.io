@@ -4,6 +4,15 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
+# [28-07-2026] - Auto-scrolling header pictures added
+- header now displays a collection of auto-scrolling photos
+- new sub-directory "header_pictures" in "files" directory created, containing all header photos
+- new directory "_data" and "header_pictures.yml" created. This contains a list of the of the pictures' names
+- the header structure has been changed, using Liquid templating for dynamic loading of the pictures inside header_pictures.yml file
+- the scrolling animation has been added in style.css file
+- pictures have been manually modified to fit in both PC and mobile view
+- modified files: files/header_pictures, _includes/header.html, static/style.css, static/js/common.js, _data/header_pictures.yml
+
 # [28-07-2026] - Fixed horizontal scrolling and go-to-up button
 - Problem with overflowing videoclip and consequential unwanted horyzontal scroll solved
 - Go-to-up button style is now the same as other buttons

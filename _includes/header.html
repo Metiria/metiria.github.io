@@ -1,4 +1,17 @@
+{% assign pictures = site.data.header_pictures %}
+{% assign slide_duration = 4 %}
+{% assign total_duration = pictures | size | times: slide_duration %}
+
 <header class="bg-hero-header">
+
+    <div class="bg-slideshow" style="--total-duration: {{ total_duration }}s;" aria-hidden="true">
+        {% for picture in pictures %}
+            <img src="{{ '/files/header_pictures/' | append: picture | relative_url }}"
+                 alt=""
+                 style="animation-delay: {{ forloop.index0 | times: slide_duration }}s;">
+        {% endfor %}
+    </div>
+
     <div class="container">
         <div class="row pt-8 align-items-center">
             <div class="col">

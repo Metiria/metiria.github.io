@@ -108,32 +108,79 @@ sup {
     font-size: 0.50em;
 }
 
+/* HEADER */
 header {
-    padding-top: 20rem;
+    padding-top: 25rem;
     padding-bottom: 15rem;
     background-color: var(--header-background-color);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     position: relative;
+    overflow: hidden;
 }
-
 header::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(169, 53, 207, 0.6);
+    inset: 0; 
+    background-color: rgba(169, 53, 207, 0.3);
+    z-index: 1; /* sopra le foto, sotto il testo */
     pointer-events: none;
 }
-
 header .container {
     position: relative;
-    z-index: 1;
+    z-index: 2;
+}
+header.bg-hero-header {
+    width: 100%;
+    min-height: 120vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    background-color: var(--header-background-color);
+    position: relative;
+    overflow: hidden;
+}
+.bg-slideshow {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+.bg-slideshow img {
+    position: absolute;
+    inset: 0;
+    left: -50px; 
+    width: calc(100% + 100px); 
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation-name: bg-fade;
+    animation-duration: var(--total-duration);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+}
+/*
+   Percentuali calcolate per 12 immagini (100/12 ≈ 8.33% a testa)
+   con fade di 1.5s su un ciclo totale di 72s (12 × 6s) → 1.5/72 ≈ 2.08%
+   Se cambi il numero di foto o la durata, ricalcola questi valori
+   (vedi nota sotto).
+*/
+@keyframes bg-fade {
+    0%     { opacity: 0; transform: translateX(40px); }
+    2.08%  { opacity: 1; transform: translateX(0); }
+    6.25%  { opacity: 1; transform: translateX(0); }
+    8.33%  { opacity: 0; transform: translateX(-40px); }
+    100%   { opacity: 0; transform: translateX(40px); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .bg-slideshow img {
+        animation: none;
+        opacity: 1;
+    }
+    .bg-slideshow img:not(:first-child) {
+        display: none;
+    }
 }
 
+/* FOOTER */
 footer {
     background-color: var(--nav-background-color);
 }
@@ -646,15 +693,6 @@ h2.section-title[id],
     }
 }
 
-/* Header background image for hero header */
-.bg-hero-header {
-    /* Replace the URL below with the path to the image you want to use */
-    background-image: url("/files/concerts/sanremo rock/1.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 /* Rule for glowing images*/
 .hover-glow {
     transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -663,7 +701,6 @@ h2.section-title[id],
     filter: brightness(1.25); 
     box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
 }
-
 /* Rule for glowing text*/
 .text-glow {
     transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;

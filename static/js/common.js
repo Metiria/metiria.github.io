@@ -19,6 +19,10 @@ window.addEventListener('scroll', handleScroll);
 const backToTopBtn = document.querySelector('#backToTopBtn'); 
 backToTopBtn.addEventListener('click', scrollToTop); 
 
+// HEADER
+// Functions for auto-scrolling header
+
+
 // FOOTER 
 // Function for showing the message box of email copying
 function showToastMessage() {
