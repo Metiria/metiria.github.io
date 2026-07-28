@@ -1,4 +1,9 @@
 /* GENERAL */
+/* Rule for clipping every overflowing item*/
+body {
+    max-width: 100%;
+    overflow-x: clip; /* Attenzione: clip, NON hidden */
+}
 
 @font-face {
     font-family: "MetalMania";
@@ -777,11 +782,11 @@ h2.section-title[id],
     position: fixed;
     bottom: 30px;
     right: 30px; 
-    width: 60px;
-    height: 60px;
-    background-color: var(--hover-link-color, #a935cf); 
-    color: #fff;
-    border: 2px solid var(--hover-link-color, #a935cf);
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    color: var(--hover-link-color, #a935cf);
+    border: 1px solid var(--hover-link-color, #a935cf);
     border-radius: 50%;
     font-size: 1.6rem;
     cursor: pointer;
@@ -800,14 +805,15 @@ h2.section-title[id],
     transform: translateY(0);
 }
 .back-to-top:hover {
-    background-color: #fff;
-    color: var(--hover-link-color, #a935cf);
-    box-shadow: 0 0 15px rgba(169, 53, 207, 0.6); 
+    background-color: var(--hover-link-color, #a935cf); 
+    color: #fff; 
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
+    transform: translateY(-4px); 
 }
 @media (min-width: 768px) {
     .back-to-top {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         font-size: 2.4rem;
         bottom: 30px;
         right: 30px;

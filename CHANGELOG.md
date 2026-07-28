@@ -4,7 +4,13 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
-# [[27-07-2026] - Go-to-top Button added
+# [28-07-2026] - Fixed horizontal scrolling and go-to-up button
+- Problem with overflowing videoclip and consequential unwanted horyzontal scroll solved
+- Go-to-up button style is now the same as other buttons
+- Support icon in footer has been aligned with other links from PC view
+- modified files: static/css/index.css, static/style.css, _includes/footer.html
+
+# [27-07-2026] - Go-to-top Button added
 - added the go-to-top button, which allows the user to rapidly go to the top of the web site page. 
 - modified files: _layouts/simple.html, static/style.css, static/js/common.js
 
