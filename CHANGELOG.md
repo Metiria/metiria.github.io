@@ -4,6 +4,11 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
+# [30-07-2026] - Patch to previous update
+- Copyright section in footer, correction from "Caflish" to "Caflisch" and "Support" to "Support Us"
+- Media Query for policy links modified, now there are two equal buttons at the bottom of the footer and the copyright takes 3 rows
+- modified files: _includes/footer.html, static/style.css
+
 # [30-07-2026] - Copyright and Policy&TermsOfUse sections added, go-to-up button fix, adjusted responsitivity
 - The footer section has been complemented with the copyright section and two links to the policy page and the terms of use page
 - Footer structure has been changed, creating a new section having class "copyright-section" under the previous "social-section"
