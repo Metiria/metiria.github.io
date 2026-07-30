@@ -1,9 +1,39 @@
+<!-- 
 {% assign pictures = site.data.header_pictures %}
 {% assign slide_duration = 4 %}
 {% assign total_duration = pictures | size | times: slide_duration %}
+--> 
+
+{% assign all_pictures = site.data.header_pictures %}
+{% assign desktop_pictures = all_pictures | where_exp: "p", "p.orientation != 'portrait'" %}
+{% assign slide_duration = 4 %}
 
 <header class="bg-hero-header">
 
+    <!-- Mobile: all pictures, even vertical ones-->
+    <div class="bg-slideshow d-lg-none"
+         style="--total-duration: {{ all_pictures | size | times: slide_duration }}s;"
+         aria-hidden="true">
+        {% for picture in all_pictures %}
+            <img src="{{ '/files/header_pictures/' | append: picture.file | relative_url }}"
+                 alt=""
+                 style="animation-delay: {{ forloop.index0 | times: slide_duration }}s;">
+        {% endfor %}
+    </div>
+
+   <!-- Desktop: only horizontal pictures (landscape) -->
+    <div class="bg-slideshow d-none d-lg-block"
+         style="--total-duration: {{ desktop_pictures | size | times: slide_duration }}s;"
+         aria-hidden="true">
+        {% for picture in desktop_pictures %}
+            <img src="{{ '/files/header_pictures/' | append: picture.file | relative_url }}"
+                 alt=""
+                 style="animation-delay: {{ forloop.index0 | times: slide_duration }}s;">
+        {% endfor %}
+    </div>
+
+
+    <!-- 
     <div class="bg-slideshow" style="--total-duration: {{ total_duration }}s;" aria-hidden="true">
         {% for picture in pictures %}
             <img src="{{ '/files/header_pictures/' | append: picture | relative_url }}"
@@ -11,7 +41,7 @@
                  style="animation-delay: {{ forloop.index0 | times: slide_duration }}s;">
         {% endfor %}
     </div>
-
+    -->
     <div class="container">
         <div class="row pt-8 align-items-center">
             <div class="col">

@@ -4,11 +4,21 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
+# [28-07-2026] - Header fix and vertical pictures allowed, new file convention added
+- Changed header logic to avoid slowdown in page loading and including vertical pictures in mobile view only.
+- Vertical pictures are now allowed and selectively displayed in mobile view to prevent cropping issues.
+- Refactored header logic and `_data/header_pictures.yml` organization, dividing images into two main families based on viewport orientation (`Landscape` for PC, `Portrait` for mobile).
+- Introduced a naming convention for header images: all vertical photos sharing the main folder must be marked with a `_ver` suffix (example, `img1.jpg` -> `img1_ver.jpg`).
+- New images cannot be used exactly as created, as they slow down the browser too much. They must be compressed so that the image file size falls within the 100–400 KB range. Below is the bash command used to compress the images (input.png and output.png are placeholders for the picture to compress and the relative output, check ffmpeg documentation for additional info):
+ffmpeg -i files/header_pictures/input.jpg -vf "scale=1920:-1" -q:v 5 -map_metadata -1 files/header_pictures/output.jpg
+- modified files: _data/header_pictures.yml, _includes/header.html, files/header_pictures
+
 # [28-07-2026] - Auto-scrolling header pictures added
 - header now displays a collection of auto-scrolling photos
 - new sub-directory "header_pictures" in "files" directory created, containing all header photos
 - new directory "_data" and "header_pictures.yml" created. This contains a list of the of the pictures' names
-- the header structure has been changed, using Liquid templating for dynamic loading of the pictures inside header_pictures.yml file
+- the header structure has been changed, using Liquid templating for dynamic loading of the pictures inside _data/header_pictures.yml file and files/header_pictures directory.
+- The data must be consistent. Therefore, if photos are renamed, added, removed or replaced, both the folder files/header_pictures (which contains the pictures) and the file _data/header_pictures.yml (which contains the image filenames and the orientation) must be updated manually.
 - the scrolling animation has been added in style.css file
 - pictures have been manually modified to fit in both PC and mobile view
 - modified files: files/header_pictures, _includes/header.html, static/style.css, static/js/common.js, _data/header_pictures.yml

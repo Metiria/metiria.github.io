@@ -1,13 +1,48 @@
-- 1.jpeg
-- 000021230008.jpg
-- 5778554489186404539_121.jpg
-- 5778554489186404546_121.jpg
-- 6016957867405460794_121.jpg
-- IMG_0183.JPG
-- HMBF9977.JPG
-- HRMV7463.JPG
-- IMG_3931.JPG
-- MMAW1579.JPG
-- WXMB0691.JPG
-- XMNA3896.JPG
-- XZIC9701.JPG
+# All the files listed below follow this format:
+# - file: filename.extension
+# - orientation: landscape / portrait
+# sLandscape is used for horizontal pictures (PC view), while portrait is used for vertical ones (mobile view). 
+
+# Vertical Pictures (Mobile view, portrait orientation)
+- file: 24109227_ver.jpg
+  orientation: portrait 
+- file: IMG_0579_ver.JPG
+  orientation: portrait
+- file: IMG_3485_ver.JPG
+  orientation: portrait
+- file: IMG_3487_ver.JPG
+  orientation: portrait
+- file: IMG_3495_ver.JPG
+  orientation: portrait
+- file: IMG_9445_ver.JPG
+  orientation: portrait
+
+# Horizontal pictures (PC view, landscape orientation)
+- file: 8EEB90F5-01B0-4AF9-A9D7-6EBC289795D9.jpg
+  orientation: landscape
+- file: 24109141.jpg
+  orientation: landscape
+- file: CDXN4440.JPG
+  orientation: landscape
+- file: IMG_0182.JPG
+  orientation: landscape
+- file: IMG_3480.JPG
+  orientation: landscape
+- file: IMG_3488.JPG
+  orientation: landscape
+- file: IMG_3493.JPG
+  orientation: landscape
+- file: IMG_3496.JPG
+  orientation: landscape
+- file: IMG_3508.JPG
+  orientation: landscape
+- file: IMG_3512.JPG
+  orientation: landscape
+- file: IMG_9442.JPG
+  orientation: landscape
+- file: IMG_9484.JPG
+  orientation: landscape
+- file: UPGG3424.JPG
+  orientation: landscape
+- file: XODC4066.JPG
+  orientation: landscape
