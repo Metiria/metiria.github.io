@@ -2,11 +2,29 @@
 // functions for the back-to-top button 
 function handleScroll() {
     const backToTopBtn = document.querySelector('#backToTopBtn');
+    const copyrightSection = document.querySelector('.copyright-section');
+
+    // Handles the appearing and disappearing of the go-to-up button 
     if (window.scrollY > 300) {
         backToTopBtn.classList.add('show'); 
     } else {
         backToTopBtn.classList.remove('show'); 
     }
+    // Handles the block mechanics above footer
+    if (backToTopBtn && copyrightSection) {
+        // Calculates coordinates of copyright section in footer 
+        const rect = copyrightSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        // If the upper part of the footer enters the screen, calculate how many pixels are visible, adding 30px of original margin 
+        if (rect.top < windowHeight) {
+            const pushUp = windowHeight - rect.top + 30;
+            backToTopBtn.style.bottom = pushUp + 'px';
+        } else {
+            // Else, mantain default margin
+            backToTopBtn.style.bottom = '30px';
+        }
+    }
+
 }
 function scrollToTop() {
     const backToTopBtn = document.querySelector('#backToTopBtn');

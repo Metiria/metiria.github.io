@@ -4,7 +4,18 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
-# [28-07-2026] - Header fix and vertical pictures allowed, new file convention added
+# [30-07-2026] - Copyright and Policy&TermsOfUse sections added, go-to-up button fix, adjusted responsitivity
+- The footer section has been complemented with the copyright section and two links to the policy page and the terms of use page
+- Footer structure has been changed, creating a new section having class "copyright-section" under the previous "social-section"
+- Both pages has been created as separated html files in root directory, named privacy-policy.html and terms.html 
+- New layout "policy.html" has been created, shared by both pages. This is very similar to simple.html layout, without the header section
+- New CSS rules has been added to static/style.css file, along with others footer rules, all near the section FOOTER
+- Other CSS rules for responsitivity has been added, like central aligning of the text for every page in mobile view
+- files/pictures directory created for generic pictures. `privacy-terms-background.JPG` added as fixed background of both pages.
+- static/js/common.js javascript file has been updated; the logic has been changed to prevent the button from moving below the footer's social section, as it would otherwise overlap with the policy buttons.
+- modified files: _layouts/simple.html, _layouts/policy.html, privacy-policy.html, terms.html, _includes/footer.html, static/style.css, files/pictures, static/js/common.js
+
+# [30-07-2026] - Header fix and vertical pictures allowed, new file convention added
 - Changed header logic to avoid slowdown in page loading and including vertical pictures in mobile view only.
 - Vertical pictures are now allowed and selectively displayed in mobile view to prevent cropping issues.
 - Refactored header logic and `_data/header_pictures.yml` organization, dividing images into two main families based on viewport orientation (`Landscape` for PC, `Portrait` for mobile).
