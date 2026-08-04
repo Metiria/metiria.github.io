@@ -4,6 +4,27 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
+# [04-07-2026] - Footer, Header and Policy pages update. CSS Architecture refactored.  
+- FOOTER CHANGES
+- Several changes have been made in footer section, including: 
+  - Less space between social and copyright sections in footer.
+  - Policy buttons text now is white when cursor gets over them.
+  - Footer overall height reduced, so that the "Follow us" row remains visible.
+  - Social icons are now re-arranged for better visualization. 
+- HEADER CHANGES
+  - New header photos have been loaded, splitted between mobile and PC version, updating the logic. 
+  - Now, portrait photos are visible in mobile view only, while landscape ones in PC view only.
+  - Transition animation speed has been slightly increased.
+  - The logic to insert or update photos was not changed.
+- POLICY PAGES CHANGES
+  - Policy pages now have a different background image.
+- RELEASES CHANGES
+  - San Marino Playlist links updated
+  - Added new simple youtube icon to each element of releases page
+- GENERAL CHANGES
+  - Now style.css imports specific css files, to improve maintainability and readability. For example, all CSS rules regarding the footer section are now collected in static/css/footer.css file, just like header and other specific parts. This refactoring takes time, so it will be completed gradually. 
+- modified files: _includes/footer.html, _includes/header.html _data/header_pictures.yml, files/header_pictures, files/pictures, static/css, static/style.css, releases.html
+
 # [30-07-2026] - Patch to previous update
 - Copyright section in footer, correction from "Caflish" to "Caflisch" and "Support" to "Support Us"
 - Media Query for policy links modified, now there are two equal buttons at the bottom of the footer and the copyright takes 3 rows

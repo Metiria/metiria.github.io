@@ -1,3 +1,8 @@
+@import url('css/header.css'); 
+@import url('css/footer.css'); 
+@import url('css/policy-pages.css'); 
+
+
 /* GENERAL */
 @font-face {
     font-family: "MetalMania";
@@ -102,168 +107,16 @@ sup {
 /* Media Query for Mobile View - Center Paragraphs */
 @media (max-width: 767.98px) {
     p {
-        text-align: center !important;
+        text-align: center;
     }
 }
 
-/* HEADER */
-header {
-    padding-top: 25rem;
-    padding-bottom: 15rem;
-    background-color: var(--header-background-color);
-    position: relative;
-    overflow: hidden;
-}
-header::before {
-    content: '';
-    position: absolute;
-    inset: 0; 
-    background-color: rgba(169, 53, 207, 0.3);
-    z-index: 1; 
-    pointer-events: none;
-}
-header .container {
-    position: relative;
-    z-index: 2;
-}
-header.bg-hero-header {
-    width: 100%;
-    min-height: 120vh;
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    background-color: var(--header-background-color);
-    position: relative;
-    overflow: hidden;
-}
-.bg-slideshow {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-}
-.bg-slideshow img {
-    position: absolute;
-    inset: 0;
-    left: -50px; 
-    width: calc(100% + 100px); 
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    animation-name: bg-fade;
-    animation-duration: var(--total-duration);
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-fill-mode: backwards;
-}
-/*
-   Percentuali calcolate per 12 immagini (100/12 ≈ 8.33% a testa)
-   con fade di 1.5s su un ciclo totale di 72s (12 × 6s) → 1.5/72 ≈ 2.08%
-   Se cambi il numero di foto o la durata, ricalcola questi valori
-   (vedi nota sotto).
-*/
-@keyframes bg-fade {
-    0%     { opacity: 0; transform: translateX(40px); }
-    2.08%  { opacity: 1; transform: translateX(0); }
-    6.25%  { opacity: 1; transform: translateX(0); }
-    8.33%  { opacity: 0; transform: translateX(-40px); }
-    100%   { opacity: 0; transform: translateX(40px); }
-}
-@media (prefers-reduced-motion: reduce) {
-    .bg-slideshow img {
-        animation: none;
-        opacity: 1;
-    }
-    .bg-slideshow img:not(:first-child) {
-        display: none;
-    }
-}
-
-/* FOOTER */
-footer {
-    background-color: var(--nav-background-color);
-}
-.footer-brand {
-    color: var(--link-color) !important;
-    text-decoration: none !important;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-}
-.footer-brand img {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0.20rem;
-    padding: 0;
-    display: inline-block;
-}
-/* Rules for copymail button in footer */
-.mail-toast {
-    position: fixed;
-    bottom: 30px; 
-    left: 50%;
-    transform: translateX(-50%); 
-    background-color: #111;
-    color: #fff;
-    padding: 12px 24px;
-    border: 1px solid var(--hover-link-color); 
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(169, 53, 207, 0.3);
-    z-index: 9999;
-    font-weight: bold;
-    pointer-events: none; 
-    animation: fadeInOut 2.5s ease forwards;
-}
-@keyframes fadeInOut {
-    0% { opacity: 0; transform: translate(-50%, 20px); }
-    15% { opacity: 1; transform: translate(-50%, 0); }
-    85% { opacity: 1; transform: translate(-50%, 0); }
-    100% { opacity: 0; transform: translate(-50%, -20px); }
-}
-/* Rules for copyright and policy&terms_of_use section on bottom footer  */
-.copyright-section {
-    background-color: var(--nav-background-color);
-    padding: 1.5rem 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.6rem;
-}
-.copyright-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
-    text-align: center;
-}
-.copyright-text {
-    font-size: 0.8rem;
-    color: var(--main-color);
-    margin: 0;
-    line-height: 1.5;
-    flex: 1;
-}
-.legal-link {
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--main-color) !important;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(169, 53, 207, 0.3);
-    padding: 0.6rem 1.2rem;
-    border-radius: 4px;
-    white-space: nowrap;
-    transition: all 0.3s ease;
-    flex-shrink: 0;
-}
-.legal-link:hover {
-    background-color: var(--hover-link-color);
-    border-color: var(--hover-link-color);
-    color: #fff;
-}
+/* Defined style for all site buttons*/
 .btn-metiria {
     padding: 16px 48px; 
     letter-spacing: 3px;
     border: 2px solid rgba(169, 53, 207, 0.3); 
-    color: var(--hover-link-color) !important; 
+    color: var(--hover-link-color); 
     background-color: transparent;
     transition: all 0.3s ease;
     text-decoration: none; 
@@ -271,8 +124,6 @@ footer {
     border-radius: 4px;
     text-align: center;
 }
-
-/* Stili per gli stati interattivi dei pulsanti */
 .btn-metiria:visited, 
 .btn-metiria:active,
 .btn-metiria:focus {
@@ -281,7 +132,6 @@ footer {
     outline: none; 
     box-shadow: none; 
 }
-
 .btn-metiria:hover {
     border-color: var(--hover-link-color);
     background-color: var(--hover-link-color);
@@ -289,91 +139,6 @@ footer {
     transform: translateY(-4px); 
     box-shadow: 0 8px 16px rgba(169, 53, 207, 0.4); 
     text-decoration: none; 
-}
-
-@media (max-width: 767.98px) {
-    .copyright-bar {
-        flex-wrap: wrap; 
-        justify-content: space-between;
-        padding: 0.1rem; 
-        gap: 0.5rem;
-    }
-    .copyright-text {
-        order: -1; 
-        flex: 0 0 100%;
-        margin-bottom: 1rem;
-        font-size: 0.65rem;
-        line-height: 1.4;
-    }
-    .legal-link.btn-metiria {
-        flex: 0 0 calc(50% - 0.25rem); 
-        max-width: none; 
-        font-size: 0.7rem; 
-        letter-spacing: 0.5px; 
-        white-space: nowrap; 
-        padding: 10px 0; 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-}
-/* Rules for policy and terms of use pages*/
-.legal-content {
-    min-height: 100vh; 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('/files/pictures/privacy-terms-background.JPG');
-    padding: 10rem 0 6rem;
-    position: relative;
-    padding: 8rem 0 6rem; 
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
-}
-@media (max-width: 767.98px) {
-    .legal-content {
-        padding-top: 12rem; 
-    }
-}
-.legal-title {
-    color: var(--link-color);
-    margin-bottom: 0.5rem;
-    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.9);
-}
-.legal-effective-date {
-    color: var(--hover-link-color);
-    font-size: 0.9rem;
-    margin-bottom: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.9);
-}
-.legal-content h2 {
-    color: #fff;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.9);
-}
-@media (max-width: 767.98px) {
-    .legal-content h2 {
-        text-align: center;
-    }
-}
-.legal-content p,
-.legal-content li {
-    color: var(--main-color);
-    line-height: 1.7;
-    font-size: 1rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.85);
-}
-.legal-content ul {
-    padding-left: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-.legal-content li {
-    margin-bottom: 0.5rem;
 }
 
 /* Modern Homepage Sections */
@@ -542,42 +307,6 @@ h2.section-title[id],
 }
 .about-image:hover img {
     transform: scale(1.05);
-}
-
-/* Social Section */
-.social-section {
-    padding: 3rem 0;
-    border-top: 2px solid rgba(169, 53, 207, 0.2);
-}
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.social-link {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid rgba(169, 53, 207, 0.3);
-    border-radius: 50%;
-    color: var(--hover-link-color);
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    background-color: transparent; 
-    cursor: pointer; 
-    font-family: inherit;
-}
-.social-link:hover {
-    border-color: var(--hover-link-color);
-    background-color: var(--hover-link-color);
-    color: #fff;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(169, 53, 207, 0.4);
 }
 
 /* Tour Timeline Section */

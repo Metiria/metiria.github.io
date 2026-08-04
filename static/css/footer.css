@@ -1,0 +1,188 @@
+footer {
+    background-color: var(--nav-background-color); 
+}
+.footer-brand {
+    color: var(--link-color);
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+.footer-brand img {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0.20rem;
+    padding: 0;
+    display: inline-block;
+}
+/* Rules for copymail button in footer */
+.mail-toast {
+    position: fixed;
+    bottom: 30px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: #111;
+    color: #fff;
+    padding: 12px 24px;
+    border: 1px solid var(--hover-link-color); 
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(169, 53, 207, 0.3);
+    z-index: 9999;
+    font-weight: bold;
+    pointer-events: none; 
+    animation: fadeInOut 2.5s ease forwards;
+}
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translate(-50%, 20px); }
+    15% { opacity: 1; transform: translate(-50%, 0); }
+    85% { opacity: 1; transform: translate(-50%, 0); }
+    100% { opacity: 0; transform: translate(-50%, -20px); }
+}
+/* Social Section */
+.social-section {
+    padding: 2rem 0 1rem 0;
+    border-top: 2px solid rgba(169, 53, 207, 0.2);
+}
+.footer-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+}
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    max-width: 230px; 
+    width: 100%;
+    margin: 0 auto; 
+}
+.social-link {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(169, 53, 207, 0.3);
+    border-radius: 50%;
+    color: var(--hover-link-color);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    background-color: transparent; 
+    cursor: pointer; 
+    font-family: inherit;
+}
+.social-link:hover {
+    border-color: var(--hover-link-color);
+    background-color: var(--hover-link-color);
+    color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(169, 53, 207, 0.4);
+}
+/* Tablet: 2 columns, rows of 2 */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .footer-sections {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+    }
+    .footer-section:nth-child(2) {
+        border-right: none;
+    }
+    .footer-section:nth-child(3),
+    .footer-section:nth-child(4) {
+        border-right: 1px solid rgba(169, 53, 207, 0.2);
+        border-top: 1px solid rgba(169, 53, 207, 0.2);
+        padding-top: 2rem;
+        margin-top: 1rem;
+    }
+    .footer-section:nth-child(4) {
+        border-right: none;
+    }
+}
+/* Mobile: 1 column, sections vertically displaced */
+@media (max-width: 767.98px) {
+    .footer-sections {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .footer-section {
+        border-right: none;
+        padding: 0;
+    }
+}
+
+/* Rules for copyright and policy&terms_of_use section on bottom footer  */
+.copyright-section {
+    background-color: var(--nav-background-color);
+    padding: 1.5rem 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+}
+.copyright-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    text-align: center;
+}
+.copyright-text {
+    font-size: 0.8rem;
+    color: var(--main-color);
+    margin: 0;
+    line-height: 1.5;
+    flex: 1; 
+}
+.legal-link {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--main-color);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(169, 53, 207, 0.3);
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+.legal-link:hover {
+    background-color: var(--hover-link-color);
+    border-color: var(--hover-link-color);
+    color: #fff;
+}
+@media (max-width: 767.98px) {
+    .copyright-bar {
+        flex-wrap: wrap; 
+        justify-content: space-between;
+        padding: 0.1rem; 
+        gap: 0.5rem;
+    }
+    .copyright-text {
+        order: -1; 
+        flex: 0 0 100%;
+        margin-bottom: 1rem;
+        font-size: 0.65rem;
+        line-height: 1.4;
+    }
+    .legal-link.btn-metiria {
+        flex: 0 0 calc(50% - 0.25rem); 
+        max-width: none; 
+        font-size: 0.7rem; 
+        letter-spacing: 0.5px; 
+        white-space: nowrap; 
+        padding: 10px 0; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+

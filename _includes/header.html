@@ -1,47 +1,69 @@
-<!-- 
-{% assign pictures = site.data.header_pictures %}
-{% assign slide_duration = 4 %}
-{% assign total_duration = pictures | size | times: slide_duration %}
---> 
-
 {% assign all_pictures = site.data.header_pictures %}
-{% assign desktop_pictures = all_pictures | where_exp: "p", "p.orientation != 'portrait'" %}
-{% assign slide_duration = 4 %}
+{% assign desktop_pictures = all_pictures | where: "orientation", "landscape" %}
+{% assign mobile_pictures = all_pictures | where: "orientation", "portrait" %}
+
+<!-- Slide duration and transition time are assigned here -->
+{% assign slide_duration = 4.0 %}
+{% assign fade_time = 1.5 %}
+
+<!-- Dynamic generation of CSS Keyframes -->
+<style>
+    /* DESKTOP animation */
+    {% if desktop_pictures.size > 0 %}
+    {% assign d_total = desktop_pictures | size | times: slide_duration %}
+    {% assign d_fade_in = fade_time | divided_by: d_total | times: 100 %}
+    {% assign d_vis_end = slide_duration | divided_by: d_total | times: 100 %}
+    {% assign d_fade_out = slide_duration | plus: fade_time | divided_by: d_total | times: 100 %}
+    @keyframes bg-fade-desktop {
+        0%   { opacity: 0; transform: translateX(40px); }
+        {{ d_fade_in }}% { opacity: 1; transform: translateX(0); }
+        {{ d_vis_end }}% { opacity: 1; transform: translateX(0); }
+        {{ d_fade_out }}% { opacity: 0; transform: translateX(-40px); }
+        100% { opacity: 0; transform: translateX(40px); }
+    }
+    {% endif %}
+
+    /* MOBILE animation */
+    {% if mobile_pictures.size > 0 %}
+    {% assign m_total = mobile_pictures | size | times: slide_duration %}
+    {% assign m_fade_in = fade_time | divided_by: m_total | times: 100 %}
+    {% assign m_vis_end = slide_duration | divided_by: m_total | times: 100 %}
+    {% assign m_fade_out = slide_duration | plus: fade_time | divided_by: m_total | times: 100 %}
+    @keyframes bg-fade-mobile {
+        0%   { opacity: 0; transform: translateX(40px); }
+        {{ m_fade_in }}% { opacity: 1; transform: translateX(0); }
+        {{ m_vis_end }}% { opacity: 1; transform: translateX(0); }
+        {{ m_fade_out }}% { opacity: 0; transform: translateX(-40px); }
+        100% { opacity: 0; transform: translateX(40px); }
+    }
+    {% endif %}
+</style>
 
 <header class="bg-hero-header">
 
-    <!-- Mobile: all pictures, even vertical ones-->
+    <!-- Mobile: SOLO foto portrait -->
     <div class="bg-slideshow d-lg-none"
-         style="--total-duration: {{ all_pictures | size | times: slide_duration }}s;"
+         style="--total-duration: {{ mobile_pictures | size | times: slide_duration }}s;"
          aria-hidden="true">
-        {% for picture in all_pictures %}
+        {% for picture in mobile_pictures %}
             <img src="{{ '/files/header_pictures/' | append: picture.file | relative_url }}"
                  alt=""
-                 style="animation-delay: {{ forloop.index0 | times: slide_duration }}s;">
+                 style="animation-name: bg-fade-mobile; animation-delay: {{ forloop.index0 | times: slide_duration }}s;">
         {% endfor %}
     </div>
 
-   <!-- Desktop: only horizontal pictures (landscape) -->
+   <!-- Desktop: SOLO foto landscape -->
     <div class="bg-slideshow d-none d-lg-block"
          style="--total-duration: {{ desktop_pictures | size | times: slide_duration }}s;"
          aria-hidden="true">
         {% for picture in desktop_pictures %}
             <img src="{{ '/files/header_pictures/' | append: picture.file | relative_url }}"
                  alt=""
-                 style="animation-delay: {{ forloop.index0 | times: slide_duration }}s;">
+                 style="animation-name: bg-fade-desktop; animation-delay: {{ forloop.index0 | times: slide_duration }}s;">
         {% endfor %}
     </div>
 
-
-    <!-- 
-    <div class="bg-slideshow" style="--total-duration: {{ total_duration }}s;" aria-hidden="true">
-        {% for picture in pictures %}
-            <img src="{{ '/files/header_pictures/' | append: picture | relative_url }}"
-                 alt=""
-                 style="animation-delay: {{ forloop.index0 | times: slide_duration }}s;">
-        {% endfor %}
-    </div>
-    -->
+    <!-- Testo sovrapposto -->
     <div class="container">
         <div class="row pt-8 align-items-center">
             <div class="col">

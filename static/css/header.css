@@ -1,0 +1,57 @@
+header {
+    padding-top: 25rem;
+    padding-bottom: 15rem;
+    background-color: var(--header-background-color);
+    position: relative;
+    overflow: hidden;
+}
+header::before {
+    content: '';
+    position: absolute;
+    inset: 0; 
+    background-color: rgba(169, 53, 207, 0.3);
+    z-index: 1; 
+    pointer-events: none;
+}
+header .container {
+    position: relative;
+    z-index: 2;
+}
+header.bg-hero-header {
+    width: 100%;
+    min-height: 120vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    background-color: var(--header-background-color);
+    position: relative;
+    overflow: hidden;
+}
+.bg-slideshow {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+.bg-slideshow img {
+    position: absolute;
+    inset: 0;
+    left: -50px; 
+    width: calc(100% + 100px); 
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation-name: bg-fade;
+    animation-duration: var(--total-duration);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+}
+@media (prefers-reduced-motion: reduce) {
+    .bg-slideshow img {
+        animation: none;
+        opacity: 1;
+    }
+    .bg-slideshow img:not(:first-child) {
+        display: none;
+    }
+}

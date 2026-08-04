@@ -4,45 +4,49 @@
 # sLandscape is used for horizontal pictures (PC view), while portrait is used for vertical ones (mobile view). 
 
 # Vertical Pictures (Mobile view, portrait orientation)
-- file: 24109227_ver.jpg
-  orientation: portrait 
-- file: IMG_0579_ver.JPG
+- file: 1_ver.JPG
   orientation: portrait
-- file: IMG_3485_ver.JPG
+- file: 2_ver.JPG
   orientation: portrait
-- file: IMG_3487_ver.JPG
+- file: 3_ver.JPG
   orientation: portrait
-- file: IMG_3495_ver.JPG
+- file: 4_ver.JPG
   orientation: portrait
-- file: IMG_9445_ver.JPG
+- file: 5_ver.JPG
+  orientation: portrait
+- file: 6_ver.jpeg
+  orientation: portrait
+- file: 7_ver.jpeg
+  orientation: portrait
+- file: 8_ver.JPG
+  orientation: portrait
+- file: 9_ver.JPG
+  orientation: portrait
+- file: 10_ver.JPG
   orientation: portrait
 
 # Horizontal pictures (PC view, landscape orientation)
-- file: 8EEB90F5-01B0-4AF9-A9D7-6EBC289795D9.jpg
+- file: 1.JPG
   orientation: landscape
-- file: 24109141.jpg
+- file: 2.jpeg
   orientation: landscape
-- file: CDXN4440.JPG
+- file: 3.jpeg
   orientation: landscape
-- file: IMG_0182.JPG
+- file: 4.JPG
   orientation: landscape
-- file: IMG_3480.JPG
+- file: 5.JPG
   orientation: landscape
-- file: IMG_3488.JPG
+- file: 6.JPG
   orientation: landscape
-- file: IMG_3493.JPG
+- file: 7.JPG
   orientation: landscape
-- file: IMG_3496.JPG
+- file: 8.JPG
   orientation: landscape
-- file: IMG_3508.JPG
+- file: 9.jpeg
   orientation: landscape
-- file: IMG_3512.JPG
+- file: 10.JPG
   orientation: landscape
-- file: IMG_9442.JPG
+- file: 11.JPG
   orientation: landscape
-- file: IMG_9484.JPG
-  orientation: landscape
-- file: UPGG3424.JPG
-  orientation: landscape
-- file: XODC4066.JPG
+- file: 12.JPG
   orientation: landscape
