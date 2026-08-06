@@ -38,7 +38,7 @@ const backToTopBtn = document.querySelector('#backToTopBtn');
 backToTopBtn.addEventListener('click', scrollToTop); 
 
 // SCROLLING-ANIMATION
-// 1. Inserisci qui tutte le classi o i tag che vuoi animare nel sito, separati da virgola
+// Insert here all classes or IDs that you want to animate, separeted by a "," simbol 
 const selettoriDaAnimare = ".tour-card, .tour-branch";
 const elementi = document.querySelectorAll(selettoriDaAnimare);
 
@@ -54,13 +54,10 @@ const observer = new IntersectionObserver((entries) => {
     threshold: 0
 });
 
-// 2. Il ciclo forEach fa il lavoro sporco per te:
-// Aggiunge la classe di partenza (hidden) e inizia a osservare ogni singolo nodo
 elementi.forEach(el => {
     el.classList.add("hidden-on-scroll");
     observer.observe(el);
 });
-
 
 // FOOTER 
 // Function for showing the message box of email copying
