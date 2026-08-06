@@ -37,8 +37,29 @@ window.addEventListener('scroll', handleScroll);
 const backToTopBtn = document.querySelector('#backToTopBtn'); 
 backToTopBtn.addEventListener('click', scrollToTop); 
 
-// HEADER
-// Functions for auto-scrolling header
+// SCROLLING-ANIMATION
+// 1. Inserisci qui tutte le classi o i tag che vuoi animare nel sito, separati da virgola
+const selettoriDaAnimare = ".tour-card, .tour-branch";
+const elementi = document.querySelectorAll(selettoriDaAnimare);
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show-on-scroll");
+        } else {
+            entry.target.classList.remove("show-on-scroll");
+        }
+    });
+}, {
+    threshold: 0
+});
+
+// 2. Il ciclo forEach fa il lavoro sporco per te:
+// Aggiunge la classe di partenza (hidden) e inizia a osservare ogni singolo nodo
+elementi.forEach(el => {
+    el.classList.add("hidden-on-scroll");
+    observer.observe(el);
+});
 
 
 // FOOTER 
@@ -70,3 +91,4 @@ function onMailBtnClick(event) {
 }
 const copyMailBtn = document.querySelector('#copyMailBtn'); 
 copyMailBtn.addEventListener('click', onMailBtnClick); 
+

@@ -3,324 +3,55 @@ layout: simple
 tab: Tour
 title: Tour & Events
 subtitle: Future and past live performances
+custom_js: tour.js
 ---
-<!-- Tour Timeline Section -->
+
 <section class="tour-section">
     <div class="container">
         <div class="tour-timeline">
-            <!-- Tour Event 13 -->
-            <div id="Rosemary's Pub" class="tour-event">
-                <div class="tour-date">
-                    <span class="date-day">20</span>
-                    <span class="date-month">Aug</span>
-                    <span class="date-year">2026</span>
+            
+            {% for branch in site.data.tour %}
+            <!-- Tour and Branch ID -->
+            <div class="tour-branch" id="{{ branch.id }}">
+                
+                <!-- Tour Node (btn and title) -->
+                <div class="tour-node">
+                    <button class="node-dot" aria-label="Toggle events"></button>
+                    <h2 class="node-title text-glow">{{ branch.title }}</h2>
                 </div>
-                <div class="tour-details">
-                    <h3 class="tour-venue">Rosemary's Pub</h3>
-                    <p class="tour-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Nicolosi, Italy
-                    </p>
-                    <p class="tour-city">Via Giuseppe Garibaldi 1</p>
-                </div>
-                <div class="tour-media-links">
-                    <a href="/pictures.html" aria-label="View pictures for this event" title="Pictures">
-                        <i class="fas fa-camera fa-lg"></i>
-                    </a>
-                </div>
-            </div>
+                <!-- Tour Node (cards container) -->
+                <div class="tour-branch-content">
+                    <div class="tour-branch-inner">
+                        <div class="events-grid">
+                            
+                            {% for event in branch.events %}
+                            <!-- Single card of the tour -->
+                            <div class="tour-card" id="{{ event.id }}">
+                                <div class="tour-date-badge">{{ event.date }}</div>
+                                <h3 class="tour-venue">{{ event.venue }}</h3>
+                                
+                                <a href="{{ event.maps_url }}" target="_blank" rel="noopener noreferrer" class="tour-map-link" title="Apri in Google Maps">
+                                    <span class="tour-city"><i class="fas fa-map-marker-alt"></i> {{ event.city }}</span>
+                                    <span class="tour-location">{{ event.location }}</span>
+                                </a>
+                                
+                                <div class="tour-media-links">
+                                    {% if event.pictures %}
+                                    <a href="{{ event.pictures }}" aria-label="Pictures"><i class="fas fa-camera"></i></a>
+                                    {% endif %}
+                                    {% if event.news %}
+                                    <a href="{{ event.news }}" aria-label="News"><i class="fas fa-newspaper"></i></a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% endfor %}
 
-            <!-- Tour Event 12 -->
-            <div id="carnevale-dei-fiori" class="tour-event">
-                <div class="tour-date">
-                    <span class="date-day">1</span>
-                    <span class="date-month">May</span>
-                    <span class="date-year">2026</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="tour-details">
-                    <h3 class="tour-venue">Carnevale dei Fiori</h3>
-                    <p class="tour-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Acireale, Italy
-                    </p>
-                    <p class="tour-city">Piazza Duomo</p>
-                </div>
-                <div class="tour-media-links">
-                    <a href="/pictures.html" aria-label="View pictures for this event" title="Pictures">
-                        <i class="fas fa-camera fa-lg"></i>
-                    </a>
-                </div>
-            </div>
 
-            <!-- Tour Event 11 -->
-            <div id="san-marino-song-contest-semifinals" class="tour-event">
-                <div class="tour-date">
-                    <span class="date-day">4</span>
-                    <span class="date-month">Mar</span>
-                    <span class="date-year">2026</span>
-                </div>
-                <div class="tour-details">
-                    <h3 class="tour-venue">San Marino Song Contest - Semifinals</h3>
-                    <p class="tour-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        San Marino, San Marino
-                    </p>
-                    <p class="tour-city">Teatro Nuovo</p>
-                </div>
-                <div class="tour-media-links">
-                    <a href="/pictures.html" aria-label="View pictures for this event" title="Pictures">
-                        <i class="fas fa-camera fa-lg"></i>
-                    </a>
-                    <a href="/news.html#news-event-2" aria-label="Read news for this event" title="News">
-                        <i class="fas fa-newspaper fa-lg"></i>
-                    </a>
-                </div>
             </div>
-
-            <!-- Tour Event 10 -->
-            <div class="tour-event">
-                <div class="tour-date">
-                    <span class="date-day">15</span>
-                    <span class="date-month">Feb</span>
-                    <span class="date-year">2026</span>
-                </div>
-                <div class="tour-details">
-                    <h3 class="tour-venue">Rumori Barocchi</h3>
-                    <p class="tour-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Acireale, Italy
-                    </p>
-                    <p class="tour-city">Piazza Garibaldi</p>
-                </div>
-                <div class="tour-media-links">
-                    <a href="/pictures.html" aria-label="View pictures for this event" title="Pictures">
-                        <i class="fas fa-camera fa-lg"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Tour Event 9 -->
-            <div id="dreaming-san-marino-stage-&-live-academy" class="tour-event">
-                <div class="tour-date">
-                    <span class="date-day">14</span>
-                    <span class="date-month">Feb</span>
-                    <span class="date-year">2026</span>
-                </div>
-                <div class="tour-details">
-                    <h3 class="tour-venue">Dreaming San Marino Song Contest - Stage & Live Academy</h3>
-                    <p class="tour-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Serravalle, San Marino
-                    </p>
-                    <p class="tour-city">Sala Polivalente - Auditorium Little Tony</p>
-                </div>
-                <div class="tour-media-links">
-                    <a href="/pictures.html" aria-label="View pictures for this event" title="Pictures">
-                        <i class="fas fa-camera fa-lg"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Tour Event 8 -->
-            <div id="dreaming-san-marino-casting" class="tour-event">
-                <div class="tour-date">
-                    <span class="date-day">1</span>
-                    <span class="date-month">Feb</span>
-                    <span class="date-year">2026</span>
-                </div>
-                <div class="tour-details">
-                    <h3 class="tour-venue">Dreaming San Marino Song Contest - Casting</h3>
-                    <p class="tour-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Falciano, San Marino
-                    </p>
-                    <p class="tour-city">San Marino Outlet Experience</p>
-                </div>
-                <div class="tour-media-links">
-                    <a href="/pictures.html" aria-label="View pictures for this event" title="Pictures">
-                        <i class="fas fa-camera fa-lg"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Tour Event 7 -->
-            <div class="tour-event">
-                <div class="tour-date">
-                    <span class="date-day">28</span>
-                    <span class="date-month">Oct</span>
-                    <span class="date-year">2025</span>
-                </div>
-                <div class="tour-details">
-                    <h3 class="tour-venue">Disummer</h3>
-                    <p class="tour-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Catania, Italy
-                    </p>
-                    <p class="tour-city">Palazzo della Cultura</p>
-                </div>
-                <div class="tour-media-links">
-                    <a href="/pictures.html" aria-label="View pictures for this event" title="Pictures">
-                        <i class="fas fa-camera fa-lg"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Tour Event 6 -->
-            <div class="tour-event">
-                <div class="tour-date">
-                    <span class="date-day">28</span>
-                    <span class="date-month">Sep</span>
-                    <span class="date-year">2025</span>
-                </div>
-                <div class="tour-details">
-                    <h3 class="tour-venue">Risuoni</h3>
-                    <p class="tour-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Trecastagni, Italy
-                    </p>
-                    <p class="tour-city">Spazio polifunzionale</p>
-                </div>
-                <div class="tour-media-links">
-                    <a href="/pictures.html" aria-label="View pictures for this event" title="Pictures">
-                        <i class="fas fa-camera fa-lg"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Tour Event 6 -->
-            <div id="sanremo-rock-finals" class="tour-event">
-                <div class="tour-date">
-                    <span class="date-day">13</span>
-                    <span class="date-month">Sep</span>
-                    <span class="date-year">2025</span>
-                </div>
-                <div class="tour-details">
-                    <h3 class="tour-venue">Sanremo Rock - National Finals</h3>
-                    <p class="tour-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Sanremo, Italy
-                    </p>
-                    <p class="tour-city">Teatro Ariston</p>
-                </div>
-                <div class="tour-media-links">
-                    <a href="/pictures.html" aria-label="View pictures for this event" title="Pictures">
-                        <i class="fas fa-camera fa-lg"></i>
-                    </a>
-                    <a href="/news.html#news-event-1" aria-label="Read news for this event" title="News">
-                        <i class="fas fa-newspaper fa-lg"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Tour Event 5 -->
-            <div id="sanremo-rock-selection" class="tour-event">
-                <div class="tour-date">
-                    <span class="date-day">1-2</span>
-                    <span class="date-month">Aug</span>
-                    <span class="date-year">2025</span>
-                </div>
-                <div class="tour-details">
-                    <h3 class="tour-venue">Sanremo Rock - Regional & Interregional Selection</h3>
-                    <p class="tour-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Noto, Italy
-                    </p>
-                    <p class="tour-city">Cattedrale di Noto</p>
-                </div>
-                <div class="tour-media-links">
-                    <a href="/pictures.html" aria-label="View pictures for this event" title="Pictures">
-                        <i class="fas fa-camera fa-lg"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Tour Event 4 -->
-            <div id="castel-rock" class="tour-event">
-                <div class="tour-date">
-                    <span class="date-day">1</span>
-                    <span class="date-month">Jun</span>
-                    <span class="date-year">2025</span>
-                </div>
-                <div class="tour-details">
-                    <h3 class="tour-venue">Castel Rock</h3>
-                    <p class="tour-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Castelmola, Italy
-                    </p>
-                    <p class="tour-city">Piazza S. Antonio</p>
-                </div>
-                <div class="tour-media-links">
-                    <a href="/pictures.html" aria-label="View pictures for this event" title="Pictures">
-                        <i class="fas fa-camera fa-lg"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Tour Event 3 -->
-            <div id="teatro-coppola" class="tour-event">
-                <div class="tour-date">
-                    <span class="date-day">9</span>
-                    <span class="date-month">Apr</span>
-                    <span class="date-year">2025</span>
-                </div>
-                <div class="tour-details">
-                    <h3 class="tour-venue">The Saturn & Metiria Live</h3>
-                    <p class="tour-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Catania, Italy
-                    </p>
-                    <p class="tour-city">Teatro Coppola - Teatro dei Cittadini</p>
-                </div>
-                <div class="tour-media-links">
-                    <a href="/pictures.html" aria-label="View pictures for this event" title="Pictures">
-                        <i class="fas fa-camera fa-lg"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Tour Event 2 -->
-            <div id="promuovi" class="tour-event">
-                <div class="tour-date">
-                    <span class="date-day">21</span>
-                    <span class="date-month">Dec</span>
-                    <span class="date-year">2024</span>
-                </div>
-                <div class="tour-details">
-                    <h3 class="tour-venue">Promuovi la tua musica</h3>
-                    <p class="tour-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Matera, Italy
-                    </p>
-                    <p class="tour-city">Auditorium R. Gervasio</p>
-                </div>
-                <div class="tour-media-links">
-                    <a href="/pictures.html" aria-label="View pictures for this event" title="Pictures">
-                        <i class="fas fa-camera fa-lg"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Tour Event 1 -->
-            <div id="disummer" class="tour-event">
-                <div class="tour-date">
-                    <span class="date-day">5</span>
-                    <span class="date-month">Oct</span>
-                    <span class="date-year">2024</span>
-                </div>
-                <div class="tour-details">
-                    <h3 class="tour-venue">Disummer</h3>
-                    <p class="tour-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Catania, Italy
-                    </p>
-                    <p class="tour-city">Monastero dei Benedettini</p>
-                </div>
-                <div class="tour-media-links">
-                    <a href="/pictures.html" aria-label="View pictures for this event" title="Pictures">
-                        <i class="fas fa-camera fa-lg"></i>
-                    </a>
-                </div>
-            </div>
+            {% endfor %}
 
         </div>
     </div>

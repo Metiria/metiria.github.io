@@ -4,6 +4,20 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
+# [06-07-2026] - Home, Tour and News update. New site colors chosen.
+- GENERAL
+- New color palette chosen. Main colors are black, white, #2D6F87 and #3D94B2. The conversion is gradual, continuing the CSS optimization process also. The elevated number of redundacies increments the time needed to complete the task. 
+- New element animation added in common.js. Now, the targeted elements are subjected to a scrolling animation. To target new elements, simply add the class or the id inside the targeted elements list in common.js.   
+- HOME & NEWS
+- Begginning text corrected and code re-organized.
+- New dedicated CSS file created in static/css directory, named "news.css". All redundancies in style.css have been eliminated. 
+- TOUR 
+- New dedicated CSS file created in static/css directory, named "tour.css". All redundancies in style.css have been eliminated.
+- New dedicated JavaScript file created in static/js directory, named "tour.js", in order to animate the timeline buttons. 
+- New "tour.yml" file created in _data/ directory. This file contains all information about tours and events; it must to be updated to alter the timeline structure, which uses Liquid template to generate all the structures like branches and cards. To add a new branch or event, simply copy-paste an existent branch or event and modify the information, following the current format. 
+- Timeline has been changed completely. Now, it is animated and uses Liquid Templating in order to respect DRY principle. There are 2 different animation, one in the opening phase of the branch and the other one in the closing phase. All tour page specific CSS rules are written into static/css/tour.css. 
+- modified files: index.html, tour.html, news.html, static/style.css, static/css/tour.css, static/css/news.css, static/js/common.js, static/js/tour.js, _data/tour.yml
+
 # [04-07-2026] - Footer, Header and Policy pages update. CSS Architecture refactored.  
 - FOOTER CHANGES
 - Several changes have been made in footer section, including: 
