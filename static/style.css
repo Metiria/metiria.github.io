@@ -3,8 +3,10 @@
 @import url('css/policy-pages.css'); 
 @import url('css/tour.css'); 
 @import url('css/news.css');
+@import url('css/index.css'); 
+@import url('css/members.css');
 
-/* GENERAL */
+/* GENERAL RULES*/
 @font-face {
     font-family: "MetalMania";
     src: url('assets/fonts/Metal_Mania/MetalMania-Regular.ttf');
@@ -12,17 +14,21 @@
     font-weight: normal;
     font-style:  normal;
 }
-
 :root {
     --main-background-color: rgb(18, 18, 18);
     --nav-background-color: rgb(0, 0, 0);
-    --header-background-color: rgb(169, 53, 207);
+    
+    /* Hexadecimal variables (Helpful for background default for example) */
+    --header-background-color: #2D6F87;
+    --hover-link-color: #3D94B2;
+    
+    /* RGB variables (identical to previous hexadecimal colors, helpful for opacity for example) */
+    --header-background-rgb: 45, 111, 135; 
+    --hover-link-rgb: 61, 148, 178;       
 
     --main-color: rgb(212, 212, 212);
     --link-color: rgb(255, 255, 255);
-    --hover-link-color: rgb(169, 53, 207);
 }
-
 html, body {
     background-color: var(--main-background-color);
     color: var(--main-color);
@@ -32,33 +38,27 @@ html, body {
     margin-right:  0px;
     font-family: "MetalMania";
 }
-
 body {
     display: flex;
     flex-direction: column;
     max-width: 100%;
     overflow-x: clip;
 }
-
 main {
     flex: 1;
 }
-
 a {
     color: var(--hover-link-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
-
 a:hover, a:focus {
     color: var(--link-color);
     text-decoration: none;
 }
-
 .profile-main {
     padding-top: 12rem;
 }
-
 hr {
     border: 1px solid var(--main-color);
     margin-top:    12px;
@@ -66,52 +66,38 @@ hr {
     padding-top:    0px;
     padding-bottom: 0px;
 }
-
 h1 {
     font-weight: bold;
     font-size:   2.5rem;
 }
-
 h2 {
     font-weight: bold;
     font-size:   1.5rem;
 }
-
 h3 {
     font-weight: bold;
     font-size:   1.25rem;
 }
-
 h4 {
     font-weight: bold;
     font-size:   1.0rem;
 }
-
 h5 {
     font-weight: bold;
     font-size:   0.75rem;
 }
-
 sub {
     font-size: 0.50em;
 }
-
 sup {
     font-size: 0.50em;
 }
 
-/* Media Query for Mobile View - Center Paragraphs */
-@media (max-width: 767.98px) {
-    p {
-        text-align: center;
-    }
-}
-
-/* Defined style for all site buttons*/
+/* STYLE FOR EVERY BUTTON IN THE SITE */
 .btn-metiria {
     padding: 16px 48px; 
     letter-spacing: 3px;
-    border: 2px solid rgba(169, 53, 207, 0.3); 
+    border: 2px solid rgba(var(--hover-link-rgb), 0.3); 
     color: var(--hover-link-color); 
     background-color: transparent;
     transition: all 0.3s ease;
@@ -127,17 +113,37 @@ sup {
     color: var(--hover-link-color); 
     outline: none; 
     box-shadow: none; 
+    text-decoration: none;
 }
 .btn-metiria:hover {
     border-color: var(--hover-link-color);
     background-color: var(--hover-link-color);
     color: #fff; 
     transform: translateY(-4px); 
-    box-shadow: 0 8px 16px rgba(169, 53, 207, 0.4); 
+    box-shadow: 0 8px 16px rgba(var(--hover-link-rgb), 0.4); 
     text-decoration: none; 
+    text-decoration: none;
 }
 
-/* CSS rules for scrolling animation */
+/* GLOWING IMAGES */
+.hover-glow {
+    transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.hover-glow:hover {
+    filter: brightness(1.25); 
+    box-shadow: 0 0 15px rgba(var(--hover-link-rgb), 0.6);
+}
+
+/* GLOWING TEXT */
+.text-glow {
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    font-size: 1.5rem;
+}
+.text-glow:hover {
+    color: #ffffff; 
+}
+
+/* SCROLLING ANIMATION CLASS */
 .hidden-on-scroll {
     opacity: 0;
     transform: translateY(40px);
@@ -148,143 +154,7 @@ sup {
     transform: translateY(0);
 }
 
-/* Modern Homepage Sections */
-.section-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--link-color);
-    margin-bottom: 1rem;
-    letter-spacing: 0.05em;
-    text-align: center;
-}
-
-/* Featured Cards Section */
-.featured-section {
-    padding: 5rem 0;
-    background-color: var(--main-background-color);
-}
-.feature-card {
-    background: var(--nav-background-color);
-    border: 1px solid rgba(169, 53, 207, 0.2);
-    padding: 2rem;
-    border-radius: 8px;
-    text-align: center;
-    transition: all 0.3s ease;
-    height: 100%;
-}
-.feature-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--hover-link-color);
-    box-shadow: 0 12px 24px rgba(169, 53, 207, 0.2);
-}
-.member-card .member-avatar {
-    width: 260px;
-    height: 260px;
-    margin: 0 auto 1.25rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid rgba(169, 53, 207, 0.35);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-}
-.past-members-section .feature-card {
-    border-color: rgba(255, 255, 255, 0.3);
-}
-.past-members-section .feature-card:hover {
-    transform: none;
-    border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: none;
-}
-.past-members-section .member-card .member-avatar {
-    border-width: 1px;
-    border-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
-}
-.member-card-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
-.member-card-link:hover,
-.member-card-link:focus {
-    color: inherit;
-}
-.member-card .member-avatar i {
-    font-size: 3rem;
-    color: var(--link-color);
-    opacity: 0.9;
-}
-.member-card h4 {
-    color: #fff;
-    margin-bottom: 0.75rem;
-    font-size: 1.1rem;
-    letter-spacing: 0.03em;
-}
-.current-members-section .member-card h2,
-.current-members-section .member-card h2 * {
-    color: var(--hover-link-color);
-}
-.member-card-link[id] {
-    scroll-margin-top: 10rem;
-}
-h2.section-title[id],
-.release-slots[id] {
-    scroll-margin-top: 10rem;
-}
-
-/* About Section */
-.about-section {
-    padding: 5rem 0;
-    background-color: var(--main-background-color);
-}
-.about-section .feature-card:hover,
-.about-section .feature-card:focus,
-.about-section .feature-card:focus-within,
-.about-section .feature-card:active {
-    transform: none;
-    border-color: rgba(169, 53, 207, 0.2);
-    box-shadow: none;
-}
-.about-section .feature-card a:hover,
-.about-section .feature-card a:focus,
-.about-section .feature-card a:active {
-    color: var(--link-color);
-    text-decoration: none;
-}
-.about-section .section-title {
-    margin-bottom: 2rem;
-    position: relative;
-    padding-bottom: 1rem;
-    text-align: center;
-}
-.about-section .section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: var(--hover-link-color);
-}
-.about-section p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--main-color);
-}
-.about-section a {
-    color: var(--hover-link-color);
-    text-decoration: none;
-    font-weight: 600;
-}
-.about-section a:hover,
-.about-section a:focus {
-    color: #fff;
-    text-decoration: underline;
-}
-
+/* COMMON RULES BETWEEN HOME PAGE AND PROFILE PAGES */
 /* Releases page - center content in rows and columns */
 .about-section .feature-card .row {
     align-items: center;
@@ -302,117 +172,7 @@ h2.section-title[id],
     height: auto;
 }
 
-.about-image {
-    text-align: center;
-    padding: 2rem;
-}
-.about-image img {
-    max-width: 80%;
-    height: auto;
-    filter: drop-shadow(0 8px 16px rgba(169, 53, 207, 0.3));
-    transition: transform 0.3s ease;
-}
-.about-image:hover img {
-    transform: scale(1.05);
-}
-
-/* Rule for glowing images*/
-.hover-glow {
-    transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-.hover-glow:hover {
-    filter: brightness(1.25); 
-    box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
-}
-/* Rule for glowing text*/
-.text-glow {
-    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-    font-size: 1.5rem;
-}
-.text-glow:hover {
-    color: #ffffff; 
-}
-
-/* Rule for video-clip loop in home*/
-.video-hero {
-    height: 100vh; 
-    min-height: 600px;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    overflow: hidden;
-    background-color: #000; 
-    z-index: 1; 
-}
-.bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    z-index: 2; 
-}
-.video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); 
-    z-index: 3; 
-}
-.content-overlay {
-    position: relative;
-    z-index: 4; 
-}
-/* Rules for text in video clip section*/
-.band-name {
-    font-size: clamp(3.5rem, 8vw, 7.5rem) !important; 
-    line-height: 1;
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 4px 8px rgba(0,0,0,0.8); 
-}
-.song-title {
-    font-size: clamp(1.2rem, 3vw, 2.5rem) !important;
-    letter-spacing: 18px; 
-    margin-bottom: 3rem;
-    text-indent: 18px; 
-    text-shadow: 2px 4px 8px rgba(0,0,0,0.8);
-}
-
-/* Rules for watch video button */
-.watch-video-btn {
-    font-size: 1.3rem !important;
-    padding: 16px 48px !important; 
-    letter-spacing: 3px;
-    border: 2px solid rgba(169, 53, 207, 0.3) !important; 
-    color: var(--hover-link-color) !important; 
-    background-color: transparent;
-    transition: all 0.3s ease;
-    text-decoration: none !important; 
-}
-.watch-video-btn:visited, 
-.watch-video-btn:active,
-.watch-video-btn:focus {
-    text-decoration: none !important; 
-    color: var(--hover-link-color) !important; 
-    outline: none !important; 
-    box-shadow: none; 
-}
-.watch-video-btn:hover {
-    border-color: var(--hover-link-color) !important;
-    background-color: var(--hover-link-color) !important;
-    color: #fff !important; 
-    transform: translateY(-4px); 
-    box-shadow: 0 8px 16px rgba(169, 53, 207, 0.4) !important; 
-    text-decoration: none !important; 
-}
-
-/* Rules for back-to-top button*/
+/* BACK-TO-TOP BUTTON*/
 .back-to-top {
     position: fixed;
     bottom: 30px;
@@ -420,8 +180,8 @@ h2.section-title[id],
     width: 40px;
     height: 40px;
     background-color: transparent;
-    color: var(--hover-link-color, #a935cf);
-    border: 1px solid var(--hover-link-color, #a935cf);
+    color: var(--hover-link-color);
+    border: 2px solid rgba(var(--hover-link-rgb), 0.3);
     border-radius: 50%;
     font-size: 1.6rem;
     cursor: pointer;
@@ -432,7 +192,7 @@ h2.section-title[id],
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .back-to-top.show {
     opacity: 1;
@@ -440,9 +200,10 @@ h2.section-title[id],
     transform: translateY(0);
 }
 .back-to-top:hover {
-    background-color: var(--hover-link-color, #a935cf); 
+    background-color: var(--hover-link-color); 
+    border-color: var(--hover-link-color);
     color: #fff; 
-    box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
+    box-shadow: 0 8px 16px rgba(var(--hover-link-rgb), 0.4); 
     transform: translateY(-4px); 
 }
 @media (min-width: 768px) {
@@ -452,5 +213,12 @@ h2.section-title[id],
         font-size: 2.4rem;
         bottom: 30px;
         right: 30px;
+    }
+}
+
+/* MQ FOR MOBILE VIEW: CENTERING ALL PARAGRAPHS */
+@media (max-width: 767.98px) {
+    p {
+        text-align: center;
     }
 }

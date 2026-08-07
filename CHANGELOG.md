@@ -4,6 +4,15 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
+# [07-07-2026] - CSS refactoring, color palette update. 
+- New dedicated CSS file created in static/css directory, named "members.css", containing all CSS rules shared by the individual pages for each member of the band
+- Home specific CSS rules have been moved to static/css/index.css file
+- All new CSS files are imported in static/style.css file, which is linked in every layout (check _layout/simple.html, profile.html and policy.html)
+- The new color variables are defined in style.css in root rules; to change color palette, change those variables. All the colors in every CSS files now refer to those rules. 
+- Back-to-top button aesthetics fixed.
+- Logo updated to blue version. 
+- modified files: static/style.css, static/menu.css, static/css/members.css, static/css/index.css, static/css/header.css, static/css/footer.css, static/css/tour.css, static/css/news.css, static/css/policy-pages.css, _layout/simple.html, index.html, _includes/menu.html, files/logo/transparent_background/Logo/blue_logo.png
+
 # [06-07-2026] - Home, Tour and News update. New site colors chosen.
 - GENERAL
 - New color palette chosen. Main colors are black, white, #2D6F87 and #3D94B2. The conversion is gradual, continuing the CSS optimization process also. The elevated number of redundacies increments the time needed to complete the task. 

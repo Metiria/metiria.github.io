@@ -14,7 +14,7 @@
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(180deg, var(--hover-link-color) 0%, rgba(169, 53, 207, 0.3) 100%);
+    background: linear-gradient(180deg, var(--hover-link-color) 0%, rgba(var(--header-background-rgb), 0.3) 100%);
 }
 .news-event {
     margin-bottom: 3rem;
@@ -33,7 +33,7 @@
     top: 8px;
     width: 24px;
     height: 24px;
-    background: linear-gradient(135deg, var(--hover-link-color) 0%, rgba(169, 53, 207, 0.8) 100%);
+    background: linear-gradient(135deg, var(--hover-link-color) 0%, rgba(var(--header-background-rgb), 0.8) 100%);
     border-radius: 50%;
     border: 2px solid var(--main-background-color);
     box-shadow: 0 0 0 2px var(--hover-link-color);
@@ -53,8 +53,8 @@
     transform: translateX(-50%);
 }
 .news-details {
-    background: linear-gradient(135deg, rgba(169, 53, 207, 0.15) 0%, rgba(169, 53, 207, 0.05) 100%);
-    border: 1px solid rgba(169, 53, 207, 0.25);
+    background: linear-gradient(135deg, rgba(var(--hover-link-rgb), 0.15) 0%, rgba(var(--hover-link-rgb), 0.05) 100%);
+    border: 1px solid rgba(var(--hover-link-rgb), 0.25);
     border-radius: 8px;
     padding: 1.5rem;
     flex: 1;
@@ -64,8 +64,8 @@
     transition: all 0.3s ease;
 }
 .news-event:hover .news-details {
-    border-color: rgba(169, 53, 207, 0.8);
-    box-shadow: 0 8px 24px rgba(169, 53, 207, 0.2);
+    border-color: var(--hover-link-color);
+    box-shadow: 0 8px 24px rgba(var(--hover-link-rgb), 0.2);
     transform: translateX(8px);
 }
 .news-title {

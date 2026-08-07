@@ -16,6 +16,7 @@ footer {
     padding: 0;
     display: inline-block;
 }
+
 /* Rules for copymail button in footer */
 .mail-toast {
     position: fixed;
@@ -27,7 +28,7 @@ footer {
     padding: 12px 24px;
     border: 1px solid var(--hover-link-color); 
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(169, 53, 207, 0.3);
+    box-shadow: 0 4px 12px rgba(var(--hover-link-rgb), 0.3);
     z-index: 9999;
     font-weight: bold;
     pointer-events: none; 
@@ -39,10 +40,11 @@ footer {
     85% { opacity: 1; transform: translate(-50%, 0); }
     100% { opacity: 0; transform: translate(-50%, -20px); }
 }
+
 /* Social Section */
 .social-section {
     padding: 2rem 0 1rem 0;
-    border-top: 2px solid rgba(169, 53, 207, 0.2);
+    border-top: 2px solid rgba(var(--hover-link-rgb), 0.2);
 }
 .footer-sections {
     display: flex;
@@ -69,7 +71,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid rgba(169, 53, 207, 0.3);
+    border: 2px solid rgba(var(--hover-link-rgb), 0.3);
     border-radius: 50%;
     color: var(--hover-link-color);
     font-size: 1.5rem;
@@ -84,7 +86,7 @@ footer {
     background-color: var(--hover-link-color);
     color: #fff;
     transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(169, 53, 207, 0.4);
+    box-shadow: 0 8px 16px rgba(var(--hover-link-rgb), 0.4);;
 }
 /* Tablet: 2 columns, rows of 2 */
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -98,8 +100,8 @@ footer {
     }
     .footer-section:nth-child(3),
     .footer-section:nth-child(4) {
-        border-right: 1px solid rgba(169, 53, 207, 0.2);
-        border-top: 1px solid rgba(169, 53, 207, 0.2);
+        border-right: 1px solid rgba(var(--hover-link-rgb), 0.2);
+        border-top: 1px solid rgba(var(--hover-link-rgb), 0.2);
         padding-top: 2rem;
         margin-top: 1rem;
     }
@@ -142,15 +144,8 @@ footer {
 }
 .legal-link {
     font-size: 0.8rem;
-    letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--main-color);
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(169, 53, 207, 0.3);
-    padding: 0.6rem 1.2rem;
-    border-radius: 4px;
     white-space: nowrap;
-    transition: all 0.3s ease;
     flex-shrink: 0;
 }
 .legal-link:hover {

@@ -15,18 +15,15 @@ nav {
 }
 
 .navbar-nav .nav-link {
-    color: var(--link-color) !important;
+    color: var(--link-color);
     margin: 0 0.5rem;
     transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: var(--hover-link-color) !important;
-}
-
-.navbar-nav .nav-link.active {
-    text-decoration: underline;
+    color: var(--hover-link-color);
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
 .menu-layout {
@@ -66,7 +63,7 @@ nav {
         left: auto;
         top: auto;
         transform: none;
-        margin: 0 !important;
+        margin: 0;
         z-index: 1;
     }
 

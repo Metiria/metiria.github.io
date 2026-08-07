@@ -1,0 +1,75 @@
+/* Featured Cards Section */
+.featured-section {
+    padding: 5rem 0;
+    background-color: var(--main-background-color);
+}
+.feature-card {
+    background: var(--nav-background-color);
+    border: 1px solid rgba(var(--hover-link-rgb), 0.2);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+.feature-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--hover-link-color);
+    box-shadow: 0 12px 24px rgba(var(--hover-link-rgb), 0.2);
+}
+.member-card .member-avatar {
+    width: 260px;
+    height: 260px;
+    margin: 0 auto 1.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(var(--hover-link-rgb), 0.35);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.past-members-section .feature-card {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+.past-members-section .feature-card:hover {
+    transform: none;
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: none;
+}
+.past-members-section .member-card .member-avatar {
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+.member-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.member-card-link:hover,
+.member-card-link:focus {
+    color: inherit;
+}
+.member-card .member-avatar i {
+    font-size: 3rem;
+    color: var(--link-color);
+    opacity: 0.9;
+}
+.member-card h4 {
+    color: #fff;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.03em;
+}
+.current-members-section .member-card h2,
+.current-members-section .member-card h2 * {
+    color: var(--hover-link-color);
+}
+.member-card-link[id] {
+    scroll-margin-top: 10rem;
+}
+h2.section-title[id],
+.release-slots[id] {
+    scroll-margin-top: 10rem;
+}
