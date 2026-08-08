@@ -5,7 +5,7 @@ All project changes will be recorded in this file.
 ## PATCHES
 
 # [07-07-2026] - Small fixes in news-single.html layout
-- removed the go back to news button 
+- removed the go back to news button and reduced page padding
 - link label updated, new link added to the first news and image updated
 - modified files: _layouts/news-single.html, _posts, static/css/single-news-page.css
 

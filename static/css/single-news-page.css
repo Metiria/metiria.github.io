@@ -1,7 +1,6 @@
 /* PAGE RULES */
 .article-page {
-    padding-top: 13rem; 
-    padding-bottom: 5rem;
+    padding-top: 10rem; 
     background-color: var(--main-background-color);
     min-height: 100vh;
 }
