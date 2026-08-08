@@ -4,6 +4,24 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
+# [07-07-2026] - News page rebuilt and linked to Tour page. Tour page and simple fixes.
+- GENERAL FIXES
+- menu.css file has been moved to static/css directory; all layouts now are linked only to style.css, which imports every other CSS file. 
+- NEWS PAGE 
+- News page completely rebuilt. New logic has been implemented to link the tour page events and the news. Indeed, some events are linked to a news, which are now reported in the news page. Read TOUR section for more information about linking events and news. 
+- The news page presents a collection of news as cards, sorted from the most recent to the oldest one. The structure has been defined in the news.html file. All data to fill the cards are collected from the markdown files saved in _posts directory. 
+- By clicking over a card, a new page opens, which is a dedicated page to the selected news. 
+- The directory _posts collects every markdown file for each news. A single markdown file contains all informations of a news and has a fixed structure with some fields to fullfill (example, title, cover_image, ...). Some fields are optional, like source, news_id and youtube_id. 
+The text content can be copy-pasted below this fixed structure, which is marked by dashes ---. 
+- A new layout has been defined in the _layouts directory, named news-single.html. This layout automatically builds the page (using Liquid template) for the selected news, collecting all informations from the related markdown file. 
+- The style rules for the news page are collected inside static/css/news-page.css, while specific news pages rules are collected inside static/css/single-news-page.css
+- files/news_pictures folder has been created to collect every picture for the news pages
+- TOUR PAGE
+- In Tour page, Branch titles now are blue by default and became white when cursor is hover. 
+- Now, in _data/tour.yml file, the news field must be filled with "false" if no news is linked to the event, else you have to use the news id defined in the corresponding news markdown file. For example, looking in tour.yml file, you can find the "san-marino-song-contest-2026" event, which is linked to the news in the _posts directory "2026-02-20-ariston-metiria.md". If you open this markdown file, you can find the news_id. All you have to do to link the news to the event is to copy-paste this link in the news field of the event in the tour.yml file.
+- modified files: _data/tour.yml, _layouts/news-single.html, _layouts/policy.html, _layouts/profile.html, _layouts/simple.html, _posts, _files/news_pictures, static/style.css, static/css/menu.css, static/css/news-page.css, static/css/policy-pages.css, static/css/single-news-page.css, news.html, tour.html
+- deleted files: files/news folder
+
 # [07-07-2026] - CSS refactoring, color palette update. 
 - New dedicated CSS file created in static/css directory, named "members.css", containing all CSS rules shared by the individual pages for each member of the band
 - Home specific CSS rules have been moved to static/css/index.css file
@@ -11,7 +29,7 @@ All project changes will be recorded in this file.
 - The new color variables are defined in style.css in root rules; to change color palette, change those variables. All the colors in every CSS files now refer to those rules. 
 - Back-to-top button aesthetics fixed.
 - Logo updated to blue version. 
-- modified files: static/style.css, static/menu.css, static/css/members.css, static/css/index.css, static/css/header.css, static/css/footer.css, static/css/tour.css, static/css/news.css, static/css/policy-pages.css, _layout/simple.html, index.html, _includes/menu.html, files/logo/transparent_background/Logo/blue_logo.png
+- modified files: static/style.css, static/menu.css, static/css/members.css, static/css/index.css, static/css/header.css, static/css/footer.css, static/css/tour.css, static/css/news.css, static/css/policy-pages.css, index.html, _includes/menu.html, files/logo/transparent_background/Logo/blue_logo.png
 
 # [06-07-2026] - Home, Tour and News update. New site colors chosen.
 - GENERAL

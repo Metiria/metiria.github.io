@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="{{ '/static/structure/bootstrap/bootstrap.min.css' | relative_url }}" rel="stylesheet">
+        <link href="{{ 'static/style.css' | relative_url }}" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+        <script src="{{ '/static/js/common.js' | relative_url }}" defer></script>
+        <script src="{{ '/static/structure/bootstrap/bootstrap.bundle.min.js' | relative_url }}" defer></script>
+        <script src="https://kit.fontawesome.com/a4b5770492.js" crossorigin="anonymous" defer></script>
+
+        <title>Metiria - {{ page.tab | default: "News" }}</title>
+
+        <link rel="icon" href="{{ '/files/logo/transparent_background/Logo/1-8.png' | relative_url }}" type="image/png">
+    </head>
+
+    <body>
+        {% include menu.html %}
+
+        <main>
+            <article class="article-page">
+                <div class="container article-container">
+                    
+                    <!-- Article Header-->
+                    <div class="article-header">
+                        <!-- Title -->
+                        <h1 class="article-title">{{ page.title }}</h1>
+                        
+                        <!-- Header Contents -->
+                        <div class="article-meta">
+                            <!-- Date -->
+                            <span class="article-date">{{ page.date | date: "%B %d, %Y" | upcase }}</span>
+                            
+                            <!-- Source link, if exists -->
+                            {% if page.source %}
+                                <span class="article-separator">|</span>
+                                {% if page.source_url %}
+                                    <a href="{{ page.source_url }}" target="_blank" rel="noopener noreferrer" class="article-source-link">
+                                        <i class="fas fa-newspaper"></i> {{ page.source | upcase }}
+                                    </a>
+                                {% else %}
+                                    <span class="article-source">
+                                        <i class="fas fa-newspaper"></i> {{ page.source | upcase }}
+                                    </span>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Cover image -->
+                    {% if page.cover_image %}
+                    <div class="article-cover">
+                        <img src="{{ page.cover_image | relative_url }}" alt="{{ page.title }}">
+                    </div>
+                    {% endif %}
+
+                    <!-- All article text contents -->
+                    <div class="article-content">
+                        {{ content }}
+                    </div>
+
+                    <!-- Full Source link, if exists -->
+                    {% if page.source_url %}
+                    <div class="article-full-source">
+                        <span>Click here for the full article</span>
+                        <a href="{{ page.source_url }}" target="_blank" rel="noopener noreferrer" class="btn-metiria">
+                            READ MORE
+                        </a>
+                    </div>
+                    {% endif %}
+
+                    <!-- YouTube video link and iframe, if exists -->
+                    {% if page.youtube_id %}
+                    <div class="article-video-container">
+                        <iframe src="https://www.youtube.com/embed/{{ page.youtube_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    {% endif %}
+                    
+                    <!-- Article footer -->
+                    <div class="article-footer">
+                        <a href="{{ '/news.html' | relative_url }}" class="btn-metiria">BACK TO NEWS</a>
+                    </div>
+
+                </div>
+            </article>
+        </main>
+        
+        {% include footer.html %}
+
+        <button id="backToTopBtn" class="back-to-top" aria-label="Back to top" title="Back to top">
+            <i class="fas fa-angles-up"></i>
+        </button>
+    </body>
+</html>

@@ -29,7 +29,7 @@
       location: "Teatro Nuovo"
       maps_url: "https://maps.app.goo.gl/reBuXg7GseZpxQzSA"
       pictures: "/pictures.html"
-      news: "/news.html#news-event-2"
+      news: "san-marino-2026"
 
     - id: "dreaming-san-marino-stage"
       date: "14 Feb 2026"
@@ -89,7 +89,7 @@
       location: "Teatro Ariston"
       maps_url: "https://maps.app.goo.gl/AyCb4j5U4qgpktzX8"
       pictures: "/pictures.html"
-      news: "/news.html#news-event-2"
+      news: "sanremo-rock-2025"
 
     - id: "sanremo-interregional"
       date: "2 Aug 2025"

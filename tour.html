@@ -30,17 +30,20 @@ custom_js: tour.js
                                 <div class="tour-date-badge">{{ event.date }}</div>
                                 <h3 class="tour-venue">{{ event.venue }}</h3>
                                 
-                                <a href="{{ event.maps_url }}" target="_blank" rel="noopener noreferrer" class="tour-map-link" title="Apri in Google Maps">
+                                <a href="{{ event.maps_url | relative_url }}" target="_blank" rel="noopener noreferrer" class="tour-map-link" title="Apri in Google Maps">
                                     <span class="tour-city"><i class="fas fa-map-marker-alt"></i> {{ event.city }}</span>
                                     <span class="tour-location">{{ event.location }}</span>
                                 </a>
                                 
                                 <div class="tour-media-links">
                                     {% if event.pictures %}
-                                    <a href="{{ event.pictures }}" aria-label="Pictures"><i class="fas fa-camera"></i></a>
+                                    <a href="{{ event.pictures | relative_url }}" aria-label="Pictures"><i class="fas fa-camera"></i></a>
                                     {% endif %}
                                     {% if event.news %}
-                                    <a href="{{ event.news }}" aria-label="News"><i class="fas fa-newspaper"></i></a>
+                                        {% assign target_news = site.posts | where: "news_id", event.news | first %}
+                                        {% if target_news %}
+                                        <a href="{{ target_news.url | relative_url }}" aria-label="News"><i class="fas fa-newspaper"></i></a>
+                                        {% endif %}
                                     {% endif %}
                                 </div>
                             </div>

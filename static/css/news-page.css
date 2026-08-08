@@ -1,0 +1,146 @@
+/* PAGE RULES */
+.news-section {
+    padding: 5rem 0;
+    background-color: var(--main-background-color);
+}
+
+/* CARDS CONTAINER */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 500px));
+    gap: 3rem 2rem; 
+    justify-content: center;
+    max-width: 1100px;
+    width: 95%;
+    margin: 0 auto;
+}
+@media (max-width: 767.98px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem; 
+    }
+}
+
+/* CARD */
+.news-card {
+    position: relative;
+    display: flex;             
+    flex-direction: column;    
+    width: 100%;
+    min-height: 420px;         
+    height: auto;              
+    border-radius: 8px; 
+    overflow: hidden; 
+    text-decoration: none;
+    background-color: #000;
+    border: 1px solid rgba(var(--hover-link-rgb), 0.2);
+    transition: box-shadow 0.4s ease, border-color 0.4s ease, transform 0.2s ease;
+}
+@media (max-width: 767.98px) {
+    .news-card {
+        min-height: 350px; 
+    }
+}
+.news-card:hover, 
+.news-card:focus {
+    border-color: var(--hover-link-color);
+    box-shadow: 0 0 25px rgba(var(--hover-link-rgb), 0.5); 
+    text-decoration: none;
+    transform: translateY(4px);
+}
+
+/* BACKGROUND-IMAGE */
+.news-image {
+    position: absolute;
+    inset: 0; 
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.70) saturate(0.8);
+    transition: filter 0.5s ease;
+    z-index: 1;
+}
+.news-card:hover .news-image {
+    filter: brightness(1.1) saturate(1.1); 
+}
+
+/* IMAGE OVERLAY */
+.news-overlay {
+    position: absolute;
+    inset: 0; 
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.2) 60%, transparent 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* TEXT-CONTAINER */
+.news-content {
+    position: relative; 
+    margin-top: auto;   
+    width: 100%;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 3; 
+}
+@media (max-width: 767.98px) {
+    .news-content {
+        padding: 2rem 1.25rem; 
+    }
+}
+
+/* TEXT-STYLES */
+.news-title {
+    color: #fff;
+    font-size: 1.4rem; 
+    font-weight: bold;
+    text-transform: uppercase; 
+    line-height: 1.4;
+    margin-bottom: 0.8rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+    transition: color 0.3s ease;
+}
+@media (max-width: 767.98px) {
+    .news-title {
+        font-size: 1.2rem;
+    }
+}
+.news-date {
+    color: var(--main-color);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin: 0;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+.read-more {
+    color: var(--hover-link-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.news-card:hover .read-more,
+.news-card:hover .news-title {
+    color: #fff;
+}
+
+/* NEWS' SOURCE */
+.news-source {
+    color: #fff;
+    font-family: "MetalMania", sans-serif; 
+    font-size: 1.3rem; 
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); 
+}
+.news-source i {
+    font-size: 1.1rem; 
+}
+
+@media (max-width: 991.98px) {
+    .profile-main {
+        padding-top: 9.5rem;
+    }
+}
