@@ -66,7 +66,7 @@
                     <!-- Full Source link, if exists -->
                     {% if page.source_url %}
                     <div class="article-full-source">
-                        <span>Click here for the full article</span>
+                        <span>Click here to read the full article</span>
                         <a href="{{ page.source_url }}" target="_blank" rel="noopener noreferrer" class="btn-metiria">
                             READ MORE
                         </a>
@@ -79,11 +79,6 @@
                         <iframe src="https://www.youtube.com/embed/{{ page.youtube_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     {% endif %}
-                    
-                    <!-- Article footer -->
-                    <div class="article-footer">
-                        <a href="{{ '/news.html' | relative_url }}" class="btn-metiria">BACK TO NEWS</a>
-                    </div>
 
                 </div>
             </article>

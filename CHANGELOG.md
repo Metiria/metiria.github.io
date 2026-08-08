@@ -4,6 +4,11 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
+# [07-07-2026] - Small fixes in news-single.html layout
+- removed the go back to news button 
+- link label updated, new link added to the first news and image updated
+- modified files: _layouts/news-single.html, _posts, static/css/single-news-page.css
+
 # [07-07-2026] - News page rebuilt and linked to Tour page. Tour page and simple fixes.
 - GENERAL FIXES
 - menu.css file has been moved to static/css directory; all layouts now are linked only to style.css, which imports every other CSS file. 

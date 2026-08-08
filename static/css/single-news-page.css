@@ -113,13 +113,6 @@
     height: 100%;
 }
 
-/* ARTICLE FOOTER*/
-.article-footer {
-    text-align: center;
-    margin-top: 4rem;
-    padding-top: 3rem;
-}
-
 /* FULL-SOURCE-BOX RULES */
 .article-full-source {
     display: flex;

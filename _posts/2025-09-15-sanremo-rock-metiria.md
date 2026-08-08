@@ -4,7 +4,7 @@ title: "Metiria: applausi a Sanremo Rock per la band etnea"
 tab: News
 cover_image: "files/news_pictures/La_Sicilia_25_09_15.jpeg"
 source: "La Sicilia"
-source_url: false
+source_url: "https://edicola.lasicilia.it/lasicilia/pageflip/swipe/centrale/20250915centrale"
 news_id: "sanremo-rock-2025"
 youtube_id: false
 ---
