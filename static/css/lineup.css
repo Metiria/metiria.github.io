@@ -1,0 +1,55 @@
+.about-section .feature-card:hover,
+.about-section .feature-card:focus,
+.about-section .feature-card:focus-within,
+.about-section .feature-card:active {
+    transform: none;
+    border-color: rgba(var(--hover-link-rgb), 0.2);
+    box-shadow: none;
+}
+.about-section .feature-card a:hover,
+.about-section .feature-card a:focus,
+.about-section .feature-card a:active {
+    color: var(--link-color);
+    text-decoration: none;
+}
+.about-section .section-title {
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+.about-section .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--hover-link-color);
+}
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--main-color);
+}
+.about-section a {
+    font-weight: 600;
+}
+.about-section a:hover,
+.about-section a:focus {
+    color: #fff;
+}
+.about-image {
+    text-align: center;
+    padding: 2rem;
+}
+.about-image img {
+    max-width: 80%;
+    height: auto;
+    filter: drop-shadow(0 8px 16px rgba(var(--hover-link-rgb), 0.3));
+    transition: transform 0.3s ease;
+}
+.about-image:hover img {
+    transform: scale(1.05);
+}
