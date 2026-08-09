@@ -1,15 +1,19 @@
-
 ### CHANGELOG
 All project changes will be recorded in this file. 
 
 ## PATCHES
 
-# [07-07-2026] - Small fixes in news-single.html layout
+# [09-07-2026] - General information section in home page refactored
+- The list of members' links has been replaced by an automatic scrolling carousel, displaying some clickable cards of each active member. 
+- The logo has been placed as a watermark, instead of an active element of the page
+- modified files: index.html, static/style.css, static/css/index.css
+
+# [08-07-2026] - Small fixes in news-single.html layout
 - removed the go back to news button and reduced page padding
 - link label updated, new link added to the first news and image updated
 - modified files: _layouts/news-single.html, _posts, static/css/single-news-page.css
 
-# [07-07-2026] - News page rebuilt and linked to Tour page. Tour page and simple fixes.
+# [08-07-2026] - News page rebuilt and linked to Tour page. Tour page and simple fixes.
 - GENERAL FIXES
 - menu.css file has been moved to static/css directory; all layouts now are linked only to style.css, which imports every other CSS file. 
 - NEWS PAGE 

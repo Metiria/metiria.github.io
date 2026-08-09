@@ -7,6 +7,7 @@
 @import url('css/news-page.css');
 @import url('css/single-news-page.css');
 @import url('css/members.css');
+@import url('css/lineup.css'); 
 
 /* GENERAL RULES*/
 @font-face {
@@ -35,7 +36,7 @@
 html, body {
     background-color: var(--main-background-color);
     color: var(--main-color);
-    font-size: 18px;
+    font-size: 1.2rem;
     height: 100%;
     margin-left:   0px;
     margin-right:  0px;

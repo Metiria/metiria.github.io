@@ -1,72 +1,129 @@
-/* Modern Homepage Sections */
+/* About Section */
+.about-section {
+    padding-top: 3rem; 
+    background-color: var(--main-background-color);
+}
+
+/* GENERAL INFORMATION SECTION */
 .section-title {
     font-size: 2.5rem;
     font-weight: bold;
     color: var(--link-color);
-    margin-bottom: 1rem;
     letter-spacing: 0.05em;
     text-align: center;
 }
-
-/* About Section */
-.about-section {
-    padding: 5rem 0;
-    background-color: var(--main-background-color);
+.general-info-wrapper {
+    overflow: hidden;
 }
-.about-section .feature-card:hover,
-.about-section .feature-card:focus,
-.about-section .feature-card:focus-within,
-.about-section .feature-card:active {
-    transform: none;
-    border-color: rgba(var(--hover-link-rgb), 0.2);
-    box-shadow: none;
+/* Watermark logo */
+.watermark-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100%;
+    min-height: 600px;
+    background-image: url('/files/logo/transparent_background/Logo/blue_logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    opacity: 0.12; 
+    z-index: 0; 
+    pointer-events: none;
 }
-.about-section .feature-card a:hover,
-.about-section .feature-card a:focus,
-.about-section .feature-card a:active {
-    color: var(--link-color);
-    text-decoration: none;
-}
-.about-section .section-title {
-    margin-bottom: 2rem;
+.general-info-content {
     position: relative;
-    padding-bottom: 1rem;
-    text-align: center;
+    z-index: 1; 
 }
-.about-section .section-title::after {
-    content: '';
+
+/* Infinite Scrolling Carousel */
+.css-marquee-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+.css-marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-marquee 25s linear infinite;
+    will-change: transform;
+}
+.css-marquee-container:hover .css-marquee-track {
+    animation-play-state: paused;
+}
+@keyframes scroll-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
+.css-marquee-item {
+    width: 380px; 
+    height: 500px;
+    flex-shrink: 0;
+    margin: 0 15px; 
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    display: block;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: brightness(0.7); 
+}
+.css-marquee-container:hover .css-marquee-item {
+    filter: brightness(0.3) grayscale(60%);
+}
+.css-marquee-container .css-marquee-item:hover {
+    filter: brightness(1.1) grayscale(0%) !important;
+    transform: scale(1.03);
+    z-index: 10;
+    box-shadow: 0 12px 30px rgba(var(--hover-link-rgb), 0.4);
+}
+.css-marquee-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+.css-marquee-caption {
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: var(--hover-link-color);
-}
-.about-section p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--main-color);
-}
-.about-section a {
-    font-weight: 600;
-}
-.about-section a:hover,
-.about-section a:focus {
-    color: #fff;
-}
-.about-image {
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
+    padding: 3rem 1rem 1rem;
     text-align: center;
-    padding: 2rem;
 }
-.about-image img {
-    max-width: 80%;
-    height: auto;
-    filter: drop-shadow(0 8px 16px rgba(var(--hover-link-rgb), 0.3));
-    transition: transform 0.3s ease;
+.css-marquee-caption h5 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
-.about-image:hover img {
-    transform: scale(1.05);
+.css-marquee-caption p {
+    color: var(--hover-link-color);
+    font-size: 1rem;
+    margin-bottom: 0;
+    letter-spacing: 2px;
+}
+@media (max-width: 991px) {
+    .css-marquee-item {
+        width: 320px;
+        height: 420px;
+    }
+}
+@media (max-width: 767px) {
+    .css-marquee-item {
+        width: 260px;
+        height: 350px;
+        margin: 0 10px;
+    }
+    .css-marquee-track {
+        animation-duration: 15s; 
+    }
 }
 
 /* Rule for video-clip loop in home*/
