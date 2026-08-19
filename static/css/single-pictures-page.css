@@ -1,0 +1,93 @@
+/* GRIGLIA FOTO */
+.gallery-clickable-img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid rgba(var(--hover-link-rgb), 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-clickable-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(var(--hover-link-rgb), 0.5);
+}
+
+/* MODALE SFONDO NERO */
+.photo-modal {
+    display: flex;  
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.92);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    user-select: none; 
+}
+
+/* IMMAGINE INGRANDITA */
+.photo-modal .modal-content {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    cursor: zoom-out; 
+}
+
+/* FRECCE LATERALI */
+.modal-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: var(--main-color);
+    padding: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 10001;
+}
+.modal-arrow:hover {
+    color: var(--hover-link-color);
+    transform: translateY(-50%) scale(1.2);
+}
+.modal-arrow.left { left: 2%; }
+.modal-arrow.right { right: 2%; }
+
+/* =========================================
+   ANIMAZIONI DI SCORRIMENTO MODALE
+   ========================================= */
+
+@keyframes slideInFromRight {
+    0% { transform: translateX(50px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    0% { transform: translateX(-50px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Classi che applicheremo tramite Javascript */
+.slide-next {
+    animation: slideInFromRight 0.3s ease-out forwards;
+}
+
+.slide-prev {
+    animation: slideInFromLeft 0.3s ease-out forwards;
+}
+
+/* MOBILE */
+@media (max-width: 767.98px) {
+    .modal-arrow {
+        font-size: 2rem;
+        padding: 10px;
+    }
+    .gallery-clickable-img {
+        height: 300px; 
+    }
+}

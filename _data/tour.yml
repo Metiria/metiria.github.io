@@ -28,7 +28,7 @@
       city: "San Marino, San Marino"
       location: "Teatro Nuovo"
       maps_url: "https://maps.app.goo.gl/reBuXg7GseZpxQzSA"
-      pictures: "/pictures.html"
+      pictures: "san-marino-semifinals"
       news: "san-marino-2026"
 
     - id: "dreaming-san-marino-stage"
@@ -37,7 +37,7 @@
       city: "Serravalle, San Marino"
       location: "Auditorium Little Tony"
       maps_url: "https://maps.app.goo.gl/wnFuJgcAk4uSpk9F9"
-      pictures: "/pictures.html"
+      pictures: "san-marino-semifinals"
       news: false
 
     - id: "dreaming-san-marino-casting"
@@ -46,7 +46,7 @@
       city: "Falciano, San Marino"
       location: "San Marino Outlet Experience"
       maps_url: "https://maps.app.goo.gl/1jMPmpoJJoMgo5hH9"
-      pictures: "/pictures.html"
+      pictures: "san-marino-semifinals"
       news: false
 
 - id: "local-contests-2026"
@@ -58,7 +58,7 @@
       city: "Acireale, Italy"
       location: "Piazza Giuseppe Garibaldi"
       maps_url: "https://maps.app.goo.gl/mYgL7CCgNYFNHJcr6"
-      pictures: "/pictures.html"
+      pictures: "rumori-barocchi"
       news: false
 
     - id: "disummer-2025"
@@ -67,7 +67,7 @@
       city: "Catania, Italy"
       location: "Palazzo della cultura"
       maps_url: "https://maps.app.goo.gl/gVZ8KvWUXGbyVe3r5"
-      pictures: "/pictures.html"
+      pictures: "disummer-2025"
       news: false
 
     - id: "risuoni"
@@ -76,7 +76,7 @@
       city: "Trecastagni, Italy"
       location: "Spazio Artistico Corso Europa 70"
       maps_url: "https://maps.app.goo.gl/vJDd5FCSAQmj1eVs6"
-      pictures: "/pictures.html"
+      pictures: "risuoni"
       news: false
 
 - id: "sanremo-rock-2025"
@@ -88,7 +88,7 @@
       city: "Sanremo, Italy"
       location: "Teatro Ariston"
       maps_url: "https://maps.app.goo.gl/AyCb4j5U4qgpktzX8"
-      pictures: "/pictures.html"
+      pictures: "sanremo-national-finals"
       news: "sanremo-rock-2025"
 
     - id: "sanremo-interregional"
@@ -97,7 +97,7 @@
       city: "Noto, Italy"
       location: "Cattedrale di San Nicolò"
       maps_url: "https://maps.app.goo.gl/hWr8bz5tbxLbmW4w8"
-      pictures: "/pictures.html"
+      pictures: "sanremo-rock-2025"
       news: false
 
     - id: "sanremo-regional"
@@ -106,7 +106,7 @@
       city: "Noto, Italy"
       location: "Cattedrale di San Nicolò"
       maps_url: "https://maps.app.goo.gl/hWr8bz5tbxLbmW4w8"
-      pictures: "/pictures.html"
+      pictures: "sanremo-rock-2025"
       news: false
 
 - id: "rock-festivals-2025"

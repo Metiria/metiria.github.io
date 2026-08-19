@@ -36,9 +36,15 @@ custom_js: tour.js
                                 </a>
                                 
                                 <div class="tour-media-links">
+                                    <!-- Assigns the respective picture page link -->
                                     {% if event.pictures %}
-                                    <a href="{{ event.pictures | relative_url }}" aria-label="Pictures"><i class="fas fa-camera"></i></a>
+                                        {% assign target_pictures = site.posts | where: "event_id", event.pictures | first %}
+                                        {% if target_pictures %}
+                                        <a href="{{ target_pictures.url | relative_url }}" aria-label="Pictures"><i class="fas fa-camera"></i></a>
+                                        {% endif %}
                                     {% endif %}
+
+                                    <!-- Assigns the respective news page link -->
                                     {% if event.news %}
                                         {% assign target_news = site.posts | where: "news_id", event.news | first %}
                                         {% if target_news %}

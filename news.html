@@ -10,8 +10,9 @@ subtitle: Acknowledgements of our results
         
         <!-- Cards' grid -->
         <div class="news-grid">
-        
-            {% for post in site.posts %}
+
+            {% assign news_posts = site.posts | where: "type", "news" %}
+            {% for post in news_posts %}
             
                 <!-- Card with automatically generated link to single news page -->
                 <a href="{{ post.url | relative_url }}" class="news-card">
@@ -37,5 +38,6 @@ subtitle: Acknowledgements of our results
             {% endfor %}
 
         </div>
+
     </div>
 </section>

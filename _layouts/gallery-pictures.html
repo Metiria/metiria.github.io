@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="{{ '/static/structure/bootstrap/bootstrap.min.css' | relative_url }}" rel="stylesheet">
+        <link href="{{ 'static/style.css' | relative_url }}" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+        
+        <script src="{{ '/static/js/common.js' | relative_url }}" defer></script>
+        <script src="{{ '/static/structure/bootstrap/bootstrap.bundle.min.js' | relative_url }}" defer></script>
+        <script src="https://kit.fontawesome.com/a4b5770492.js" crossorigin="anonymous" defer></script>
+        <script src="{{ '/static/js/gallery-modal.js' | relative_url }}" defer></script>
+
+        <title>Metiria - {{ page.tab | default: "Gallery" }}</title>
+        <link rel="icon" href="{{ '/files/logo/transparent_background/Logo/1-8.png' | relative_url }}" type="image/png">
+    </head>
+
+    <body>
+        
+        {% include menu.html %}
+
+        <main>
+            <article class="article-page" style="padding-top: 10rem; padding-bottom: 5rem;">
+
+                <div class="container">
+                    
+                    <!-- Search the event in the .yml file by id -->
+                    {% assign current_event = nil %}
+                    {% for tour in site.data.tour %}
+                        {% for event in tour.events %}
+                            {% if event.id == page.event_id %}
+                                {% assign current_event = event %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+
+                    <!-- If the event is found -->
+                    {% if current_event %}
+                        <!-- Event Header -->
+                        <div class="article-header text-center mb-5">
+                            <h1 class="article-title" style="font-size: clamp(2.5rem, 6vw, 4rem);">{{ current_event.venue }}</h1>
+                            <div class="article-meta justify-content-center">
+                                <span class="article-date">{{ current_event.date | upcase }}</span>
+                            </div>
+                        </div>
+
+                        <!-- Photos gallery -->
+                        <div class="row justify-content-center">
+                            {% capture event_folder %}/files/events_pictures/{{ current_event.id }}/{% endcapture %}
+                            
+                            {% for file in site.static_files %}
+                                {% if file.path contains event_folder %}
+                                    {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.png' or file.extname == '.JPG' %}
+                                        
+                                        <!-- col-12 mobile-view, col-md-4 for medium and large screen -->
+                                        <div class="col-12 col-md-4 mb-4">
+                                            <img src="{{ file.path | relative_url }}" class="gallery-clickable-img" alt="Foto {{ current_event.venue }}">
+                                        </div>
+                                        
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+
+                    <!-- In case the event is not found -->   
+                    {% else %}
+                        <div class="text-center">
+                            <h1>Event not found!</h1>
+                            <p>Make sure the event_id in your .md file matches an ID in your tour.yml data.</p>
+                        </div>
+                    {% endif %}
+
+                </div>
+            </article>
+        </main>
+        
+        {% include footer.html %}
+
+        <!-- Back to top button -->
+        <button id="backToTopBtn" class="back-to-top" aria-label="Back to top" title="Back to top">
+            <i class="fas fa-angles-up"></i>
+        </button>
+
+        <!-- Full Screen Modal View -->
+        <div id="photoModal" class="photo-modal hidden">
+            <span id="modalArrowLeft" class="modal-arrow left">&#10094;</span>
+            <img class="modal-content" id="modalImage" alt="Fullscreen Image">
+            <span id="modalArrowRight" class="modal-arrow right">&#10095;</span>
+        </div>
+
+    </body>
+</html>

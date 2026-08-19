@@ -7,6 +7,7 @@ source: "La Sicilia - Rosanna Gimmillaro"
 source_url: "https://www.lasicilia.it/news/cultura-e-spettacoli/3018836/dalle-cantine-di-catania-al-teatro-ariston-i-metiria-e-l-ascesa-tra-prog-pop-e-metal-contemporaneo.html"
 news_id: "san-marino-2026"
 youtube_id: false
+type: "news"
 ---
 
 **The band from Catania, with a sound that blends prog, pop openings, and contemporary metal, from their debut at the Benedictine Monastery to third place at Sanremo Rock and the semifinal of the San Marino Song Contest.**

@@ -4,3 +4,50 @@ tab: Pictures
 title: Pictures & Clips
 subtitle: Photo and video gallery of our shared moments
 ---
+
+<section class="news-section">
+    <div class="container">
+        
+        <div class="news-grid">
+            <!-- Filtering site.posts by tag type: "pictures" -->
+            {% assign gallery_posts = site.posts | where: "type", "pictures" %}
+            
+            {% for post in gallery_posts %}
+                
+                {% assign current_event = nil %}
+                
+                <!-- Search in tour.yml the event having the same id -->
+                {% for tour in site.data.tour %}
+                    {% for event in tour.events %}
+                        {% if event.id == post.event_id %}
+                            {% assign current_event = event %}
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+
+                <!-- If the event is found, the card is generated -->
+                {% if current_event %}
+                
+                    <!-- Card recycled from news.html -->
+                    <a href="{{ post.url | relative_url }}" class="news-card">
+                        <!-- Background-image and overlay -->
+                        <div class="news-image" style="background-image: url('{{ post.cover_image | relative_url }}');"></div>
+                        <div class="news-overlay"></div>
+                        <!-- Card content -->
+                        <div class="news-content">
+                            <!-- Title and date from tour.yml file -->
+                            <h3 class="news-title">{{ current_event.venue }}</h3>
+                            <p class="news-date">
+                                {{ current_event.date | upcase }} <span class="read-more">/ VIEW GALLERY &rarr;</span>
+                            </p>
+                        </div>
+                    </a>
+                
+                {% endif %}
+
+            {% endfor %}
+            
+        </div>
+
+    </div>
+</section>

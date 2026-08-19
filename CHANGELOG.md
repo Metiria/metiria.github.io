@@ -3,6 +3,33 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
+# [19-07-2026] - General Fixes, Picture page completed, documentation written. 
+- Picture section completed with functionality, contents and styling 
+- picture.css file removed, new static/css/single-picture-page.css file created
+- gallery-modal.js file created and linked to gallery-pictures.html layout
+- tour.html page logic updated, now photos buttons appears only if "pictures" field in tour.yml is not false and it is linked directly to the event specific photo page
+- CSS conflict fixed and Tour page functionality restored; in tour.css and tour.js, the "hidden" class has become the "collapsed" class, while in style.css the class "hidden" has a specific rule of display:none. 
+- EVENTS ADDED TO PICTURES AND LINKED TO TOUR PAGE
+- disummer
+- risuoni
+- rumori-barocchi
+- san-marino
+- sanremo-rock
+- DOCUMENTATION 
+- The procedure to create a new gallery in pictures page linked to the event in the tour page is fully explained in the documentation file, which is developed simultaneously. 
+- modified files: CHANGELOG.md, tour.html, pictures.html, news.html, lineup.html, index.html, static/style.css, static/css/tour.css, static/css/single-pictures-page.css, static/css/index.css, static/js/tour.js, static/js/gallery-modal.js, files/events_pictures, _posts/news, _posts/events_pictures, _layouts/gallery-pictures.html, _includes/menu.html, _data/tour.yml
+
+index.html, lineup.html, menu.html, news.html, pictures.html, _posts, events_pictures, static/style.css, static/css/index.css
+
+# [12-07-2026] - New Pictures page created and linked to Tour page. Home and News pages fixes. 
+- Music style section is now below videoclip in home page. 
+- Lineup pharentesis removed from members' names. 
+- Store link added to the store button; now it redirects directly to bandcamp page. 
+- PICTURES
+- New page pictures.html created. It dinamycally loads all events covers from _posts/pictures directory in form of standard cards. Each card is a link which refers to an automatically generated page, specific for each event. 
+- _posts logic slightly modified; now, the attribute type has been added to all .md files in _posts, in order to differenciate between news and pictures subdirectories
+- modified files: index.html, lineup.html, menu.html, news.html, pictures.html, _posts, events_pictures, static/style.css, static/css/index.css
+
 # [09-07-2026] - General information section in home page refactored
 - The list of members' links has been replaced by an automatic scrolling carousel, displaying some clickable cards of each active member. 
 - The logo has been placed as a watermark, instead of an active element of the page

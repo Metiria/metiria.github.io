@@ -8,6 +8,7 @@
 @import url('css/single-news-page.css');
 @import url('css/members.css');
 @import url('css/lineup.css'); 
+@import url('css/single-pictures-page.css');
 
 /* GENERAL RULES*/
 @font-face {
@@ -129,6 +130,10 @@ sup {
     text-decoration: none;
 }
 
+/* CLASS FOR HIDING PAGE ELEMENTS*/
+.hidden {
+    display: none; 
+}
 /* GLOWING IMAGES */
 .hover-glow {
     transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;

@@ -7,6 +7,7 @@ source: "La Sicilia"
 source_url: "https://edicola.lasicilia.it/lasicilia/pageflip/swipe/centrale/20250915centrale"
 news_id: "sanremo-rock-2025"
 youtube_id: false
+type: "news"
 ---
 
 **"LIOTRU" BRAND. After reaching the national finals, the five young artists secured third place overall.**
