@@ -5,122 +5,60 @@ title: Releases & Creations
 subtitle: Our complete discography and videography
 ---
 
-<section class="about-section py-5">
-	<div class="container">
-        <!-- Singles -->
-        <div class="row align-items-center">
-            <div class="col">
-                <div class="feature-card text-start">
-                    <h2 id="singles" class="section-title text-glow">Singles</h2>
-                    
-                    <!-- Sorrow -->
-                    <div id="sorrow" class="row align-items-center text-center mb-4">
-                        <!-- Song Title-->
-                        <div class="col-12 col-lg-4 mb-3 mb-lg-0">
-                            <span class="text-glow">Sorrow</span>
-                        </div>
-                        <!-- Image and youtube video url -->
-                        <div class="col-12 col-lg-4">
-                            <a href="https://www.youtube.com/watch?v=A4u9jzIAPk8" target="_blank" rel="noopener noreferrer">
-                                <img src="{{ '/files/covers/Sorrow Cover.jpeg' | relative_url }}" class="img-fluid rounded mb-4 hover-glow" alt="Angelo Li Rosi">
-                            </a>
-                        </div>
-                        <!-- Links -->
-                        <div class="col-12 col-lg-4 d-flex flex-row flex-lg-column justify-content-center align-items-center gap-3">
-                            <a href="https://open.spotify.com/track/2HXpuXwTG3iekGA8hRADja" target="_blank" rel="noopener noreferrer" title="Spotify"><i class="fa-brands fa-spotify"></i></a>
-                            
-                            <!-- Icona YouTube standard (Video) -->
-                            <a href="https://www.youtube.com/watch?v=A4u9jzIAPk8" target="_blank" rel="noopener noreferrer" title="YouTube Video"><i class="fa-brands fa-youtube"></i></a>
-                            
-                            <!-- Icona YouTube quadrata (Music) -->
-                            <a href="https://music.youtube.com/playlist?list=OLAK5uy_nzcuk6SIRIpA_Fxm3h4CBHHzkWC-dSD-o" target="_blank" rel="noopener noreferrer" title="YouTube Music"><i class="fa-brands fa-square-youtube"></i></a>
-                            
-                            <a href="https://music.apple.com/it/album/attention-seeker-single/1881168539" target="_blank" rel="noopener noreferrer" title="Apple Music"><i class="fa-brands fa-apple"></i></a>
-                            <a href="https://music.amazon.it/albums/B0GQ569W7Q" target="_blank" rel="noopener noreferrer" title="Amazon Music"><i class="fa-brands fa-amazon"></i></a>
-                            <a href="https://link.deezer.com/s/32GRN7Gqem7pWxDwbBxsK" target="_blank" rel="noopener noreferrer" title="Deezer"><i class="fa-brands fa-deezer"></i></a>
-                            <a href="https://tidal.com/track/502175427/u" target="_blank" rel="noopener noreferrer" title="Tidal"><i class="fa-brands fa-tidal"></i></a>
-                        </div>
-                    </div>
-                    
-                    <!-- Attention Seeker -->
-                    <div id="attention-seeker" class="row align-items-center text-center mb-4">
-                        <div class="col-12 col-lg-4 mb-3 mb-lg-0">
-                            <span class="text-glow">Attention Seeker</span>
-                        </div>
-                        <div class="col-12 col-lg-4">
-                            <a href="https://www.youtube.com/watch?v=A4u9jzIAPk8" target="_blank" rel="noopener noreferrer">
-                                <img src="{{ '/files/covers/Attention Cover.jpeg' | relative_url }}" class="img-fluid rounded mb-4 hover-glow" alt="Angelo Li Rosi">
-                            </a>
-                        </div>
-                        <div class="col-12 col-lg-4 d-flex flex-row flex-lg-column justify-content-center align-items-center gap-3">
-                            <a href="https://open.spotify.com/track/2HXpuXwTG3iekGA8hRADja" target="_blank" rel="noopener noreferrer" title="Spotify"><i class="fa-brands fa-spotify"></i></a>
-                            <a href="https://www.youtube.com/watch?v=A4u9jzIAPk8" target="_blank" rel="noopener noreferrer" title="YouTube Video"><i class="fa-brands fa-youtube"></i></a>
-                            <a href="https://music.youtube.com/playlist?list=OLAK5uy_nzcuk6SIRIpA_Fxm3h4CBHHzkWC-dSD-o" target="_blank" rel="noopener noreferrer" title="YouTube Music"><i class="fa-brands fa-square-youtube"></i></a>
-                            <a href="https://music.apple.com/it/album/attention-seeker-single/1881168539" target="_blank" rel="noopener noreferrer" title="Apple Music"><i class="fa-brands fa-apple"></i></a>
-                            <a href="https://music.amazon.it/albums/B0GQ569W7Q" target="_blank" rel="noopener noreferrer" title="Amazon Music"><i class="fa-brands fa-amazon"></i></a>
-                            <a href="https://link.deezer.com/s/32GRN7Gqem7pWxDwbBxsK" target="_blank" rel="noopener noreferrer" title="Deezer"><i class="fa-brands fa-deezer"></i></a>
-                            <a href="https://tidal.com/track/502175427/u" target="_blank" rel="noopener noreferrer" title="Tidal"><i class="fa-brands fa-tidal"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Ep's -->
+<section class="releases-section py-5">
+    <div class="container">
+        
+        <!-- Categories cycle -->
+        {% for category in site.data.releases %}
         <div class="row">
-            <div class="col">
-                <div class="feature-card text-start">
-                    <h2 id="eps" class="section-title text-glow">Ep's</h2>
-                </div>
-            </div>
-        </div>
-
-        <!-- Albums -->
-        <div class="row">
-            <div class="col">
-                <div class="feature-card text-start">
-                    <h2 id="albums" class="section-title text-glow">Albums</h2>
-                </div>
-            </div>
-        </div>
-
-        <!-- Live -->
-         <div class="row">
-            <div class="col">
-                <div class="feature-card text-start">
-                    <h2 id="live" class="section-title text-glow">Live</h2>
-                </div>
-            </div>
-        </div>
-
-        <!-- Playlists -->
-        <div class="row">
-            <div class="col">
-                <div class="feature-card text-start">
-                    <h2 id="playlists" class="section-title text-glow">Playlists</h2>
+            <div class="col-12">
+                
+                <!-- Category -->
+                <div class="release-category-card text-center text-lg-start">
                     
-                    <!-- San Marino song contest -->
-                    <div id="san-marino-2026-playlist" class="row align-items-center text-center mb-4">
-                        <div class="col-12 col-lg-4 mb-3 mb-lg-0">
-                            <span class="text-glow">San Marino Song Contest 2026</span>
+                    <!-- Category title -->
+                    <h2 id="{{ category.category_id }}" class="section-title text-glow text-center mb-4">{{ category.category_title }}</h2>
+                    
+                    <!-- Message if the category has no items -->
+                    {% if category.items.size == 0 %}
+                        <p class="empty-release-msg text-center">New {{ category.category_title | downcase }} coming soon...</p>
+                    {% else %}
+                        
+                        <!-- Items cycle -->
+                        {% for item in category.items %}
+                        <div id="{{ item.id }}" class="row align-items-center text-center release-item-row">
+    
+                            <!-- Title -->
+                            <div class="col-12 col-lg-4 mb-4 mb-lg-0 order-2 order-lg-1">
+                                <span class="release-title text-glow">{{ item.title }}</span>
+                            </div>
+    
+                            <!-- Cover image -->
+                            <div class="col-12 col-lg-4 mb-4 mb-lg-0 order-1 order-lg-2">
+                                <a href="{{ item.main_link }}" target="_blank" rel="noopener noreferrer">
+                                <img src="{{ item.cover_image | relative_url }}" class="release-cover-img hover-glow" alt="{{ item.title }}">
+                                </a>
+                            </div>
+    
+                            <!-- Platforms links -->
+                            <div class="col-12 col-lg-4 order-3 order-lg-3">
+                                <div class="release-platforms">
+                                    {% for platform in item.platforms %}
+                                        <a href="{{ platform.url }}" class="social-link" target="_blank" rel="noopener noreferrer" title="{{ platform.name }}">
+                                            <i class="fa-brands {{ platform.icon }}"></i>
+                                        </a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+    
                         </div>
-                        <div class="col-12 col-lg-4">
-                            <a href="https://youtube.com/playlist?list=PLp4i8IJdXtsazxxE7vrDz8DWFFVQktbuf&si=YkJ632NtEj9hOcNB" target="_blank">
-                                <img src="{{ 'files/covers/san_marino_cover.jpg' | relative_url}}" class="img-fluid rounded mb-4 hover-glow" alt="San Marino Song Contest">
-                            </a>
-                        </div>
-                        <div class="col-12 col-lg-4 d-flex flex-row flex-lg-column justify-content-center align-items-center gap-3">
-                            <a href="https://open.spotify.com/playlist/1U5k7iBRzSUkyjie6nEX5b?si=10993466b5154026" target="_blank" rel="noopener noreferrer" title="Spotify"><i class="fa-brands fa-spotify"></i></a>
-                            <a href="https://youtube.com/playlist?list=PLp4i8IJdXtsazxxE7vrDz8DWFFVQktbuf&si=YkJ632NtEj9hOcNB" target="_blank" rel="noopener noreferrer" title="YouTube Video"><i class="fa-brands fa-youtube"></i></a>
-                            <a href="https://youtube.com/playlist?list=PLp4i8IJdXtsazxxE7vrDz8DWFFVQktbuf&si=YkJ632NtEj9hOcNB" target="_blank" rel="noopener noreferrer" title="YouTube Playlist"><i class="fa-brands fa-square-youtube"></i></a>
-                            <a href="https://music.apple.com/it/album/attention-seeker-single/1881168539" target="_blank" rel="noopener noreferrer" title="Apple Music"><i class="fa-brands fa-apple"></i></a>
-                            <a href="https://music.amazon.it/albums/B0GQ569W7Q" target="_blank" rel="noopener noreferrer" title="Amazon Music"><i class="fa-brands fa-amazon"></i></a>
-                            <a href="https://link.deezer.com/s/32GRN7Gqem7pWxDwbBxsK" target="_blank" rel="noopener noreferrer" title="Deezer"><i class="fa-brands fa-deezer"></i></a>
-                            <a href="https://tidal.com/track/502175427/u" target="_blank" rel="noopener noreferrer" title="Tidal"><i class="fa-brands fa-tidal"></i></a>
-                        </div>
-                    </div>
+                        {% endfor %}
+                    {% endif %}
+
                 </div>
             </div>
         </div>
-	</div>
+        {% endfor %}
+
+    </div>
 </section>

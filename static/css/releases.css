@@ -1,0 +1,103 @@
+/* Category container */
+.release-category-card {
+    background-color: #000000; 
+    border: 1px solid rgba(var(--header-background-rgb), 0.3);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    margin-bottom: 4px; 
+    min-height: 200px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* Category title */
+.release-title {
+    display: block; 
+    max-width: 250px;
+    margin: 0 auto; 
+    font-size: 1.5rem; 
+    line-height: 1.2;
+}
+
+/* Blue line under the title */
+.release-category-card .section-title {
+    position: relative;
+    padding-bottom: 15px; 
+}
+.release-category-card .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centratura matematica perfetta */
+    width: 60px; /* Lunghezza della linea */
+    height: 3px; /* Spessore della linea */
+    background-color: var(--hover-link-color); /* Richiama il tuo colore azzurro globale */
+    border-radius: 2px; /* Ammorbidisce leggermente gli angoli del trattino */
+}
+
+/* Cover image */
+.release-cover-img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(var(--hover-link-rgb), 0.2);
+}
+
+/* Platforms links container */
+.release-platforms {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+/* Empty category message */
+.empty-release-msg {
+    color: var(--main-color);
+    opacity: 0.6;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+/* Items spacing */
+.release-item-row {
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+}
+.release-item-row:not(:last-child) {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Mobile media-query */
+@media (max-width: 767.98px) {
+    
+    .release-platforms .social-link {
+        border: none;
+        width: auto;
+        height: auto;
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent;
+    }
+    .release-platforms .social-link i {
+        font-size: 1.2rem; 
+    }
+    .release-platforms {
+        gap: 0.6rem;
+        max-width: 250px; 
+        margin: 0 auto; /* Centra matematicamente il blocco rispetto all'immagine sopra */
+    }
+    .release-platforms .social-link:hover {
+        background-color: transparent;
+        box-shadow: none;
+        transform: scale(1.1);
+    }
+    .release-category-card {
+        border: none;
+        padding: 2rem 0;
+        box-shadow: none;
+    }
+}

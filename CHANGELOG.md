@@ -3,6 +3,14 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
+# [25-07-2026] - Releases page is now dynamic. 
+- Logic and page style modified. Now it is possible to add new categories of releases or new items like singles, albums, etc.. modifying the _data/releases.yml file. 
+- releases.yml file organizes each release in categories (Singles, Ep's, Albums, Live, Playlists), which has to be specified; these categories are editable and it's possible to add or remove a category
+- each category contains some items, which are displayed as cards showing the title, the cover image and some links to the streaming platform. 
+- each information related to a specific item has to be inserted into releases.yml file, following the same strutcure 
+- all additional information are found in the guide
+- modified files: _data/releases.yml, releases.html, static/css/releases.css, static/style.css
+
 # [19-07-2026] - General Fixes, Picture page completed, documentation written. 
 - Picture section completed with functionality, contents and styling 
 - picture.css file removed, new static/css/single-picture-page.css file created
@@ -17,6 +25,7 @@ All project changes will be recorded in this file.
 - sanremo-rock
 - DOCUMENTATION 
 - The procedure to create a new gallery in pictures page linked to the event in the tour page is fully explained in the documentation file, which is developed simultaneously. 
+- All pictures given have been sorted and compressed to acceptable dimensions (KB, not MG). 
 - modified files: CHANGELOG.md, tour.html, pictures.html, news.html, lineup.html, index.html, static/style.css, static/css/tour.css, static/css/single-pictures-page.css, static/css/index.css, static/js/tour.js, static/js/gallery-modal.js, files/events_pictures, _posts/news, _posts/events_pictures, _layouts/gallery-pictures.html, _includes/menu.html, _data/tour.yml
 
 index.html, lineup.html, menu.html, news.html, pictures.html, _posts, events_pictures, static/style.css, static/css/index.css
