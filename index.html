@@ -13,20 +13,20 @@ custom_js: index.js
         <!-- General Information -->
         <div class="general-info-wrapper position-relative mb-3 pb-2 mt-2">
             
-            <!-- WATERMARK LOGO (Filigrana di sfondo) -->
+            <!-- WATERMARK LOGO -->
             <div class="watermark-logo"></div>
 
-            <!-- CONTENUTO IN PRIMO PIANO -->
+            <!-- CONTENT -->
             <div class="general-info-content">
                 
-                <!-- 1. RIGA DEL TITOLO -->
+                <!-- Title -->
                 <div class="row mb-2">
                     <div class="col-12 text-center">
                         <h2 class="section-title">General information</h2>
                     </div>
                 </div>
 
-                <!-- 2. RIGA DEL TESTO (Estesa come le altre sezioni) -->
+                <!-- Text content -->
                 <div class="row mb-3">
                     <div class="col-12">
                         <p>
@@ -37,96 +37,75 @@ custom_js: index.js
                     </div>
                 </div>
 
-                <!-- 3. RIGA DEL CAROSELLO (Esteso per tutta la larghezza del container) -->
-                <div class="css-marquee-container mt-4 mb-4">
+                <!-- BAND MEMBERS' CAROUSEL -->
+                <div class="carousel-wrapper d-flex align-items-center justify-content-center mt-4 mb-4">
+    
+                    <!-- Left button -->
+                    <button id="scroll-left" class="btn-metiria btn-carousel mx-2" aria-label="Precedente">
+                    <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <!-- Band members card set -->
+                    <div class="css-marquee-container mx-2" id="members-carousel">
                     <div class="css-marquee-track">
-                                
-                        <!-- SET ORIGINALE (5 Membri) -->
+
                         <!-- Aurora -->
                         <a href="{{ '/aurora.html' | relative_url }}" class="css-marquee-item">
-                                    <img src="{{ '/files/members/Aurora 0.jpeg' | relative_url }}" alt="Aurora">
-                                    <div class="css-marquee-caption">
-                                        <h5>Aurora Amas</h5>
-                                        <p>Vocals</p>
-                                    </div>
+                            <img src="{{ '/files/members/Aurora 0.jpeg' | relative_url }}" alt="Aurora">
+                            <div class="css-marquee-caption">
+                                <h5>Aurora Amas</h5>
+                                <p>Vocals</p>
+                            </div>
                         </a>
+            
                         <!-- Arturo -->
                         <a href="{{ '/arturo.html' | relative_url }}" class="css-marquee-item">
-                                    <img src="{{ '/files/members/Arturo 0.jpeg' | relative_url }}" alt="Arturo">
-                                    <div class="css-marquee-caption">
-                                        <h5>Arturo Caflisch</h5>
-                                        <p>Guitar</p>
-                                    </div>
+                            <img src="{{ '/files/members/Arturo 0.jpeg' | relative_url }}" alt="Arturo">
+                            <div class="css-marquee-caption">
+                                <h5>Arturo Caflisch</h5>
+                                <p>Guitar</p>
+                            </div>
                         </a>
+            
                         <!-- Lorenzo -->
                         <a href="{{ '/lorenzo.html' | relative_url }}" class="css-marquee-item">
-                                    <img src="{{ '/files/members/Lorenzo 0.jpeg' | relative_url }}" alt="Lorenzo">
-                                    <div class="css-marquee-caption">
-                                        <h5>Lorenzo Ragusa</h5>
-                                        <p>Bass</p>
-                                    </div>
+                            <img src="{{ '/files/members/Lorenzo 0.jpeg' | relative_url }}" alt="Lorenzo">
+                            <div class="css-marquee-caption">
+                                <h5>Lorenzo Ragusa</h5>
+                                <p>Bass</p>
+                            </div>
                         </a>
+            
                         <!-- Angelo -->
                         <a href="{{ '/angelo.html' | relative_url }}" class="css-marquee-item">
-                                    <img src="{{ '/files/members/Angelo 0.jpeg' | relative_url }}" alt="Angelo">
-                                    <div class="css-marquee-caption">
-                                        <h5>Angelo Li Rosi</h5>
-                                        <p>Keyboards</p>
-                                    </div>
+                            <img src="{{ '/files/members/Angelo 0.jpeg' | relative_url }}" alt="Angelo">
+                            <div class="css-marquee-caption">
+                                <h5>Angelo Li Rosi</h5>
+                                <p>Keyboards</p>
+                            </div>
                         </a>
+            
                         <!-- Sergio -->
                         <a href="{{ '/sergio.html' | relative_url }}" class="css-marquee-item">
-                                    <img src="{{ '/files/members/Sergio 0.jpeg' | relative_url }}" alt="Samuele">
-                                    <div class="css-marquee-caption">
-                                        <h5>Sergio Giuliano</h5>
-                                        <p>Drums</p>
-                                    </div>
+                            <img src="{{ '/files/members/Sergio 0.jpeg' | relative_url }}" alt="Sergio">
+                            <div class="css-marquee-caption">
+                                <h5>Sergio Giuliano</h5>
+                                <p>Drums</p>
+                            </div>
                         </a>
-                        <!-- SET DUPLICATO (Necessario per il loop infinito senza scatti) -->
-                        <!-- Aurora -->
-                        <a href="{{ '/aurora.html' | relative_url }}" class="css-marquee-item">
-                                    <img src="{{ '/files/members/Aurora 0.jpeg' | relative_url }}" alt="Aurora">
-                                    <div class="css-marquee-caption">
-                                        <h5>Aurora Amas</h5>
-                                        <p>Vocals</p>
-                                    </div>
-                        </a>
-                        <!-- Arturo -->
-                        <a href="{{ '/arturo.html' | relative_url }}" class="css-marquee-item">
-                                    <img src="{{ '/files/members/Arturo 0.jpeg' | relative_url }}" alt="Arturo">
-                                    <div class="css-marquee-caption">
-                                        <h5>Arturo Caflisch</h5>
-                                        <p>Guitar</p>
-                                    </div>
-                        </a>
-                        <!-- Lorenzo -->
-                        <a href="{{ '/lorenzo.html' | relative_url }}" class="css-marquee-item">
-                                    <img src="{{ '/files/members/Lorenzo 0.jpeg' | relative_url }}" alt="Lorenzo">
-                                    <div class="css-marquee-caption">
-                                        <h5>Lorenzo Ragusa</h5>
-                                        <p>Bass</p>
-                                    </div>
-                        </a>
-                        <!-- Angelo -->
-                        <a href="{{ '/angelo.html' | relative_url }}" class="css-marquee-item">
-                                    <img src="{{ '/files/members/Angelo 0.jpeg' | relative_url }}" alt="Angelo">
-                                    <div class="css-marquee-caption">
-                                        <h5>Angelo Li Rosi</h5>
-                                        <p>Keyboards</p>
-                                    </div>
-                        </a>
-                        <!-- Sergio -->
-                        <a href="{{ '/sergio.html' | relative_url }}" class="css-marquee-item">
-                                    <img src="{{ '/files/members/Sergio 0.jpeg' | relative_url }}" alt="Samuele">
-                                    <div class="css-marquee-caption">
-                                        <h5>Sergio Giuliano</h5>
-                                        <p>Drums</p>
-                                    </div>
-                        </a>
-                                
+            
                     </div>
+                    </div>
+
+                    <!-- Bottone Destra -->
+                    <button id="scroll-right" class="btn-metiria btn-carousel mx-2" aria-label="Successivo">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
                 </div>
+
             </div>
+
         </div>
 
         <!-- Music Style -->
