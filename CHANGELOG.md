@@ -3,6 +3,15 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
+# [31-07-2026] - Favicon updated. Home updates and bug fixes. 
+- FAVICON
+- Blue logo setted in browser tab. 
+- HOME
+- General information text has been updated
+- Metiria logo position has been adjusted to better fit both PC and mobile view in General Information section
+- Videoclip in Attention Seeker section has been fixed in order to avoid freezing in mobile devices. The new javascript file "index.js" has been linked to the index.html page in order to fix video refreshing problems.
+- modified files: _layouts/simple.html, _layouts/profile.html, _layouts/policy.html, _layouts/news-single.html, _layouts/gallery-pictures.html, index.html, static/css/index.css, static/js/index.js
+
 # [25-07-2026] - Releases page is now dynamic. 
 - Logic and page style modified. Now it is possible to add new categories of releases or new items like singles, albums, etc.. modifying the _data/releases.yml file. 
 - releases.yml file organizes each release in categories (Singles, Ep's, Albums, Live, Playlists), which has to be specified; these categories are editable and it's possible to add or remove a category

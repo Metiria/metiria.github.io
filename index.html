@@ -3,7 +3,7 @@ layout: simple
 tab: Official page
 title: Home & Biography
 subtitle: Our journey and destination
-custom_css: index.css
+custom_js: index.js
 ---
 
 <!-- About Section -->
@@ -30,8 +30,9 @@ custom_css: index.css
                 <div class="row mb-3">
                     <div class="col-12">
                         <p>
-                            Metiria is a band from eastern Sicily blending prog and pop elements together with heavy influences derived from modern metal.
-                            <a href="{{ '/lineup.html#currentmembers' | relative_url }}">The band</a> members are shown below.
+                            METIRIA is a band from Eastern Sicily that blends Progressive and Symphonic elements together with 
+                            heavy influences derived from modern Metal. <a href="{{ '/lineup.html#currentmembers' | relative_url }}">The band</a>
+                            is formed by Aurora Amas, Arturo Caflisch, Lorenzo Ragusa, Angelo Li Rosi and Sergio Giuliano.
                         </p>
                     </div>
                 </div>
@@ -143,7 +144,7 @@ custom_css: index.css
         <!-- Attention Seeker video div -->
         <div class="video-hero position-relative overflow-hidden d-flex align-items-center justify-content-center">
             <!-- Background video -->
-            <video autoplay loop muted playsinline class="bg-video">
+            <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="bg-video">
                 <source src="{{ '/files/videos/clip_attention_seeker.mp4' | relative_url }}" type="video/mp4">
             </video>
             <!-- Dark overlay-->
