@@ -24,11 +24,19 @@ subtitle: Acknowledgements of our results
                     <!-- Card content -->
                     <div class="news-content">
                         <h3 class="news-title">{{ post.title }}</h3>
-                        {% if post.source %}
-                            <p class="news-source">
-                                <i class="fas fa-newspaper"></i> {{ post.source }}
-                            </p>
-                        {% endif %}
+                        <div class="news-metadata">
+                            {% if post.source %}
+                                <span class="news-source">
+                                    <i class="fas fa-newspaper"></i> {{ post.source }}
+                                </span>
+                            {% endif %}
+    
+                            {% if post.author %}
+                                <span class="news-author">
+                                    <i class="fas fa-pen-nib"></i> {{ post.author }}
+                                </span>
+                            {% endif %}
+                        </div>
                         <p class="news-date">
                             {{ post.date | date: "%B %d, %Y" | upcase }} <span class="read-more">/ READ MORE &rarr;</span>
                         </p>

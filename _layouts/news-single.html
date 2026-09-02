@@ -34,7 +34,7 @@
                         <div class="article-meta">
                             <!-- Date -->
                             <span class="article-date">{{ page.date | date: "%B %d, %Y" | upcase }}</span>
-                            
+    
                             <!-- Source link, if exists -->
                             {% if page.source %}
                                 <span class="article-separator">|</span>
@@ -47,6 +47,14 @@
                                         <i class="fas fa-newspaper"></i> {{ page.source | upcase }}
                                     </span>
                                 {% endif %}
+                            {% endif %}
+
+                            <!-- Author, if exists (NUOVO) -->
+                            {% if page.author %}
+                                <span class="article-separator">|</span>
+                                <span class="article-author">
+                                    <i class="fas fa-pen-nib"></i> {{ page.author | upcase }}
+                                </span>
                             {% endif %}
                         </div>
                     </div>

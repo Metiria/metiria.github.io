@@ -3,7 +3,8 @@ layout: news-single
 title: "Dalle cantine di Catania al teatro Ariston: i Metiria e l'ascesa tra prog, pop e metal contemporaneo"
 tab: News
 cover_image: "files/news_pictures/Eurovision_song_contest.jpeg"
-source: "La Sicilia - Rosanna Gimmillaro"
+source: "La Sicilia"
+author: "Rosanna Gimmillaro"
 source_url: "https://www.lasicilia.it/news/cultura-e-spettacoli/3018836/dalle-cantine-di-catania-al-teatro-ariston-i-metiria-e-l-ascesa-tra-prog-pop-e-metal-contemporaneo.html"
 news_id: "san-marino-2026"
 youtube_id: false

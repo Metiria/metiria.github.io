@@ -10,12 +10,12 @@
       pictures: false
       news: false
 
-    - id: "rosemarys-pub"
-      date: "20 Aug 2026"
-      venue: "Rosemary's Pub"
-      city: "Nicolosi, Italy"
-      location: "Via Giuseppe Garibaldi 1"
-      maps_url: "https://maps.app.goo.gl/rWHw75uSzw6kfmXa6"
+    - id: "music-contest"
+      date: "21 Ago 2026"
+      venue: "Music Contest"
+      city: "Sant'Angelo di Brolo, Italy"
+      location: "Museo degli Angeli"
+      maps_url: "https://maps.app.goo.gl/HsU8Upbc5fvmJ7776"
       pictures: false
       news: false
 

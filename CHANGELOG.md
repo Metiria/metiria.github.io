@@ -3,6 +3,15 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
+# [02-09-2026] - Various updates and fixes.
+- In tour.html page, all item cards animation have been removed (CSS rule ➔ tour-card:hover). 
+- Rosemary's pub event removed, new Music Contest added 
+- Policy pages background image changed
+- Threads and X buttons added in footer links
+- Social links updated in arturo.html page
+- Updating news cards structure in News page and in the auto-generated pages; now, a new author field is available
+- modified files: _data/tour.yml, _includes/footer.html, _layouts/news-single.html, _posts/news, static/css/news-page.css, static/css/policy-pages.css, arturo.html, news.html
+
 # [02-09-2026] - Anchoring all links to specific html elements. 
 - Anchoring all links in home page to the correct page sections, specifically:
 - *Benedictine Monastery* ➔ Disummer 2024.
