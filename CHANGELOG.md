@@ -3,6 +3,33 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
+# [02-09-2026] - Anchoring all links to specific html elements. 
+- Anchoring all links in home page to the correct page sections, specifically:
+- *Benedictine Monastery* ➔ Disummer 2024.
+- *Local contests & Festivals* are now two splitted links: "Local contests" and "Rock Festivals"
+- *Small theaters* link removed.
+- *Basilicata* link removed 
+- *Interregional round* ➔ Interregional Selection, uniforming titles in: Selection, Round and Finals
+- *Sorrow* ➔ Sorrow id, Releases page
+- *National grand final* ➔ National finals.
+- *Third overall place* ➔ Linked directly to the article.
+- *Castings* ➔ Castings.
+- *Stage and Live…* ➔ Stage.
+- *Attention Seeker* ➔ Link corrected from Sorrow to Attention Seeker.
+- *First semifinal* ➔ Semifinals.
+- *numerous national and international artists* ➔ Aggiungere nuovo link verso la playlist di San Marino.
+- *Part of the first 20* ➔ Decidere se far aprire direttamente l'articolo. 
+- New rule in style.css file added (scroll-padding-top) in order to center anchoring elements when navigating through links
+- modified files: index.html, static/style.css, _data/tour.yml
+
+# [31-07-2026] - Auto-scrolling carousel in home page refactored. 
+- Auto-scrolling carousel in home page has been reconstructed. 
+- Two buttons now enables manual scrolling, while all cards auto-scrolls. 
+- In mobile view, the buttons appear below the cards
+- All the logic has been defined in static/js/index.js file. 
+- The freezing problem has been fixed, now the animation-stop linked to the cursor movement over the cards is applied only in desktop view, while it is adjusted in mobile-view. 
+- modified files: index.html, index.css, index.js
+
 # [31-07-2026] - Favicon updated. Home updates and bug fixes. 
 - FAVICON
 - Blue logo setted in browser tab. 

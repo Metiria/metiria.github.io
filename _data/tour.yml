@@ -84,7 +84,7 @@
   events:
     - id: "sanremo-national-finals"
       date: "13 Sep 2025"
-      venue: "Sanremo Rock - National Finals"
+      venue: "Sanremo Rock - Finals"
       city: "Sanremo, Italy"
       location: "Teatro Ariston"
       maps_url: "https://maps.app.goo.gl/AyCb4j5U4qgpktzX8"
@@ -93,7 +93,7 @@
 
     - id: "sanremo-interregional"
       date: "2 Aug 2025"
-      venue: "Sanremo Rock - Interregional Selection"
+      venue: "Sanremo Rock - Round"
       city: "Noto, Italy"
       location: "Cattedrale di San Nicolò"
       maps_url: "https://maps.app.goo.gl/hWr8bz5tbxLbmW4w8"
@@ -102,7 +102,7 @@
 
     - id: "sanremo-regional"
       date: "1 Aug 2025"
-      venue: "Sanremo Rock - Regional Selection"
+      venue: "Sanremo Rock - Selection"
       city: "Noto, Italy"
       location: "Cattedrale di San Nicolò"
       maps_url: "https://maps.app.goo.gl/hWr8bz5tbxLbmW4w8"
