@@ -146,6 +146,13 @@
     color: var(--link-color);
     margin-bottom: 0.5rem;
 }
+.tour-stage {
+    display: block; 
+    font-size: 1.2rem; 
+    color: var(--main-color); 
+    margin-top: 0.2rem;
+    font-weight: 500;
+}
 .tour-location {
     font-size: 0.9rem;
     color: var(--main-color);

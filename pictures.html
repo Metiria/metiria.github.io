@@ -35,8 +35,13 @@ subtitle: Photo and video gallery of our shared moments
                         <div class="news-overlay"></div>
                         <!-- Card content -->
                         <div class="news-content">
-                            <!-- Title and date from tour.yml file -->
-                            <h3 class="news-title">{{ current_event.venue }}</h3>
+                            <!-- Venue, optional stage and date from tour.yml file -->
+                            <h3 class="news-title">
+                                {{ current_event.venue }}
+                                {% if current_event.stage and current_event.stage != false %}
+                                    <span class="picture-stage">{{ current_event.stage }}</span>
+                                {% endif %}
+                            </h3>
                             <p class="news-date">
                                 {{ current_event.date | upcase }} <span class="read-more">/ VIEW GALLERY &rarr;</span>
                             </p>
@@ -44,7 +49,6 @@ subtitle: Photo and video gallery of our shared moments
                     </a>
                 
                 {% endif %}
-
             {% endfor %}
             
         </div>

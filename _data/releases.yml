@@ -6,24 +6,31 @@
       main_link: "https://www.youtube.com/watch?v=A4u9jzIAPk8"
       cover_image: "/files/covers/Sorrow Cover.jpeg"
       platforms:
-        - name: "Spotify"
-          url: "https://open.spotify.com/track/2HXpuXwTG3iekGA8hRADja"
-          icon: "fa-spotify"
+        # YouTube
         - name: "YouTube Video"
           url: "https://www.youtube.com/watch?v=A4u9jzIAPk8"
           icon: "fa-youtube"
+        # Spotify
+        - name: "Spotify"
+          url: "https://open.spotify.com/track/2HXpuXwTG3iekGA8hRADja"
+          icon: "fa-spotify"
+        # YouTube Music
         - name: "YouTube Music"
           url: "https://music.youtube.com/playlist?list=OLAK5uy_nzcuk6SIRIpA_Fxm3h4CBHHzkWC-dSD-o"
           icon: "fa-square-youtube"
+        # Apple Music
         - name: "Apple Music"
           url: "https://music.apple.com/it/album/attention-seeker-single/1881168539"
           icon: "fa-apple"
+        # Amazon Music
         - name: "Amazon Music"
           url: "https://music.amazon.it/albums/B0GQ569W7Q"
           icon: "fa-amazon"
+        # Deezer
         - name: "Deezer"
           url: "https://link.deezer.com/s/32GRN7Gqem7pWxDwbBxsK"
           icon: "fa-deezer"
+        # Tidal
         - name: "Tidal"
           url: "https://tidal.com/track/502175427/u"
           icon: "fa-tidal"
@@ -33,24 +40,31 @@
       main_link: "https://www.youtube.com/watch?v=A4u9jzIAPk8"
       cover_image: "/files/covers/Attention Cover.jpeg"
       platforms:
-        - name: "Spotify"
-          url: "https://open.spotify.com/track/2HXpuXwTG3iekGA8hRADja"
-          icon: "fa-spotify"
+        # YouTube
         - name: "YouTube Video"
           url: "https://www.youtube.com/watch?v=A4u9jzIAPk8"
           icon: "fa-youtube"
+        # Spotify
+        - name: "Spotify"
+          url: "https://open.spotify.com/track/2HXpuXwTG3iekGA8hRADja"
+          icon: "fa-spotify"
+        # YouTube Music
         - name: "YouTube Music"
           url: "https://music.youtube.com/playlist?list=OLAK5uy_nzcuk6SIRIpA_Fxm3h4CBHHzkWC-dSD-o"
           icon: "fa-square-youtube"
+        # Apple Music
         - name: "Apple Music"
           url: "https://music.apple.com/it/album/attention-seeker-single/1881168539"
           icon: "fa-apple"
+        # Amazon Music
         - name: "Amazon Music"
           url: "https://music.amazon.it/albums/B0GQ569W7Q"
           icon: "fa-amazon"
+        # Deezer
         - name: "Deezer"
           url: "https://link.deezer.com/s/32GRN7Gqem7pWxDwbBxsK"
           icon: "fa-deezer"
+        # Tidal
         - name: "Tidal"
           url: "https://tidal.com/track/502175427/u"
           icon: "fa-tidal"
@@ -75,24 +89,15 @@
       main_link: "https://youtube.com/playlist?list=PLp4i8IJdXtsazxxE7vrDz8DWFFVQktbuf&si=YkJ632NtEj9hOcNB"
       cover_image: "files/covers/san_marino_cover.jpg"
       platforms:
-        - name: "Spotify"
-          url: "https://open.spotify.com/playlist/1U5k7iBRzSUkyjie6nEX5b?si=10993466b5154026"
-          icon: "fa-spotify"
+        # YouTube 
         - name: "YouTube Video"
           url: "https://youtube.com/playlist?list=PLp4i8IJdXtsazxxE7vrDz8DWFFVQktbuf&si=YkJ632NtEj9hOcNB"
           icon: "fa-youtube"
+        # Spotify
+        - name: "Spotify"
+          url: "https://open.spotify.com/playlist/1U5k7iBRzSUkyjie6nEX5b?si=10993466b5154026"
+          icon: "fa-spotify"
+        # YouTube Playlist
         - name: "YouTube Playlist"
           url: "https://youtube.com/playlist?list=PLp4i8IJdXtsazxxE7vrDz8DWFFVQktbuf&si=YkJ632NtEj9hOcNB"
           icon: "fa-square-youtube"
-        - name: "Apple Music"
-          url: "https://music.apple.com/it/album/attention-seeker-single/1881168539"
-          icon: "fa-apple"
-        - name: "Amazon Music"
-          url: "https://music.amazon.it/albums/B0GQ569W7Q"
-          icon: "fa-amazon"
-        - name: "Deezer"
-          url: "https://link.deezer.com/s/32GRN7Gqem7pWxDwbBxsK"
-          icon: "fa-deezer"
-        - name: "Tidal"
-          url: "https://tidal.com/track/502175427/u"
-          icon: "fa-tidal"

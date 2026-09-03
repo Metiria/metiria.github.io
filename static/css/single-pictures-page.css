@@ -1,4 +1,4 @@
-/* GRIGLIA FOTO */
+/* PHOTOS GRID */
 .gallery-clickable-img {
     width: 100%;
     height: 250px; 
@@ -13,7 +13,16 @@
     box-shadow: 0 8px 24px rgba(var(--hover-link-rgb), 0.5);
 }
 
-/* MODALE SFONDO NERO */
+/* Rule to modify the style of tour stage */
+.picture-stage {
+    display: block; 
+    font-size: 1rem; 
+    color: var(--main-color);
+    margin-top: 0.3rem;
+    letter-spacing: normal;
+}
+
+/* Modal view */
 .photo-modal {
     display: flex;  
     position: fixed;
@@ -28,8 +37,6 @@
     flex-direction: column;
     user-select: none; 
 }
-
-/* IMMAGINE INGRANDITA */
 .photo-modal .modal-content {
     max-width: 90%;
     max-height: 85vh;
@@ -39,7 +46,7 @@
     cursor: zoom-out; 
 }
 
-/* FRECCE LATERALI */
+/* Lateral arrows */
 .modal-arrow {
     position: absolute;
     top: 50%;
@@ -58,25 +65,20 @@
 .modal-arrow.left { left: 2%; }
 .modal-arrow.right { right: 2%; }
 
-/* =========================================
-   ANIMAZIONI DI SCORRIMENTO MODALE
-   ========================================= */
-
+/* Modal scrolling animations */
 @keyframes slideInFromRight {
     0% { transform: translateX(50px); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
 }
-
 @keyframes slideInFromLeft {
     0% { transform: translateX(-50px); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
 }
 
-/* Classi che applicheremo tramite Javascript */
+/* Rules applied in Javascript through classes */
 .slide-next {
     animation: slideInFromRight 0.3s ease-out forwards;
 }
-
 .slide-prev {
     animation: slideInFromLeft 0.3s ease-out forwards;
 }

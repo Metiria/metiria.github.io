@@ -3,6 +3,19 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
+# [03-09-2026] - Tour and pictures update. Releases update.  
+- TOUR & PICTURES
+- New field "stage" added to tour.yml, to indicate eventual tour stages (ex. Sanremo rock -> venue, Finals -> stage). 
+- Liquid templating logic in tour.html changed. Now, the venue is complemented with the stage, which info are withdrawn from tour.yml file
+- New CSS rules added to the ".tour-stage" class in tour.css file
+- Liquid templating logic in pictures.html changed. As previous, the venue is now complemented with an optional stage row. 
+- New CSS rules added to the ".picture-stage" class in single-picture-page.css file
+- RELEASES
+- In releases.yml file, YouTube icon has been moved before Spotify icon for every element; each element has been correctly labeled, to achieve better recognition. 
+- In releases.html file, a new div class ".collapsable" has been added, in order to make every category (es. Singles, Albums, ...) collapsable by cliking over the title. 
+- All style rules linked to this functionality have been added to releases.css file. 
+- modified files: _data/tour.yml, tour.html, static/css/tour.css, pictures.html, static/css/single-pictures-page.css, releases.html, _data/releases.yml, static/css/releases.css
+
 # [02-09-2026] - Various updates and fixes.
 - In tour.html page, all item cards animation have been removed (CSS rule ➔ tour-card:hover). 
 - Rosemary's pub event removed, new Music Contest added 

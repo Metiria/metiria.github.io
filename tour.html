@@ -19,6 +19,7 @@ custom_js: tour.js
                     <button class="node-dot" aria-label="Toggle events"></button>
                     <h2 class="node-title text-glow">{{ branch.title }}</h2>
                 </div>
+                
                 <!-- Tour Node (cards container) -->
                 <div class="tour-branch-content">
                     <div class="tour-branch-inner">
@@ -27,9 +28,19 @@ custom_js: tour.js
                             {% for event in branch.events %}
                             <!-- Single card of the tour -->
                             <div class="tour-card" id="{{ event.id }}">
+
+                                <!-- Date -->
                                 <div class="tour-date-badge">{{ event.date }}</div>
-                                <h3 class="tour-venue">{{ event.venue }}</h3>
                                 
+                                <!-- Venue and optional stage -->
+                                <h3 class="tour-venue">
+                                    {{ event.venue }}
+                                    {% if event.stage and event.stage != false %}
+                                        <span class="tour-stage">{{ event.stage }}</span>
+                                    {% endif %}
+                                </h3>
+                                
+                                <!-- Maps position -->
                                 <a href="{{ event.maps_url | relative_url }}" target="_blank" rel="noopener noreferrer" class="tour-map-link" title="Apri in Google Maps">
                                     <span class="tour-city"><i class="fas fa-map-marker-alt"></i> {{ event.city }}</span>
                                     <span class="tour-location">{{ event.location }}</span>

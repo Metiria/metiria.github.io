@@ -18,21 +18,29 @@
     line-height: 1.2;
 }
 
-/* Blue line under the title */
+/* Blue line under the title & Accordion interactivity */
 .release-category-card .section-title {
     position: relative;
     padding-bottom: 15px; 
+    cursor: pointer; 
+    transition: color 0.3s ease; 
+}
+.release-category-card .section-title:hover {
+    color: var(--hover-link-color);
 }
 .release-category-card .section-title::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%); /* Centratura matematica perfetta */
-    width: 60px; /* Lunghezza della linea */
-    height: 3px; /* Spessore della linea */
-    background-color: var(--hover-link-color); /* Richiama il tuo colore azzurro globale */
-    border-radius: 2px; /* Ammorbidisce leggermente gli angoli del trattino */
+    transform: translateX(-50%); 
+    width: 60px; 
+    height: 3px; 
+    background-color: var(--hover-link-color); 
+    border-radius: 2px; 
+}
+.collapsing {
+    transition: height 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* Cover image */

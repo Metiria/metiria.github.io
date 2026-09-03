@@ -4,6 +4,7 @@
     - id: "metal-fest"
       date: "4 Sep 2026"
       venue: "Metal Fest"
+      stage: false
       city: "Belpasso, Italy"
       location: "Parco Urbano di Belpasso"
       maps_url: "https://maps.app.goo.gl/XMbjRabTpgP99Mao9"
@@ -13,6 +14,7 @@
     - id: "music-contest"
       date: "21 Ago 2026"
       venue: "Music Contest"
+      stage: false
       city: "Sant'Angelo di Brolo, Italy"
       location: "Museo degli Angeli"
       maps_url: "https://maps.app.goo.gl/HsU8Upbc5fvmJ7776"
@@ -24,7 +26,8 @@
   events:
     - id: "san-marino-semifinals"
       date: "4 Mar 2026"
-      venue: "San Marino Song Contest - Semifinals"
+      venue: "San Marino Song Contest"
+      stage: "Semifinals"
       city: "San Marino, San Marino"
       location: "Teatro Nuovo"
       maps_url: "https://maps.app.goo.gl/reBuXg7GseZpxQzSA"
@@ -33,7 +36,8 @@
 
     - id: "dreaming-san-marino-stage"
       date: "14 Feb 2026"
-      venue: "Dreaming San Marino Song Contest - Stage & Live Academy"
+      venue: "Dreaming San Marino Song Contest"
+      stage: "Stage & Live Academy"
       city: "Serravalle, San Marino"
       location: "Auditorium Little Tony"
       maps_url: "https://maps.app.goo.gl/wnFuJgcAk4uSpk9F9"
@@ -42,7 +46,8 @@
 
     - id: "dreaming-san-marino-casting"
       date: "1 Feb 2026"
-      venue: "Dreaming San Marino Song Contest - Casting"
+      venue: "Dreaming San Marino Song Contest"
+      stage: "Casting"
       city: "Falciano, San Marino"
       location: "San Marino Outlet Experience"
       maps_url: "https://maps.app.goo.gl/1jMPmpoJJoMgo5hH9"
@@ -55,6 +60,7 @@
     - id: "rumori-barocchi"
       date: "1 May 2026"
       venue: "Rumori Barocchi"
+      stage: false
       city: "Acireale, Italy"
       location: "Piazza Giuseppe Garibaldi"
       maps_url: "https://maps.app.goo.gl/mYgL7CCgNYFNHJcr6"
@@ -64,6 +70,7 @@
     - id: "disummer-2025"
       date: "28 Oct 2025"
       venue: "Disummer"
+      stage: false
       city: "Catania, Italy"
       location: "Palazzo della cultura"
       maps_url: "https://maps.app.goo.gl/gVZ8KvWUXGbyVe3r5"
@@ -73,6 +80,7 @@
     - id: "risuoni"
       date: "28 Sep 2025"
       venue: "Risuoni"
+      stage: false
       city: "Trecastagni, Italy"
       location: "Spazio Artistico Corso Europa 70"
       maps_url: "https://maps.app.goo.gl/vJDd5FCSAQmj1eVs6"
@@ -84,7 +92,8 @@
   events:
     - id: "sanremo-national-finals"
       date: "13 Sep 2025"
-      venue: "Sanremo Rock - Finals"
+      venue: "Sanremo Rock"
+      stage: "Finals"
       city: "Sanremo, Italy"
       location: "Teatro Ariston"
       maps_url: "https://maps.app.goo.gl/AyCb4j5U4qgpktzX8"
@@ -93,7 +102,8 @@
 
     - id: "sanremo-interregional"
       date: "2 Aug 2025"
-      venue: "Sanremo Rock - Round"
+      venue: "Sanremo Rock"
+      stage: "Round"
       city: "Noto, Italy"
       location: "Cattedrale di San Nicolò"
       maps_url: "https://maps.app.goo.gl/hWr8bz5tbxLbmW4w8"
@@ -102,7 +112,8 @@
 
     - id: "sanremo-regional"
       date: "1 Aug 2025"
-      venue: "Sanremo Rock - Selection"
+      venue: "Sanremo Rock"
+      stage: "Selection"
       city: "Noto, Italy"
       location: "Cattedrale di San Nicolò"
       maps_url: "https://maps.app.goo.gl/hWr8bz5tbxLbmW4w8"
@@ -115,6 +126,7 @@
     - id: "castel-rock"
       date: "1 Jun 2025"
       venue: "Castel Rock"
+      stage: false
       city: "Castelmola, Italy"
       location: "Piazza S.Antonio"
       maps_url: "https://maps.app.goo.gl/yZwDKqH7MVKQUpeU7"
@@ -124,6 +136,7 @@
     - id: "Saturn-and-Metiria-Live"
       date: "9 Apr 2025"
       venue: "The Saturn & Metiria Live"
+      stage: false
       city: "Catania, Italy"
       location: "Teatro Coppola - Teatro Dei Cittadini"
       maps_url: "https://maps.app.goo.gl/7s5jUxXdVppVVjj9A"
@@ -136,6 +149,7 @@
     - id: "promuovi-la-tua-musica"
       date: "21 Dec 2024"
       venue: "Promuovi la tua musica"
+      stage: false
       city: "Matera, Italy"
       location: "Auditorium R. Gervasio"
       maps_url: "https://maps.app.goo.gl/rzUYQ8MGdkSpc1Ww7"
@@ -145,6 +159,7 @@
     - id: "disummer-2024"
       date: "28 Oct 2024"
       venue: "Disummer"
+      stage: false
       city: "Catania, Italy"
       location: "Monastero dei Benedettini"
       maps_url: "https://maps.app.goo.gl/qouDv2f536heJ8zF7"

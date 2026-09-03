@@ -17,45 +17,61 @@ subtitle: Our complete discography and videography
                 <div class="release-category-card text-center text-lg-start">
                     
                     <!-- Category title -->
-                    <h2 id="{{ category.category_id }}" class="section-title text-glow text-center mb-4">{{ category.category_title }}</h2>
+                    <h2 id="{{ category.category_id }}" 
+                        class="section-title text-glow text-center mb-4"
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#collapse-{{ category.category_id }}" 
+                        aria-expanded="true" 
+                        aria-controls="collapse-{{ category.category_id }}">
+                        {{ category.category_title }}
+                    </h2>
                     
-                    <!-- Message if the category has no items -->
-                    {% if category.items.size == 0 %}
-                        <p class="empty-release-msg text-center">New {{ category.category_title | downcase }} coming soon...</p>
-                    {% else %}
+                    <!-- Collapsable Category Container -->
+                    <div class="collapse show" id="collapse-{{ category.category_id }}">
                         
-                        <!-- Items cycle -->
-                        {% for item in category.items %}
-                        <div id="{{ item.id }}" class="row align-items-center text-center release-item-row">
-    
-                            <!-- Title -->
-                            <div class="col-12 col-lg-4 mb-4 mb-lg-0 order-2 order-lg-1">
-                                <span class="release-title text-glow">{{ item.title }}</span>
-                            </div>
-    
-                            <!-- Cover image -->
-                            <div class="col-12 col-lg-4 mb-4 mb-lg-0 order-1 order-lg-2">
-                                <a href="{{ item.main_link }}" target="_blank" rel="noopener noreferrer">
-                                <img src="{{ item.cover_image | relative_url }}" class="release-cover-img hover-glow" alt="{{ item.title }}">
-                                </a>
-                            </div>
-    
-                            <!-- Platforms links -->
-                            <div class="col-12 col-lg-4 order-3 order-lg-3">
-                                <div class="release-platforms">
-                                    {% for platform in item.platforms %}
-                                        <a href="{{ platform.url }}" class="social-link" target="_blank" rel="noopener noreferrer" title="{{ platform.name }}">
-                                            <i class="fa-brands {{ platform.icon }}"></i>
-                                        </a>
-                                    {% endfor %}
+                        <!-- Message if the category has no items -->
+                        {% if category.items.size == 0 %}
+
+                            <p class="empty-release-msg text-center">New {{ category.category_title | downcase }} coming soon...</p>
+
+                        {% else %}
+                            
+                            <!-- Items cycle -->
+                            {% for item in category.items %}
+                            <div id="{{ item.id }}" class="row align-items-center text-center release-item-row">
+        
+                                <!-- Title -->
+                                <div class="col-12 col-lg-4 mb-4 mb-lg-0 order-2 order-lg-1">
+                                    <span class="release-title text-glow">{{ item.title }}</span>
                                 </div>
+        
+                                <!-- Cover image -->
+                                <div class="col-12 col-lg-4 mb-4 mb-lg-0 order-1 order-lg-2">
+                                    <a href="{{ item.main_link }}" target="_blank" rel="noopener noreferrer">
+                                    <img src="{{ item.cover_image | relative_url }}" class="release-cover-img hover-glow" alt="{{ item.title }}">
+                                    </a>
+                                </div>
+        
+                                <!-- Platforms links -->
+                                <div class="col-12 col-lg-4 order-3 order-lg-3">
+                                    <div class="release-platforms">
+                                        {% for platform in item.platforms %}
+                                            <a href="{{ platform.url }}" class="social-link" target="_blank" rel="noopener noreferrer" title="{{ platform.name }}">
+                                                <i class="fa-brands {{ platform.icon }}"></i>
+                                            </a>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+        
                             </div>
-    
-                        </div>
-                        {% endfor %}
-                    {% endif %}
+                            {% endfor %}
+
+                        {% endif %}
+                        
+                    </div>
 
                 </div>
+                
             </div>
         </div>
         {% endfor %}
