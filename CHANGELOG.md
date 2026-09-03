@@ -3,6 +3,11 @@ All project changes will be recorded in this file.
 
 ## PATCHES
 
+# [03-09-2026] - Home page "beginning as a local project" update. 
+- Beginning as a local project section in home page refactored. 
+- This section is now divided into 2 columns, one with text content and one with a series of auto-scrolling images, which are taken from the directory "/files/events_pictures/sanremo-national-finals". 
+- modified files: index.html, static/css/index.css 
+
 # [03-09-2026] - Tour and pictures update. Releases update.  
 - TOUR & PICTURES
 - New field "stage" added to tour.yml, to indicate eventual tour stages (ex. Sanremo rock -> venue, Finals -> stage). 
@@ -254,11 +259,11 @@ ffmpeg -i files/header_pictures/input.jpg -vf "scale=1920:-1" -q:v 5 -map_metada
 
 # [22-07-2026] - Attention Seeker video added to the home page 
 
-## [23-07-2026] - San Marino Song Contest 2026 spotify link added to Releases page 
+# [23-07-2026] - San Marino Song Contest 2026 spotify link added to Releases page 
 - new element added to the playlists section of the releases page
 - the element contains the playlist cover and the spotify link
 
-## [22-07-2026] - Attention Seeker video added to the home page 
+# [22-07-2026] - Attention Seeker video added to the home page 
 - added YouTube video preview on the Home page
 
 

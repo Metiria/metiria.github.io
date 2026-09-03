@@ -139,16 +139,55 @@ custom_js: index.js
         </div>
 
         <!-- Beginning as a local project -->
-        <div class="row align-items-center">
-            <div class="col my-4">
-                <h2 class="section-title">Beginning as a local project</h2>
-                <p>
+
+        <!-- Title -->
+        <div class="row mt-5 mb-4">
+            <div class="col-12">
+                <h2 class="section-title text-center">Beginning as a local project</h2>
+            </div>
+        </div>
+
+        <!-- Beginning as a local project -->
+        <div class="row align-items-center mb-5">
+    
+            <!-- Text Column -->
+            <div class="col-12 col-lg-6 mb-4 mb-lg-0 pe-lg-5">
+                <p class="text-lg-start">
                     The project takes its form and entirety in 2024 in Catania with the debut of Metiria in the setting of the <a href="{{ '/tour.html#disummer-2024' | relative_url }}">Benedictine Monastery</a>, but its birth dates back to the first writing sessions held right away in a small studio of their own.
                     “The office” as they like to call it, is a simple but essential space built with consistency and passion by musicians, hosting frequent late-night jam sessions, technological experimentations and long-lasting hours of musical exchanges shaping the group’s identity up to present days. 
                     At the beginning of the band’s career, only a few stages had been tread: some <a href="{{ '/tour.html#local-contests-2024' | relative_url }}">local contests</a> and <a href="{{ '/tour.html#rock-festivals-2025' | relative_url }}">festivals</a>, a few live performances in small theaters, and other minor gigs often providing the band with just expense reimbursements.
                     Despite this, the band’s vision was already clear and, in on year’s time, the first national shows in Basilicata and Calabria have been already put on.
                 </p>
             </div>
+    
+            <!-- Auto-scrolling images column -->
+            <div class="col-12 col-lg-6">
+                <div class="photo-switch-container">
+                    <div id="localProjectCarousel" class="carousel slide carousel-fade w-100 h-100" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="false">
+                        <div class="carousel-inner w-100 h-100">
+                    
+                        {% assign target_folder = "/files/events_pictures/sanremo-national-finals/" %}
+                        {% assign is_first = true %}
+                    
+                            {% for file in site.static_files %}
+                                {% if file.path contains target_folder %}
+                                    {% assign ext = file.extname | downcase %}
+                                    {% if ext == '.jpg' or ext == '.jpeg' or ext == '.png' %}
+                                
+                                        <div class="carousel-item w-100 h-100 {% if is_first %}active{% endif %}">
+                                            <img src="{{ file.path | relative_url }}" class="switch-img" alt="Metiria local project">
+                                        </div>
+                                        {% assign is_first = false %}
+
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <!-- Dawn of national and international success -->
